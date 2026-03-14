@@ -1,0 +1,5 @@
+config SHIELD_KIBARD_LEFT
+    def_bool $(shields_list_contains,kibard_left)
+
+config SHIELD_KIBARD_RIGHT
+    def_bool $(shields_list_contains,kibard_right)

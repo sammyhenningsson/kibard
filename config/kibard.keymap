@@ -1,0 +1,435 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/pointing.h>
+
+#define SE_CIRC LS(RIGHT_BRACKET)
+#define SE_DOLLAR RA(N4)
+#define SE_COLON LS(DOT)
+#define SE_AMPR LS(N6)
+#define SE_ACUT EQUAL
+#define SE_AT RA(N2)
+#define SE_SLASH LS(N7)
+#define SE_QUES LS(MINUS)
+#define SE_DQUOT LS(N2)
+#define SE_APOS NUHS
+#define SE_LESS NUBS
+#define SE_EQUAL LS(N0)
+#define SE_GRTR LS(NUBS)
+#define SE_LBRACE RA(N7)
+#define SE_RBRACE RA(N0)
+#define SE_BSLS RA(MINUS)
+#define SE_TILDE RA(RIGHT_BRACKET)
+#define SE_LPAR LS(N8)
+#define SE_RPAR LS(N9)
+#define SE_PLUS MINUS
+#define SE_ASTR LS(NUHS)
+#define SE_GRAV LS(EQUAL)
+#define SE_LBRACKET RA(N8)
+#define SE_RBRACKET RA(N9)
+#define SE_PIPE RA(NUBS)
+#define SE_SECT GRAV
+#define SE_PERCENT LS(N5)
+#define SE_EXCLAM LS(N1)
+#define SE_POUND LS(N3)
+#define SE_ADIA APOS
+#define SE_AA LEFT_BRACKET
+#define SE_OO SEMI
+
+#define L_GRAPHMOD 0
+#define L_COLE 1
+#define L_STURDY  2
+#define L_SYM 3
+#define L_RIGHT 4
+#define L_NUM 5
+#define L_NAV 6
+#define L_VIM 7
+#define L_MOUSE 8
+#define L_FUNC 9
+#define L_B 10
+#define L_MAIN L_GRAPHMOD
+
+
+// Shortcuts for workspaces
+#define WS_L LC(LA(LEFT))
+#define WS_R LC(LA(RIGHT))
+#define WSM_L LS(LA(LEFT))
+#define WSM_R LS(LA(RIGHT))
+
+
+/ {
+    behaviors {
+        HML: HML {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            require-prior-idle-ms = <150>;
+            /* hold-trigger-key-positions = <7 8 9 10 11 19 20 21 22 23 29 30 31 32 33 34 35 36 37 38 39>; */
+        };
+
+        HMR: HMR {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            require-prior-idle-ms = <150>;
+            /* hold-trigger-key-positions = <0 1 2 3 4 12 13 14 15 16 24 25 26 27 28 34 35 36 37 38 39>; */
+        };
+
+        /* LT_STICK: LT_STICK { */
+        /*     compatible = "zmk,behavior-hold-tap"; */
+        /*     label = "LT_STICK"; */
+        /*     #binding-cells = <2>; */
+
+        /*     tapping-term-ms = <200>; */
+        /*     quick-tap-ms = <0>; */
+        /*     flavor = "hold-preferred"; */
+
+        /*     // On tap: send key */
+        /*     // On hold: trigger sticky layer */
+        /*     bindings = <&kp>, <&sl>; */
+        /* }; */
+    };
+};
+
+        //                               Key positions
+        //
+        //╭────┬────┬────┬────┬────╮                      ╭────┬────┬────┬────┬────╮
+        //   0    1    2    3    4          5     6          7    8    9   10   11
+        //├────┼────┼────┼────┼────┤                      ├────┼────┼────┼────┼────┤
+        //  12   13   14   15   16         17    18         19   20   21   22   23
+        //├────┼────┼────┼────┼────┤                      ├────┼────┼────┼────┼────┤
+        //  24   25   26   27   28                          29   30   31   32   33
+        //╰────┴────┼────┼────┼────┤                      ├────┼────┼────┼────┴────╯
+        //            34   35   36                          37   38   39
+        //          ╰────┴────┴────╯                      ╰────┴────┴────╯
+
+
+/ {
+    macros {
+        vim_write: vim_write {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp DOT>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp W>
+                , <&macro_tap &kp RET>
+                ;
+        };
+
+        vim_close: vim_close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp DOT>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp Q>
+                , <&macro_tap &kp RET>
+                ;
+        };
+
+        vim_close_all: vim_close_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp DOT>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp Q &kp A>
+                , <&macro_tap &kp RET>
+                ;
+        };
+
+        vim_gwrite: vim_gwrite {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp DOT>
+                , <&macro_tap &kp G>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp W &kp R &kp I &kp T &kp E>
+                , <&macro_tap &kp RET>
+                ;
+        };
+
+        vim_win_left: vim_win_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp W>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp H>
+                ;
+        };
+
+        vim_win_down: vim_win_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp W>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp J>
+                ;
+        };
+
+        vim_win_up: vim_win_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp W>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp K>
+                ;
+        };
+
+        vim_win_right: vim_win_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp W>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp L>
+                ;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_aa {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&kp SE_AA>;
+            layers = <L_COLE L_GRAPHMOD L_STURDY>;
+        };
+
+        combo_adia {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&kp SE_ADIA>;
+            layers = <L_COLE L_GRAPHMOD L_STURDY>;
+        };
+
+        combo_oo {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp SE_OO>;
+            layers = <L_COLE L_GRAPHMOD L_STURDY>;
+        };
+
+        combo_to_main {
+            timeout-ms = <50>;
+            key-positions = <30 31 32>;
+            bindings = <&to L_MAIN>;
+        };
+    };
+};
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            display-name = "Graphmod";
+            bindings = <
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                    &kp Z             &kp W             &kp M             &kp P             &kp B                                    &kp BSPC          &kp F             &kp O             &kp U             &kp Q
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp N             &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &kp G                                    &kp K             &HMR LALT H       &HMR RCTRL A      &HMR RSHIFT E     &kp I
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp Y             &kp X             &kp D             &lt L_VIM C       &kp V                                    &kp J             &kp L             &kp COMMA         &kp DOT           &kp FSLH
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                                                        &key_repeat       &lt L_SYM SPACE   &lt L_NUM ESC                            &lt L_NAV TAB     &lt L_RIGHT RET   &key_repeat
+                //                                    ╰─────────────────┴─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────┴─────────────────╯
+            >;
+        };
+
+        colemak_layer {
+            display-name = "Colemak";
+            bindings = <
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                    &kp Q             &kp W             &kp F             &kp P             &kp B                                    &kp J             &kp L             &kp U             &kp Y             &kp K
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp A             &HML LSHIFT R     &HML LCTRL S      &HML LALT T       &kp G                                    &kp BSPC          &HMR LALT N       &HMR RCTRL E      &HMR RSHIFT I     &kp O
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp Z             &kp X             &kp C             &lt L_VIM D       &kp V                                    &kp M             &kp H             &kp COMMA         &kp DOT           &kp FSLH
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                                                        &trans            &trans            &trans                                   &trans            &trans            &trans
+                //                                    ╰─────────────────┴─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────┴─────────────────╯
+            >;
+        };
+
+        sturdy_layer {
+            display-name = "Sturdy";
+            bindings = <
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                    &kp V             &kp M             &kp L             &kp C             &kp P                                    &kp Q             &kp F             &kp O             &kp U             &kp J
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp S             &HML LSHIFT T     &HML LCTRL R      &HML LALT D       &kp Y                                    &kp BSPC          &HMR LALT N       &HMR RCTRL A      &HMR RSHIFT E     &kp I
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp Z             &kp X             &kp K             &lt L_VIM G       &kp W                                    &kp B             &kp H             &kp COMMA         &kp DOT           &kp FSLH
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                                                        &trans            &trans            &trans                                   &trans            &trans            &trans
+                //                                    ╰─────────────────┴─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────┴─────────────────╯
+            >;
+        };
+
+        symbol_layer {
+            display-name = "Symbols";
+            bindings = <
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                    &kp SE_CIRC       &kp SE_DOLLAR     &kp SE_COLON      &kp SE_AMPR       &kp SE_ACUT                              &kp SE_GRAV       &kp SE_LBRACKET   &kp SE_RBRACKET   &kp SE_BSLS       &kp SE_TILDE
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp SE_AT         &kp SE_SLASH      &kp SE_QUES       &kp SE_DQUOT      &kp SE_EXCLAM                            &kp SE_APOS       &kp SE_LPAR       &kp SE_RPAR       &kp SE_PLUS       &kp SE_ASTR
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp SE_LESS       &kp SE_PERCENT    &kp SE_EQUAL      &kp SE_GRTR       &kp SE_CIRC                              &kp SE_PIPE       &kp SE_LBRACE     &kp SE_RBRACE     &kp SE_POUND      &kp SE_EQUAL
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                                                        &trans            &trans            &trans                                   &kp BSPC          &kp SPACE         &trans
+                //                                    ╰─────────────────┴─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────┴─────────────────╯
+            >;
+        };
+
+        right_layer {
+            display-name = "Right";
+            bindings = <
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                    &none             &none             &none             &kp K_MUTE        &kp K_VOL_UP                             &kp SYSREQ        &kp LC(W)         &kp LA(D)         &none             &none
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp LGUI          &kp LSHIFT        &kp LCTRL         &kp LALT          &kp K_VOL_DN                             &kp LC(BSPC)      &HMR LALT BSPC    &HMR RCTRL DEL    &kp RSHIFT        &kp RET
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp CAPS          &none             &kp SE_SECT       &caps_word        &kp CAPS                                 &none             &kp SPACE         &kp SE_QUES       &kp LS(INS)       &kp RET
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                                                        &trans            &kp SPACE         &trans                                   &trans            &trans            &trans
+                //                                    ╰─────────────────┴─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────┴─────────────────╯
+            >;
+        };
+
+        numpad_layer {
+            display-name = "Numpad";
+            bindings = <
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                    &none             &none             &kp LC(D)         &kp SE_POUND      &kp SE_EQUAL                             &kp SE_SLASH      &kp N7            &kp N8            &kp N9            &kp FSLH
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp LGUI          &kp LSHIFT        &kp LCTRL         &kp LALT          &kp RET                                  &kp SE_ASTR       &mt SE_LPAR N4    &mt SE_RPAR N5    &mt SPACE N6      &kp SE_PLUS
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &to L_MAIN        &kp BSPC          &kp DEL           &kp LC(C)         &kp LC(V)                                &kp C_AL_CALC     &kp N1            &kp N2            &kp N3            &kp KP_DOT
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                                                        &trans            &trans            &trans                                   &trans            &kp N0            &trans
+                //                                    ╰─────────────────┴─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────┴─────────────────╯
+            >;
+        };
+
+        navigate_layer {
+            display-name = "Navigate";
+            bindings = <
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                    &kp LG(L)         &to L_MOUSE       &to L_FUNC        &to L_B           &none                                    &none             &kp HOME          &kp END           &to L_NUM         &none
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp LGUI          &kp LSHIFT        &kp LCTRL         &kp LALT          &to L_COLE                               &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT         &kp PG_UP
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &to L_MAIN        &trans            &trans            &trans            &to L_STURDY                             &kp LA(LEFT)      &kp WS_L          &kp WS_R          &kp SE_CIRC       &kp PG_DN
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                                                        &key_repeat       &lt L_SYM SPACE   &lt L_NUM ESC                            &lt L_NAV TAB     &lt L_RIGHT SPACE   &kp RET
+                //                                    ╰─────────────────┴─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────┴─────────────────╯
+            >;
+        };
+
+        vim_layer {
+            display-name = "Vim";
+            bindings = <
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                    &trans            &trans            &trans            &trans            &trans                                   &trans            &vim_write        &vim_gwrite       &vim_close        &vim_close_all
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &trans            &trans            &trans            &trans            &trans                                   &vim_win_left     &vim_win_down     &vim_win_up       &vim_win_right    &trans
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &trans            &trans            &trans            &trans            &trans                                   &trans            &trans            &trans            &trans            &trans
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                                                        &trans            &trans            &trans                                   &trans            &trans            &trans
+                //                                    ╰─────────────────┴─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────┴─────────────────╯
+            >;
+        };
+
+        mouse_layer {
+            display-name = "Mouse";
+            bindings = <
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                       ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                    &trans            &trans            &trans            &trans            &trans                                    &none             &msc SCRL_LEFT    &mmv MOVE_UP      &msc SCRL_RIGHT   &none 
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                       ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &trans            &trans            &trans            &trans            &trans                                    &none             &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &msc SCRL_UP
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                       ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &to L_MAIN        &kp BSPC          &kp DEL           &trans            &trans                                    &none             &mkp MB1          &mkp MB3          &mkp MB2          &msc SCRL_DOWN
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                       ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                                                        &trans            &mkp MB1          &trans                                    &trans            &trans            &trans
+                //                                    ╰─────────────────┴─────────────────┴─────────────────╯                       ╰─────────────────┴─────────────────┴─────────────────╯
+            >;
+        };
+
+        functions_layer {
+            display-name = "Functions";
+            bindings = <
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                    &kp F1            &kp F2            &kp F3            &kp F4            &kp F5                                   &kp F6            &kp F7            &kp F8            &kp F9            &kp F10
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &kp F11           &kp F12           &kp F13           &kp F14           &kp F15                                  &kp F16           &kp F17           &kp F18           &kp F19           &kp F20
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &to L_MAIN        &kp K_PREV        &kp K_PP          &kp K_STOP2       &kp K_NEXT                               &none             &none             &none             &none             &none
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                                                        &trans            &trans            &trans                                   &trans            &trans            &trans
+                //                                    ╰─────────────────┴─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────┴─────────────────╯
+            >;
+        };
+
+        b_layer {
+            display-name = "B";
+            bindings = <
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                    &bt BT_CLR        &trans            &trans            &trans            &trans                                   &trans            &trans            &trans            &trans            &to L_MAIN  
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4                             &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT         &trans
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &to L_MAIN        &none             &sys_reset        &studio_unlock    &bootloader                              &bootloader       &trans            &trans            &trans            &trans
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                                                        &trans            &trans            &trans                                   &trans            &trans            &trans
+                //                                    ╰─────────────────┴─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────┴─────────────────╯
+            >;
+        };
+    };
+};
+
+
+
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                //  &trans            &trans            &trans            &trans            &trans                                   &trans            &trans            &trans            &trans            &trans
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                //  &trans            &trans            &trans            &trans            &trans                                   &trans            &trans            &trans            &trans            &trans
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                //  &trans            &trans            &trans            &trans            &trans                                   &trans            &trans            &trans            &trans            &trans
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                //                                      &trans            &trans            &trans                                   &trans            &trans            &trans
+                //                                    ╰─────────────────┴─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────┴─────────────────╯
