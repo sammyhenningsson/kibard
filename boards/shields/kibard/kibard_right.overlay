@@ -1,7 +1,5 @@
 #include "kibard.dtsi"
 
-/ {
-    chosen {
-        zmk,kscan = &kscan0;
-    };
+&default_transform {
+    col-offset = <5>;
 };
