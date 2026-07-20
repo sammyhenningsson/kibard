@@ -55,7 +55,6 @@
 #define L_B 8
 #define L_MAIN L_GRAPHMOD
 
-
 // Shortcuts for workspaces
 #define WS_L LC(LA(LEFT))
 #define WS_R LC(LA(RIGHT))
@@ -395,11 +394,11 @@
             display-name = "B";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &bt BT_CLR        &none             &none             &none             &none                 &none  &none       &none             &none             &none             &none             &none
+                    &bt BT_CLR        &none             &none             &none             &none                                    &none             &kp B             &kp T             &bt BT_CLR        &bt BT_CLR_ALL
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4                             &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT         &trans
+                    &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4                             &bt BT_DISC 4     &bt BT_DISC 3     &bt BT_DISC 2     &bt BT_DISC 1     &bt BT_DISC 0
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &to L_MAIN        &none             &none             &studio_unlock    &bootloader                              &bootloader       &trans            &trans            &trans            &trans
+                    &to L_MAIN        &none             &none             &none             &none                                    &none             &none             &none             &none             &none
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &trans                                   &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
