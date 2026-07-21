@@ -99,18 +99,16 @@
             flavor = "tap-preferred";
         };
 
-        /* LT_STICK: LT_STICK { */
-        /*     compatible = "zmk,behavior-hold-tap"; */
-        /*     #binding-cells = <2>; */
+        NUM: NUM {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&kp>;
 
-        /*     tapping-term-ms = <200>; */
-        /*     quick-tap-ms = <0>; */
-        /*     flavor = "hold-preferred"; */
-
-        /*     // On tap: send key */
-        /*     // On hold: trigger sticky layer */
-        /*     bindings = <&kp>, <&sl>; */
-        /* }; */
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+        };
     };
 };
 
@@ -302,9 +300,9 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &kp SE_EQUAL      &kp LC(T)         &kp SE_POUND      &kp LC(F)         &kp LC(D)                                &kp BSPC          &kp N7            &kp N8            &kp N9            &HT_TO L_MAIN SE_EQUAL
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp LGUI          &kp LSHIFT        &kp LCTRL         &kp LALT          &kp RET                                  &kp SE_ASTR       &mt SE_LPAR N4    &mt SE_RPAR N5    &kp N6            &kp SE_PLUS
+                    &kp LGUI          &kp LSHIFT        &kp LCTRL         &kp LALT          &kp RET                                  &kp SE_ASTR       &NUM SE_LPAR N4   &NUM SE_RPAR N5   &kp N6            &kp SE_PLUS
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &to L_MAIN        &kp BSPC          &kp DEL           &kp LC(C)         &kp LC(V)                                &mt C_AL_CALC SE_SLASH  &mt SE_COLON N1 &mt COMMA N2  &mt DOT N3        &kp SE_MINUS
+                    &to L_MAIN        &kp BSPC          &kp DEL           &kp LC(C)         &kp LC(V)                                &NUM C_AL_CALC SE_SLASH &NUM SE_COLON N1  &NUM COMMA N2   &NUM DOT N3   &kp SE_MINUS
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &trans                                   &kp SPACE         &lt L_RIGHT N0
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
