@@ -256,6 +256,42 @@
                 , <&macro_tap &kp L>
                 ;
         };
+
+        acut: acut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SE_ACUT>
+                , <&macro_tap &kp SE_ACUT>
+                ;
+        };
+
+        grav: grav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SE_GRAV>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+
+        tilde: tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SE_TILDE>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+
+        circ: circ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SE_CIRC>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
     };
 };
 
@@ -324,7 +360,7 @@
             display-name = "Right";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &kp SE_ACUT       &kp SE_GRAV       &none             &kp K_MUTE        &kp K_VOL_UP                             &none             &kp I             &kp Z             &none             &none
+                    &acut             &grav             &none             &kp K_MUTE        &kp K_VOL_UP                             &none             &kp I             &kp Z             &circ             &tilde
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &HML LGUI N       &HML LSHIFT W     &HML LCTRL T      &HML LALT S       &kp K_VOL_DN                             &kp SYSREQ        &HMR LALT P       &HMR LCTRL X      &HMR RSHIFT E     &kp RET
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
