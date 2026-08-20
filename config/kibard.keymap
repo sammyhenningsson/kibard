@@ -120,6 +120,16 @@
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
         };
+
+        // Adaptive Q: W -> Q sends N, N -> Q sends Y, otherwise plain Q.
+        AK_Q: AK_Q {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp Q>;
+
+            ak_wq { trigger-keys = <W>; max-prior-idle-ms = <300>; bindings = <&kp N>; };
+            ak_nq { trigger-keys = <N>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
+        };
     };
 };
 
@@ -315,7 +325,7 @@
             display-name = "Graphmod";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &kp W             &kp K             &kp D             &kp C             &kp Q                                    &kp BSPC          &kp F             &kp O             &kp U             &kp SE_AA
+                    &kp W             &kp K             &kp D             &kp C             &AK_Q                                    &kp BSPC          &kp F             &kp O             &kp U             &kp SE_AA
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp N             &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &kp V             &HMR LALT H       &HMR RCTRL A      &HMR RSHIFT E     &kp I
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
