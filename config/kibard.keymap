@@ -121,14 +121,22 @@
             flavor = "tap-preferred";
         };
 
-        // Adaptive Q: W -> Q sends N, N -> Q sends Y, otherwise plain Q.
+        // Adaptive Q: N -> Q sends Y, otherwise plain Q.
         AK_Q: AK_Q {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp Q>;
 
-            ak_wq { trigger-keys = <W>; max-prior-idle-ms = <300>; bindings = <&kp N>; };
             ak_nq { trigger-keys = <N>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
+        };
+
+        // Adaptive Ä: Y -> Ä sends N, otherwise plain Ä.
+        AK_ADIA: AK_ADIA {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp SE_ADIA>;
+
+            ak_yn { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp SE_ADIA>; };
         };
     };
 };
