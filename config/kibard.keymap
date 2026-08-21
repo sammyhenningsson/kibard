@@ -129,15 +129,6 @@
 
             ak_nq { trigger-keys = <N>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
         };
-
-        // Adaptive Ä: Y -> Ä sends N, otherwise plain Ä.
-        AK_ADIA: AK_ADIA {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&kp SE_ADIA>;
-
-            ak_yn { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp SE_ADIA>; };
-        };
     };
 };
 
@@ -333,11 +324,11 @@
             display-name = "Graphmod";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &kp SE_OO         &kp W             &kp D             &kp C             &AK_Q                                    &kp BSPC          &kp F             &kp O             &kp U             &kp SE_AA
+                    &kp J             &kp W             &kp D             &kp C             &AK_Q                                    &kp BSPC          &kp F             &kp O             &kp U             &kp SE_AA
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp N             &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &kp V             &HMR LALT H       &HMR RCTRL A      &HMR RSHIFT E     &kp I
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp Y             &kp M             &kp P             &kp G             &kp COMMA                                &kp DOT           &kp L             &kp J             &kp K             &kp SE_ADIA
+                    &kp Y             &kp M             &kp P             &kp G             &kp COMMA                                &kp DOT           &kp L             &kp SE_ADIA       &kp K             &kp SE_OO
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &LT_TH L_SYM SPACE   &LT_TH L_NUM ESC                      &LT_TH L_NAV TAB  &LT_TH L_RIGHT RET
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
