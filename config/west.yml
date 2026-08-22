@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: maatthc
+      url-base: https://github.com/maatthc
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -15,5 +17,10 @@ manifest:
     - name: zmk-adaptive-key
       remote: urob
       revision: v0.3 # Should match the ZMK release above.
+    # Reports the active layer to the Keyboard Layers App Companion desktop app.
+    # Untagged upstream — only `main` exists.
+    - name: zmk-feature-appcompanion
+      remote: maatthc
+      revision: main
   self:
     path: config
