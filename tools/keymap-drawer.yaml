@@ -1,0 +1,55 @@
+parse_config:
+  # The keymap's SE_* defines are plain #defines, so the preprocessor turns them
+  # into US keycodes before keymap-drawer sees them. These keys get preprocessed
+  # the same way, so mapping them back by their SE_ names is safe.
+  raw_binding_map:
+    "&kp SE_CIRC": "^"
+    "&kp SE_DOLLAR": "$"
+    "&kp SE_COLON": ":"
+    "&kp SE_AMPR": "&"
+    "&kp SE_ACUT": "´"
+    "&kp SE_AT": "@"
+    "&kp SE_SLASH": "/"
+    "&kp SE_QUES": "?"
+    "&kp SE_DQUOT": "\""
+    "&kp SE_APOS": "'"
+    "&kp SE_LESS": "<"
+    "&kp SE_MINUS": "-"
+    "&kp SE_UNDER": "_"
+    "&kp SE_EQUAL": "="
+    "&kp SE_GRTR": ">"
+    "&kp SE_LBRACE": "{"
+    "&kp SE_RBRACE": "}"
+    "&kp SE_BSLS": "\\"
+    "&kp SE_TILDE": "~"
+    "&kp SE_LPAR": "("
+    "&kp SE_RPAR": ")"
+    "&kp SE_PLUS": "+"
+    "&kp SE_ASTR": "*"
+    "&kp SE_GRAV": "`"
+    "&kp SE_LBRACKET": "["
+    "&kp SE_RBRACKET": "]"
+    "&kp SE_PIPE": "|"
+    "&kp SE_SECT": "§"
+    "&kp SE_PERCENT": "%"
+    "&kp SE_EXCLAM": "!"
+    "&kp SE_POUND": "#"
+    "&kp SE_ADIA": "ä"
+    "&kp SE_AA": "å"
+    "&kp SE_OO": "ö"
+    "&AK_Q": {t: "Q", s: "N→Y"}
+    "&msc SCRL_LEFT": "Scroll ←"
+    "&msc SCRL_RIGHT": "Scroll →"
+    "&msc SCRL_UP": "Scroll ↑"
+    "&msc SCRL_DOWN": "Scroll ↓"
+    "&mmv MOVE_LEFT": "Move ←"
+    "&mmv MOVE_RIGHT": "Move →"
+    "&mmv MOVE_UP": "Move ↑"
+    "&mmv MOVE_DOWN": "Move ↓"
+    "&mkp MB1": "LClick"
+    "&mkp MB2": "RClick"
+    "&mkp MB3": "MClick"
+draw_config:
+  key_w: 62
+  key_h: 56
+  append_colon_to_layer_header: false
