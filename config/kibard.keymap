@@ -121,13 +121,13 @@
             flavor = "tap-preferred";
         };
 
-        // Adaptive Q: N -> Q sends Y, otherwise plain Q.
+        // Adaptive Q: N -> Q sends J, otherwise plain Q.
         AK_Q: AK_Q {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp Q>;
 
-            ak_nq { trigger-keys = <N>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
+            ak_nq { trigger-keys = <N>; max-prior-idle-ms = <300>; bindings = <&kp J>; };
         };
     };
 };
