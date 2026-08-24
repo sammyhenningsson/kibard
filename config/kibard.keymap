@@ -354,11 +354,11 @@
             display-name = "Numpad";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &kp SE_EQUAL      &kp LC(T)         &kp SE_POUND      &kp LC(F)         &kp LC(D)                                &kp BSPC          &kp N7            &kp N8            &kp N9            &HT_TO L_MAIN SE_EQUAL
+                    &none             &kp LC(T)         &kp LC(D)         &kp LC(C)         &kp LC(V)                                &kp BSPC          &kp N7            &kp N8            &kp N9            &HT_TO L_MAIN SE_EQUAL
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp LGUI          &kp LSHIFT        &kp LCTRL         &kp LALT          &kp RET                                  &kp SE_ASTR       &NUM SE_LPAR N4   &NUM SE_RPAR N5   &kp N6            &kp SE_PLUS
+                    &kp RET           &kp LSHIFT        &kp LCTRL         &kp LC(Z)         &kp SE_POUND                             &kp SE_ASTR       &NUM SE_LPAR N4   &NUM SE_RPAR N5   &kp N6            &kp SE_PLUS
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &to L_MAIN        &kp BSPC          &kp DEL           &kp LC(C)         &kp LC(V)                                &NUM C_AL_CALC SE_SLASH &NUM SE_COLON N1  &NUM COMMA N2   &NUM DOT N3   &kp SE_MINUS
+                    &to L_MAIN        &kp BSPC          &kp DEL           &kp LC(F)         &kp SE_EQUAL                             &NUM C_AL_CALC SE_SLASH &NUM SE_COLON N1  &NUM COMMA N2   &NUM DOT N3   &kp SE_MINUS
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &trans                                   &kp SPACE         &lt L_RIGHT N0
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
@@ -369,11 +369,11 @@
             display-name = "Right";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &acut             &grav             &kp K_PP          &kp K_MUTE        &kp K_VOL_UP                             &none             &kp I             &kp Z             &circ             &tilde
+                    &acut             &grav             &kp K_PP          &kp K_MUTE        &kp K_VOL_UP                             &kp SYSREQ        &kp I             &kp Z             &circ             &tilde
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML LGUI N       &HML LSHIFT R     &HML LCTRL T      &HML LALT Y       &kp K_VOL_DN                             &kp SYSREQ        &HMR LALT P       &HMR LCTRL X      &HMR RSHIFT E     &kp RET
+                    &HML LGUI N       &HML LSHIFT R     &HML LCTRL T      &HML LALT Y       &kp K_VOL_DN                             &kp LC(Z)         &HMR LALT P       &HMR LCTRL X      &HMR RSHIFT E     &kp RET
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp SE_PIPE       &none             &kp LC(Z)         &caps_word        &kp CAPS                                 &none             &kp LS(INS)       &kp DEL           &kp SE_UNDER      &kp SE_MINUS
+                    &kp SE_PIPE       &kp J             &kp A             &caps_word        &kp CAPS                                 &none             &kp LS(INS)       &kp DEL           &kp SE_UNDER      &kp SE_MINUS
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &kp SPACE         &trans                                   &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
