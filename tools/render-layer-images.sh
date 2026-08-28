@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
-# Renders one PNG per keymap layer for the Keyboard Layers App Companion
-# (https://github.com/maatthc/keyboard_layers_app_companion), whose config.ini
-# maps layer index -> image file. Filenames must match that mapping.
+# Renders one PNG per keymap layer into companion/images/, for the Keyboard
+# Layers App Companion (https://github.com/maatthc/keyboard_layers_app_companion).
+# Filenames must match the layer_N mapping in companion/config.ini.
+#
+# Run tools/install-companion.sh afterwards only if the app clone isn't linked
+# up yet — it symlinks these files, so re-rendering is picked up automatically.
 #
 # Requires: keymap-drawer (venv below) and rsvg-convert (librsvg).
 set -euo pipefail
@@ -10,7 +13,7 @@ REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 KEYMAP="$REPO/config/kibard.keymap"
 CONFIG="$REPO/tools/keymap-drawer.yaml"
 KM="${KEYMAP_DRAWER:-$HOME/.local/share/kmdrawer-venv/bin/keymap}"
-ASSETS="${1:-$HOME/Development/keyboard_layers_app_companion/assets}"
+OUT="${1:-$REPO/companion/images}"
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK"' EXIT
 
@@ -18,6 +21,7 @@ trap 'rm -rf "$WORK"' EXIT
 LAYERS=(Graphmod:graphmod Symbols:symbols Numpad:numpad Right:right \
         Navigate:navigate Vim:vim Mouse:mouse Functions:functions B:b)
 
+mkdir -p "$OUT"
 "$KM" -c "$CONFIG" parse -z "$KEYMAP" -o "$WORK/kibard.yaml"
 
 # The shield isn't in keymap-drawer's layout DB, so describe it explicitly:
@@ -33,7 +37,7 @@ python3 -c "import sys; p=sys.argv[1]; s=open(p).read(); open(p,'w').write(s.spl
 for entry in "${LAYERS[@]}"; do
     layer="${entry%%:*}"; name="${entry##*:}"
     "$KM" -c "$CONFIG" draw "$WORK/kibard.yaml" --select-layers "$layer" -o "$WORK/$name.svg"
-    rsvg-convert -b white -w 1600 "$WORK/$name.svg" -o "$ASSETS/kibard-$name.png"
-    echo "  $layer -> $ASSETS/kibard-$name.png"
+    rsvg-convert -b white -w 1600 "$WORK/$name.svg" -o "$OUT/kibard-$name.png"
+    echo "  $layer -> $OUT/kibard-$name.png"
 done
 echo "Rendered ${#LAYERS[@]} layer images."
