@@ -42,7 +42,7 @@ Left half = BLE central + USB host. Right half = BLE peripheral only.
 | `build.yaml` | GitHub Actions build matrix |
 | `companion/` | Layer-display host files (`config.ini` + rendered layer images) — see `companion/README.md` |
 | `tools/render-layer-images.sh` | Regenerates `companion/images/` from the keymap via keymap-drawer |
-| `tools/install-companion.sh` | Symlinks `companion/` into a Keyboard Layers App Companion checkout |
+| `companion/install.sh` | Symlinks `companion/` into a Keyboard Layers App Companion checkout |
 
 ### Keymap layers
 

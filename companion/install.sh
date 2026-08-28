@@ -4,7 +4,7 @@
 # so symlink rather than copy: re-running render-layer-images.sh or editing
 # config.ini here then takes effect with no further step.
 #
-# Usage: tools/install-companion.sh [path-to-app-checkout]
+# Usage: companion/install.sh [path-to-app-checkout]
 set -euo pipefail
 
 # CDPATH= : a relative `cd` searches CDPATH and echoes the resolved path,

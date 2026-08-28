@@ -3,7 +3,7 @@
 # Layers App Companion (https://github.com/maatthc/keyboard_layers_app_companion).
 # Filenames must match the layer_N mapping in companion/config.ini.
 #
-# Run tools/install-companion.sh afterwards only if the app clone isn't linked
+# Run companion/install.sh afterwards only if the app clone isn't linked
 # up yet — it symlinks these files, so re-rendering is picked up automatically.
 #
 # Requires: keymap-drawer (venv below) and rsvg-convert (librsvg).

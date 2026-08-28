@@ -18,7 +18,7 @@ report — so this works over BLE *and* USB, on the central half only.
 ```bash
 sudo pacman -Syu --needed python-kivy python-hid python-aiohttp python-zeroconf python-tenacity
 git clone https://github.com/maatthc/keyboard_layers_app_companion.git ~/Development/keyboard_layers_app_companion
-~/Development/kibård/tools/install-companion.sh
+~/Development/kibård/companion/install.sh
 cd ~/Development/keyboard_layers_app_companion && python3 main.py --ble
 ```
 
