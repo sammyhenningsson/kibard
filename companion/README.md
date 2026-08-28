@@ -26,7 +26,13 @@ Add `--web` for a browser view on port 1977 instead of the Kivy window.
 
 Do **not** install `python-hidapi` — it conflicts with `python-hid`, and the app
 needs the latter's binding. The bundled `Pipfile` is no use on Manjaro either;
-Kivy publishes no wheels for the distro's Python.
+Kivy publishes no wheels for the distro's Python, and it lists stale PyPI
+backports of `asyncio`/`argparse`.
+
+Those are pacman packages, so they're only visible to `/usr/bin/python3`. If
+pyenv is on `PATH`, bare `python3` is its shim and every import fails; run
+`pyenv local system` in the app checkout so the command above resolves to the
+system interpreter.
 
 Reading the keyboard's hidraw node needs a udev rule — without it the app finds
 the device but reports `Could not open: unable to open device`:

@@ -7,7 +7,9 @@
 # Usage: tools/install-companion.sh [path-to-app-checkout]
 set -euo pipefail
 
-REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# CDPATH= : a relative `cd` searches CDPATH and echoes the resolved path,
+# which would otherwise land in REPO as a second line.
+REPO="$(CDPATH= cd -- "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 APP="${1:-$HOME/Development/keyboard_layers_app_companion}"
 
 if [ ! -f "$APP/main.py" ]; then
@@ -22,7 +24,15 @@ ln -sfn "$REPO/companion/config.ini" "$APP/config.ini"
 echo "  config.ini -> companion/config.ini"
 
 mkdir -p "$APP/assets"
-for img in "$REPO"/companion/images/kibard-*.png; do
+shopt -s nullglob
+images=("$REPO"/companion/images/kibard-*.png)
+shopt -u nullglob
+if [ ${#images[@]} -eq 0 ]; then
+    echo "No images in $REPO/companion/images — run tools/render-layer-images.sh" >&2
+    exit 1
+fi
+
+for img in "${images[@]}"; do
     ln -sfn "$img" "$APP/assets/$(basename "$img")"
     echo "  assets/$(basename "$img") -> companion/images/$(basename "$img")"
 done

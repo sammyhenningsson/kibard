@@ -9,7 +9,9 @@
 # Requires: keymap-drawer (venv below) and rsvg-convert (librsvg).
 set -euo pipefail
 
-REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# CDPATH= : a relative `cd` searches CDPATH and echoes the resolved path,
+# which would otherwise land in REPO as a second line.
+REPO="$(CDPATH= cd -- "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 KEYMAP="$REPO/config/kibard.keymap"
 CONFIG="$REPO/tools/keymap-drawer.yaml"
 KM="${KEYMAP_DRAWER:-$HOME/.local/share/kmdrawer-venv/bin/keymap}"
