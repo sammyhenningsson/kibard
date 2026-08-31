@@ -308,10 +308,10 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_to_main {
-            timeout-ms = <50>;
-            key-positions = <30 31 32>;
-            bindings = <&to L_MAIN>;
+        combo_esc {
+            timeout-ms = <40>;
+            key-positions = <1 2>;
+            bindings = <&kp ESC>;
         };
     };
 };
