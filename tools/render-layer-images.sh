@@ -21,7 +21,7 @@ trap 'rm -rf "$WORK"' EXIT
 
 # Layer name in the keymap -> image basename, in layer-index order (0..8).
 LAYERS=(Graphmod:graphmod Symbols:symbols Numpad:numpad Right:right \
-        Navigate:navigate Vim:vim Mouse:mouse Functions:functions B:b)
+        Navigate:navigate Vim:vim Mouse:mouse Functions:functions B:b Hex:hex)
 
 mkdir -p "$OUT"
 "$KM" -c "$CONFIG" parse -z "$KEYMAP" -o "$WORK/kibard.yaml"
