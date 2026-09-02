@@ -42,6 +42,8 @@ Left half = BLE central + USB host. Right half = BLE peripheral only.
 | `build.yaml` | GitHub Actions build matrix |
 | `companion/` | Layer-display host files (`config.ini` + rendered layer images) — see `companion/README.md` |
 | `tools/render-layer-images.sh` | Regenerates `companion/images/` from the keymap via keymap-drawer |
+| `tools/sync-oryx.py` | Diffs the upstream ZSA Voyager layout in Oryx against this keymap — see below |
+| `tools/oryx-snapshot.json` | Last-synced Oryx revision; the baseline `sync-oryx.py` diffs against |
 | `companion/install.sh` | Symlinks `companion/` into a Keyboard Layers App Companion checkout |
 
 ### Keymap layers
@@ -59,6 +61,7 @@ Defined in `config/kibard.keymap`. Layer indices:
 | 6 | Mouse | `to L_MOUSE` from Navigate |
 | 7 | Functions | `to L_FUNC` from Navigate |
 | 8 | B (Bluetooth/system) | `to L_B` from Navigate |
+| 9 | Hex | `LT_TH L_HEX` on Numpad (pos 19) |
 
 `L_MAIN` always equals `L_GRAPHMOD` (layer 0). The triple-combo `30+31+32` returns to main (`&to L_MAIN`) — this is the only combo defined.
 
@@ -73,3 +76,29 @@ All `SE_*` macros at the top of `kibard.keymap` map Swedish characters and symbo
 ### Vim macros
 
 The Vim layer provides keyboard macros for `:w`, `:w!`, `:q`, `:q!`, `:qa`, `:Gwrite`, and `Ctrl+W` window navigation (h/j/k/l).
+
+### Staying in sync with the Voyager (Oryx)
+
+The Kibård keymap is a hand-port of a ZSA Voyager layout kept in Oryx
+(`ORYX_LAYOUT_ID`, default `6ye0X`). `tools/sync-oryx.py` fetches that layout
+from Oryx's public GraphQL API, folds the Voyager's 52 keys onto the Kibård's
+34 positions, and reports what moved:
+
+| Command | Purpose |
+|---------|---------|
+| `tools/sync-oryx.py` | Keys changed in Oryx since the last sync, with suggested ZMK bindings. Exits 1 if any. |
+| `tools/sync-oryx.py snapshot` | Record the current Oryx layout as ported — run after editing the keymap, commit alongside. |
+| `tools/sync-oryx.py show [N]` | Draw an Oryx layer in Kibård geometry. |
+| `tools/sync-oryx.py compare` | Full Oryx-vs-`kibard.keymap` audit (`--hide-blank` drops `&none`/`&trans` noise). |
+
+`tools/oryx-snapshot.json` is the last-synced state; it is the diff's baseline
+and belongs in the commit that ports the change.
+
+Two tables in the script encode the port and are asserted on every run, so a
+rename or reorder in Oryx fails loudly instead of diffing the wrong layers:
+
+- `POSITION_MAP` — Voyager key index → Kibård position (the Kibård uses the
+  Voyager's inner 5 columns of rows 1–3, plus both thumb pairs).
+- `LAYER_MAP` — Oryx layer → ZMK layer. The two differ in order: Oryx
+  4 Mouse → ZMK 6, Oryx 6 Navigate → ZMK 4, Oryx 8 Hex → ZMK 9. ZMK layer 8
+  (Bluetooth) has no Oryx counterpart, so nothing maps onto it.

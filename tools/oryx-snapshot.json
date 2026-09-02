@@ -1,0 +1,2383 @@
+{
+ "layoutId": "6ye0X",
+ "revision": {
+  "hashId": "bv0DK7",
+  "layers": [
+   {
+    "keys": [
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_J"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_W"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_D"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_C"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_Q"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "hold": {
+       "code": "MO",
+       "layer": 2
+      },
+      "tap": {
+       "code": "KC_N"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_SHIFT"
+      },
+      "tap": {
+       "code": "KC_R"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_CTRL"
+      },
+      "tap": {
+       "code": "KC_T"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_ALT"
+      },
+      "tap": {
+       "code": "KC_S"
+      }
+     },
+     {
+      "hold": {
+       "code": "MO",
+       "layer": 5
+      },
+      "tap": {
+       "code": "KC_B"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_Y"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_M"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_P"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_G"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_COMMA"
+      }
+     },
+     {
+      "hold": {
+       "code": "MO",
+       "layer": 1
+      },
+      "tap": {
+       "code": "KC_SPACE"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_LEFT_SHIFT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_BSPC"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_O"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_U"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_AA"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_V"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_ALT"
+      },
+      "tap": {
+       "code": "KC_H"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_CTRL"
+      },
+      "tap": {
+       "code": "KC_A"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_SHIFT"
+      },
+      "tap": {
+       "code": "KC_E"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_I"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_DOT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_L"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_ADIA"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_K"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_OSLH"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "hold": {
+       "code": "MO",
+       "layer": 6
+      },
+      "tap": {
+       "code": "KC_TAB"
+      }
+     },
+     {
+      "hold": {
+       "code": "MO",
+       "layer": 3
+      },
+      "tap": {
+       "code": "KC_ENTER"
+      }
+     }
+    ],
+    "position": 0,
+    "title": "Graphish"
+   },
+   {
+    "keys": [
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "SE_ACUT"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_GRV"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_COLN"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_AMPR"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_CIRC"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "SE_AT"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_SHIFT"
+      },
+      "tap": {
+       "code": "SE_SLSH"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_CTRL"
+      },
+      "tap": {
+       "code": "SE_QUES"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_ALT"
+      },
+      "tap": {
+       "code": "SE_DQUO"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_EQL"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "SE_PIPE"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_LESS"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_GRTR"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_EXLM"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_DLR"
+      }
+     },
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_BSPC"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_LBRC"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_RBRC"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_BSLS"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_TILD"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "SE_ASTR"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_ALT"
+      },
+      "tap": {
+       "code": "SE_LPRN"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_CTRL"
+      },
+      "tap": {
+       "code": "SE_RPRN"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_SHIFT"
+      },
+      "tap": {
+       "code": "SE_APOS"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_PLUS"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_PERC"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_LCBR"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_RCBR"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_HASH"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_MINS"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_SPACE"
+      }
+     },
+     {
+      "hold": {
+       "code": "MO",
+       "layer": 3
+      },
+      "tap": {
+       "code": "SE_UNDS"
+      }
+     }
+    ],
+    "position": 1,
+    "title": "Symbols"
+   },
+   {
+    "keys": [
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_HASH"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_D",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_C",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_Z",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     },
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_ENTER"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_T",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_V",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "TO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_BSPC"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_DELETE"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_EQL"
+      }
+     },
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_BSPC"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_7"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_8"
+      }
+     },
+     {
+      "hold": {
+       "code": "SE_CIRC"
+      },
+      "tap": {
+       "code": "KC_9"
+      }
+     },
+     {
+      "hold": {
+       "code": "TO"
+      },
+      "tap": {
+       "code": "SE_EQL"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "SE_ASTR"
+      }
+     },
+     {
+      "hold": {
+       "code": "SE_LPRN"
+      },
+      "tap": {
+       "code": "KC_4"
+      }
+     },
+     {
+      "hold": {
+       "code": "SE_RPRN"
+      },
+      "tap": {
+       "code": "KC_5"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_6"
+      }
+     },
+     {
+      "hold": {
+       "code": "MO",
+       "layer": 8
+      },
+      "tap": {
+       "code": "SE_PLUS"
+      }
+     },
+     {},
+     {
+      "hold": {
+       "code": "KC_CALCULATOR"
+      },
+      "tap": {
+       "code": "SE_SLSH"
+      }
+     },
+     {
+      "hold": {
+       "code": "SE_COLN"
+      },
+      "tap": {
+       "code": "KC_1"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_COMMA"
+      },
+      "tap": {
+       "code": "KC_2"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_DOT"
+      },
+      "tap": {
+       "code": "KC_3"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_MINS"
+      }
+     },
+     {},
+     {
+      "hold": {
+       "code": "MO",
+       "layer": 6
+      },
+      "tap": {
+       "code": "KC_SPACE"
+      }
+     },
+     {
+      "hold": {
+       "code": "MO",
+       "layer": 3
+      },
+      "tap": {
+       "code": "KC_0"
+      }
+     }
+    ],
+    "position": 2,
+    "title": "Numpad"
+   },
+   {
+    "keys": [
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_EQUAL",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_EQUAL",
+          "delay": 5,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_EQUAL",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_SPACE",
+          "delay": 5,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "CW_TOGG"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MEDIA_PLAY_PAUSE"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_AUDIO_VOL_UP"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_N"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_GUI"
+      },
+      "tap": {
+       "code": "KC_R"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_CTRL"
+      },
+      "tap": {
+       "code": "KC_T"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_ALT"
+      },
+      "tap": {
+       "code": "KC_Y"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_AUDIO_VOL_DOWN"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "SE_PIPE"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_J"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_A"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_G"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_AUDIO_MUTE"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_SPACE"
+      }
+     },
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_PSCR"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_I"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_Z"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_RBRC",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_SPACE",
+          "delay": 5,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_RBRC",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": true,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": false,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_SPACE",
+          "delay": 5,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_Z",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_RIGHT_ALT"
+      },
+      "tap": {
+       "code": "KC_P"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_CTRL"
+      },
+      "tap": {
+       "code": "KC_X"
+      }
+     },
+     {
+      "hold": {
+       "code": "KC_LEFT_SHIFT"
+      },
+      "tap": {
+       "code": "KC_E"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_ENTER"
+      }
+     },
+     {},
+     {
+      "hold": {
+       "code": "KC_CAPS"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_INSERT",
+       "modifiers": {
+        "leftShift": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_DELETE"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_UNDS"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_MINS"
+      }
+     },
+     {},
+     {},
+     {}
+    ],
+    "position": 3,
+    "title": "Right"
+   },
+   {
+    "keys": [
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_T",
+       "modifiers": {
+        "leftAlt": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_R",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_LEFT_GUI"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_LEFT_SHIFT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_LEFT_CTRL"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_LEFT_ALT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_ENTER"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "TO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_BSPC"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_DELETE"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_C",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_V",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_BTN1"
+      }
+     },
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_MS_WH_LEFT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_UP"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_WH_RIGHT"
+      }
+     },
+     {
+      "hold": {
+       "code": "TO"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_MS_WH_UP"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_LEFT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_DOWN"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_RIGHT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_WH_UP"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_MS_WH_DOWN"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_BTN1"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_BTN3"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_BTN2"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_WH_DOWN"
+      }
+     },
+     {},
+     {},
+     {}
+    ],
+    "position": 4,
+    "title": "Mouse"
+   },
+   {
+    "keys": [
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "endEnter": true,
+        "keys": [
+         {
+          "code": "KC_DOT",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_W",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_1",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "endEnter": true,
+        "keys": [
+         {
+          "code": "KC_DOT",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_M",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_K",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_S",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_E",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_S",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_S",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_I",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_O",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_N",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_1",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         }
+        ]
+       }
+      }
+     },
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {},
+     {
+      "tap": {
+       "code": "TO"
+      }
+     },
+     {
+      "tap": {
+       "code": "QK_LLCK"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "endEnter": true,
+        "keys": [
+         {
+          "code": "KC_DOT",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_Q",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_1",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "endEnter": true,
+        "keys": [
+         {
+          "code": "KC_DOT",
+          "delay": 25,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_W",
+          "delay": 25,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "endEnter": true,
+        "keys": [
+         {
+          "code": "KC_DOT",
+          "delay": 25,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_G",
+          "delay": 25,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_W",
+          "delay": 25,
+          "modifiers": null
+         },
+         {
+          "code": "KC_R",
+          "delay": 25,
+          "modifiers": null
+         },
+         {
+          "code": "KC_I",
+          "delay": 25,
+          "modifiers": null
+         },
+         {
+          "code": "KC_T",
+          "delay": 25,
+          "modifiers": null
+         },
+         {
+          "code": "KC_E",
+          "delay": 25,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "endEnter": true,
+        "keys": [
+         {
+          "code": "KC_DOT",
+          "delay": 25,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_Q",
+          "delay": 25,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "endEnter": true,
+        "keys": [
+         {
+          "code": "KC_DOT",
+          "delay": 25,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_Q",
+          "delay": 25,
+          "modifiers": null
+         },
+         {
+          "code": "KC_A",
+          "delay": 25,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_H"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_J"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_K"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_L"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_G",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": false,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_COMMA",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         }
+        ]
+       }
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_W",
+          "delay": 10,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": true,
+           "leftGui": false,
+           "leftShift": false,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_H",
+          "delay": 10,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_W",
+          "delay": 10,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": true,
+           "leftGui": false,
+           "leftShift": false,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_J",
+          "delay": 10,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_W",
+          "delay": 10,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": true,
+           "leftGui": false,
+           "leftShift": false,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_K",
+          "delay": 10,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_W",
+          "delay": 10,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": true,
+           "leftGui": false,
+           "leftShift": false,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_L",
+          "delay": 10,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_W",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     }
+    ],
+    "position": 5,
+    "title": "Vim"
+   },
+   {
+    "keys": [
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_L",
+       "modifiers": {
+        "leftGui": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "OSL",
+       "layer": 7
+      }
+     },
+     {
+      "tap": {
+       "code": "TO",
+       "layer": 4
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_LEFT_GUI"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_LEFT_SHIFT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_RIGHT_CTRL"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_LEFT_ALT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "TO"
+      }
+     },
+     {
+      "tap": {
+       "code": "QK_LLCK"
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_SECT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_LEFT",
+       "modifiers": {
+        "leftAlt": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_HOME"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_END"
+      }
+     },
+     {
+      "tap": {
+       "code": "TO",
+       "layer": 2
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_LEFT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_DOWN"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_UP"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_RIGHT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_PAGE_UP"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_MS_WH_LEFT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_LEFT",
+       "modifiers": {
+        "leftAlt": true,
+        "leftCtrl": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_RIGHT",
+       "modifiers": {
+        "leftAlt": true,
+        "leftCtrl": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_WH_RIGHT"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_PGDN"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT"
+      }
+     },
+     {},
+     {}
+    ],
+    "position": 6,
+    "title": "Navigate"
+   },
+   {
+    "keys": [
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_F1"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F2"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F3"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F4"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F5"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_F11"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F12"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F13"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F14"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F15"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "TO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MEDIA_PREV_TRACK"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MEDIA_PLAY_PAUSE"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MEDIA_STOP"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MEDIA_NEXT_TRACK"
+      }
+     },
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_F6"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F7"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F8"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F9"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F10"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_F16"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F17"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F18"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F19"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F20"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "RGB_MODE_FORWARD"
+      }
+     },
+     {
+      "tap": {
+       "code": "RGB"
+      }
+     },
+     {
+      "tap": {
+       "code": "RGB"
+      }
+     },
+     {
+      "tap": {
+       "code": "RGB"
+      }
+     },
+     {
+      "tap": {
+       "code": "QK_BOOT"
+      }
+     },
+     {},
+     {},
+     {}
+    ],
+    "position": 7,
+    "title": "Function"
+   },
+   {
+    "keys": [
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_D"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_E"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_F"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_A"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_B"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_C"
+      }
+     },
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_0"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_X"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {},
+     {},
+     {}
+    ],
+    "position": 8,
+    "title": "Hex"
+   }
+  ],
+  "model": "v1",
+  "qmkVersion": "25.0",
+  "title": "Numpad shortcuts"
+ }
+}
