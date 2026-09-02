@@ -34,9 +34,9 @@ parse_config:
     "&kp SE_PERCENT": "%"
     "&kp SE_EXCLAM": "!"
     "&kp SE_POUND": "#"
-    "&kp SE_ADIA": "ä"
-    "&kp SE_AA": "å"
-    "&kp SE_OO": "ö"
+    "&kp SE_ADIA": "Ä"
+    "&kp SE_AA": "Å"
+    "&kp SE_OO": "Ö"
     "&AK_Q": {t: "Q", s: "N→Y"}
     "&msc SCRL_LEFT": "Scroll ←"
     "&msc SCRL_RIGHT": "Scroll →"
