@@ -58,7 +58,7 @@ Defined in `config/kibard.keymap`. Layer indices:
 | 3 | Right | right thumb hold (RET, pos 33) |
 | 4 | Navigate | right thumb hold (TAB, pos 32) |
 | 5 | Vim | `lt L_VIM V` (pos 14) |
-| 6 | Mouse | `to L_MOUSE` from Navigate |
+| 6 | Mouse | `LT_TH L_MOUSE Y` hold (pos 20), or `to L_MOUSE` from Navigate |
 | 7 | Functions | `to L_FUNC` from Navigate |
 | 8 | B (Bluetooth/system) | `to L_B` from Navigate |
 | 9 | Hex | `LT_TH L_HEX` on Numpad (pos 19) |
