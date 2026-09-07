@@ -62,8 +62,18 @@ Defined in `config/kibard.keymap`. Layer indices:
 | 7 | Functions | `to L_FUNC` from Navigate |
 | 8 | B (Bluetooth/system) | `to L_B` from Navigate |
 | 9 | Hex | `LT_TH L_HEX` on Numpad (pos 19) |
+| 10 | Mouse fast | left index hold (pos 13) on Mouse |
+| 11 | Mouse slow | left middle hold (pos 12) on Mouse |
 
 `L_MAIN` always equals `L_GRAPHMOD` (layer 0). The triple-combo `30+31+32` returns to main (`&to L_MAIN`) — this is the only combo defined.
+
+### Mouse speed
+
+Layers 10 (`L_MFAST`) and 11 (`L_MSLOW`) hold nothing but `&trans` — they exist
+so the pointing input listeners can scale events while one is held from the
+Mouse layer. The scaling lives in the `&mmv_input_listener` / `&msc_input_listener`
+overrides near the top of `kibard.keymap`; the two numbers are
+`<multiplier divisor>` (16 max each), and they are the only place to tune speed.
 
 ### Home row mods
 
