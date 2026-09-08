@@ -64,10 +64,10 @@ LAYER_MAP = [
     ("Graphish", 0, "Graphmod"),
     ("Symbols",  1, "Symbols"),
     ("Numpad",   2, "Numpad"),
-    ("Right",    3, "Right"),
-    ("Mouse",    6, "Mouse"),
+    ("Mouse",    3, "Mouse"),
+    ("Right",    4, "Right"),
     ("Vim",      5, "Vim"),
-    ("Navigate", 4, "Navigate"),
+    ("Navigate", 6, "Navigate"),
     ("Function", 7, "Functions"),
     ("Hex",      9, "Hex"),
 ]
