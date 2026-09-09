@@ -407,11 +407,11 @@
             display-name = "Right";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &acut             &grav             &caps_word        &kp K_PP          &kp K_VOL_UP                             &kp SYSREQ        &kp I             &kp Z             &kp SE_ADIA       &tilde
+                    &acut             &grav             &caps_word        &kp DEL           &kp K_VOL_UP                             &kp SYSREQ        &kp I             &kp Z             &kp SE_ADIA       &tilde
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp N             &HML LGUI R       &HML LCTRL D      &HML LALT Y       &kp K_VOL_DN                             &kp LC(Z)         &HMR LALT P       &HMR LCTRL X      &HMR RSHIFT E     &kp RET
+                    &kp N             &HML LGUI R       &HML LCTRL D      &HML LALT Y       &none                                    &kp RET           &HMR LALT P       &HMR LCTRL X      &HMR RSHIFT E     &kp SE_AA
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp SE_PIPE       &kp G             &kp A             &kp J             &kp K_MUTE                               &kp CAPS          &kp LS(INS)       &kp DEL           &kp SE_UNDER      &kp SE_MINUS
+                    &kp SE_PIPE       &kp G             &kp A             &kp J             &kp K_VOL_DN                             &kp CAPS          &kp LS(INS)       &kp K             &kp SE_UNDER      &kp SE_OO
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &kp SPACE         &trans                                   &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
@@ -422,11 +422,11 @@
             display-name = "Navigate";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &kp LG(L)         &to L_B           &to L_FUNC        &kp DEL           &none                                    &kp LA(LEFT)      &kp HOME          &kp END           &to L_NUM         &none
+                    &kp LG(L)         &to L_B           &to L_FUNC        &kp DEL           &kp K_VOL_UP                             &kp LA(LEFT)      &kp HOME          &kp END           &to L_NUM         &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp LGUI          &kp LSHIFT        &kp RCTRL         &kp LALT          &none                                    &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT         &kp PG_UP
+                    &kp LGUI          &kp LSHIFT        &kp RCTRL         &kp LALT          &kp K_VOL_DN                             &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT         &kp PG_UP
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &to L_MAIN        &to L_NAV         &kp SE_SECT       &trans            &none                                    &msc SCRL_LEFT    &kp WS_L          &kp WS_R          &msc SCRL_RIGHT   &kp PG_DN
+                    &to L_MAIN        &to L_NAV         &kp SE_SECT       &kp K_PP          &kp K_MUTE                               &msc SCRL_LEFT    &kp WS_L          &kp WS_R          &msc SCRL_RIGHT   &kp PG_DN
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &trans                                   &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
