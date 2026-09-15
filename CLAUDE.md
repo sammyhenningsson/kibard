@@ -53,19 +53,19 @@ Defined in `config/kibard.keymap`. Layer indices:
 | # | Name | Activation |
 |---|------|-----------|
 | 0 | Graphmod (default) | base layer |
-| 1 | Symbols | left thumb hold (SPACE, pos 30) |
-| 2 | Numpad | left thumb hold (ESC, pos 31) |
-| 3 | Right | right thumb hold (RET, pos 33) |
-| 4 | Navigate | right thumb hold (TAB, pos 32) |
-| 5 | Vim | `lt L_VIM V` (pos 14) |
-| 6 | Mouse | `LT_TH L_MOUSE Y` hold (pos 20), or `to L_MOUSE` from Navigate |
+| 1 | Symbols | left thumb hold (`LT_TH L_SYM SPACE`, pos 30) |
+| 2 | Numpad | left thumb hold (`LT_TH L_NUM ESC`, pos 31), or `to L_NUM` from Navigate |
+| 3 | Mouse | `LT_TH L_MOUSE N` hold (pos 10) |
+| 4 | Alpha+ | right thumb hold (`LT_TH L_ALPHAP RET`, pos 33), or `lt L_ALPHAP N0` on Numpad (pos 33) |
+| 5 | Navigate | right thumb hold (`LT_TH L_NAV TAB`, pos 32) |
+| 6 | Vim | `lt L_VIM B` (pos 14) |
 | 7 | Functions | `to L_FUNC` from Navigate |
 | 8 | B (Bluetooth/system) | `to L_B` from Navigate |
-| 9 | Hex | `LT_TH L_HEX` on Numpad (pos 19) |
-| 10 | Mouse fast | left index hold (pos 13) on Mouse |
-| 11 | Mouse slow | left middle hold (pos 12) on Mouse |
+| 9 | Hex | `LT_TH L_HEX SE_PLUS` on Numpad (pos 19) |
+| 10 | Mouse fast | left thumb hold (pos 31) on Mouse |
+| 11 | Mouse slow | left thumb hold (pos 30) on Mouse |
 
-`L_MAIN` always equals `L_GRAPHMOD` (layer 0). The triple-combo `30+31+32` returns to main (`&to L_MAIN`) — this is the only combo defined.
+`L_MAIN` always equals `L_GRAPHMOD` (layer 0); `&to L_MAIN` on the Numpad, Mouse, Navigate, Functions and B layers is the way back. The only combo defined is `combo_esc`: positions `1+2` within 40 ms sends `ESC`.
 
 ### Mouse speed
 
@@ -81,7 +81,7 @@ overrides near the top of `kibard.keymap`; the two numbers are
 
 ### Swedish key defines
 
-All `SE_*` macros at the top of `kibard.keymap` map Swedish characters and symbols to their positions on a Swedish keyboard layout (e.g. `SE_AA`, `SE_ADIA`, `SE_OO` for å, ä, ö). On the base layer å/ä/ö sit directly on keys (`SE_AA` at pos 9, `SE_ADIA` at pos 27, `SE_OO` at pos 28).
+All `SE_*` macros at the top of `kibard.keymap` map Swedish characters and symbols to their positions on a Swedish keyboard layout (e.g. `SE_AA`, `SE_ADIA`, `SE_OO` for å, ä, ö). On the base layer å/ä/ö sit directly on keys (`SE_AA` at pos 9, `SE_ADIA` at pos 27, `SE_OO` at pos 29).
 
 ### Vim macros
 

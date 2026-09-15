@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "JalaNp",
+  "hashId": "JalvVz",
   "layers": [
    {
     "keys": [
@@ -967,8 +967,16 @@
       }
      },
      {},
-     {},
-     {}
+     {
+      "tap": {
+       "code": "KC_MS_BTN1"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_MS_BTN2"
+      }
+     }
     ],
     "position": 3,
     "title": "Mouse"
@@ -1031,7 +1039,7 @@
      },
      {
       "tap": {
-       "code": "CW_TOGG"
+       "code": "KC_F"
       }
      },
      {
@@ -1113,7 +1121,11 @@
        "code": "KC_SPACE"
       }
      },
-     {},
+     {
+      "tap": {
+       "code": "CW_TOGG"
+      }
+     },
      {},
      {},
      {},
@@ -1200,7 +1212,7 @@
      },
      {
       "tap": {
-       "code": "KC_K"
+       "code": "SE_OSLH"
       }
      },
      {},
@@ -1237,7 +1249,7 @@
      {}
     ],
     "position": 4,
-    "title": "Right"
+    "title": "Alpha+"
    },
    {
     "keys": [
@@ -1898,7 +1910,7 @@
      },
      {
       "tap": {
-       "code": "SE_SECT"
+       "code": "KC_BSPC"
       }
      },
      {
@@ -1912,7 +1924,11 @@
       }
      },
      {},
-     {},
+     {
+      "tap": {
+       "code": "SE_SECT"
+      }
+     },
      {},
      {
       "tap": {
