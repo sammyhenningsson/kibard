@@ -60,6 +60,12 @@ After any keymap change:
 tools/render-layer-images.sh   # needs the keymap-drawer venv + rsvg-convert
 ```
 
-The app picks up the new files immediately (they're symlinks). Adding or
-reordering a layer additionally means updating the `LAYERS` array in that script
-*and* the `layer_N` entries in `config.ini` — both are ordered by layer index.
+Re-rendering an existing layer is picked up immediately (the app's `assets/`
+entries are symlinks). Adding, removing or *renaming* a layer means a new image
+basename, so also:
+
+- update the `LAYERS` array in that script and the `layer_N` entries in
+  `config.ini` — both are ordered by layer index;
+- re-run `companion/install.sh`, which links the new basename and prunes the
+  symlink the old one left behind. Skip it and the app shows nothing for that
+  layer.

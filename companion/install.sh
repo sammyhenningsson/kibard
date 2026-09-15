@@ -32,6 +32,17 @@ if [ ${#images[@]} -eq 0 ]; then
     exit 1
 fi
 
+# Drop links left behind by a renamed or deleted layer image: they'd otherwise
+# stay dangling in assets/ and the app would show nothing for that layer.
+shopt -s nullglob
+for link in "$APP"/assets/kibard-*.png; do
+    if [ -L "$link" ] && [ ! -e "$link" ]; then
+        rm -f "$link"
+        echo "  removed stale assets/$(basename "$link")"
+    fi
+done
+shopt -u nullglob
+
 for img in "${images[@]}"; do
     ln -sfn "$img" "$APP/assets/$(basename "$img")"
     echo "  assets/$(basename "$img") -> companion/images/$(basename "$img")"
