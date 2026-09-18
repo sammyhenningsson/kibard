@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "or7qrr",
+  "hashId": "pjM7XD",
   "layers": [
    {
     "keys": [
@@ -73,7 +73,7 @@
      {
       "hold": {
        "code": "MO",
-       "layer": 3
+       "layer": 4
       },
       "tap": {
        "code": "KC_N"
@@ -106,7 +106,7 @@
      {
       "hold": {
        "code": "MO",
-       "layer": 5
+       "layer": 6
       },
       "tap": {
        "code": "KC_B"
@@ -154,7 +154,7 @@
      {
       "hold": {
        "code": "MO",
-       "layer": 2
+       "layer": 3
       },
       "tap": {
        "code": "KC_ESCAPE"
@@ -221,6 +221,10 @@
       }
      },
      {
+      "hold": {
+       "code": "MO",
+       "layer": 6
+      },
       "tap": {
        "code": "KC_V"
       }
@@ -295,7 +299,7 @@
      {
       "hold": {
        "code": "MO",
-       "layer": 6
+       "layer": 7
       },
       "tap": {
        "code": "KC_TAB"
@@ -304,7 +308,7 @@
      {
       "hold": {
        "code": "MO",
-       "layer": 4
+       "layer": 5
       },
       "tap": {
        "code": "KC_ENTER"
@@ -350,6 +354,10 @@
      },
      {},
      {
+      "hold": {
+       "code": "MO",
+       "layer": 2
+      },
       "tap": {
        "code": "SE_AT"
       }
@@ -512,7 +520,7 @@
      {
       "hold": {
        "code": "MO",
-       "layer": 4
+       "layer": 5
       },
       "tap": {
        "code": "SE_UNDS"
@@ -521,6 +529,224 @@
     ],
     "position": 1,
     "title": "Symbols"
+   },
+   {
+    "keys": [
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_EQUAL",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_SPACE",
+          "delay": 5,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_EQUAL",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_EQUAL",
+          "delay": 5,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {},
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_RBRC",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_SPACE",
+          "delay": 5,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "SE_EURO"
+      }
+     },
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_RBRC",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": true,
+           "rightAlt": false,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_O",
+          "delay": 5,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_MU"
+      }
+     },
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_EQUAL",
+          "delay": 5,
+          "modifiers": null
+         },
+         {
+          "code": "KC_E",
+          "delay": 5,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_TRANSPARENT",
+       "macro": {
+        "keys": [
+         {
+          "code": "KC_RBRC",
+          "delay": 5,
+          "modifiers": {
+           "leftAlt": false,
+           "leftCtrl": false,
+           "leftGui": false,
+           "leftShift": false,
+           "rightAlt": true,
+           "rightCtrl": false,
+           "rightGui": false,
+           "rightShift": false
+          }
+         },
+         {
+          "code": "KC_SPACE",
+          "delay": 5,
+          "modifiers": null
+         }
+        ]
+       }
+      }
+     },
+     {},
+     {},
+     {
+      "tap": {
+       "code": "SE_PND"
+      }
+     },
+     {},
+     {},
+     {},
+     {},
+     {},
+     {}
+    ],
+    "position": 2,
+    "title": "Symbols+"
    },
    {
     "keys": [
@@ -701,7 +927,7 @@
      {
       "hold": {
        "code": "MO",
-       "layer": 8
+       "layer": 9
       },
       "tap": {
        "code": "SE_PLUS"
@@ -749,7 +975,7 @@
      {
       "hold": {
        "code": "MO",
-       "layer": 6
+       "layer": 7
       },
       "tap": {
        "code": "KC_SPACE"
@@ -758,14 +984,14 @@
      {
       "hold": {
        "code": "MO",
-       "layer": 4
+       "layer": 5
       },
       "tap": {
        "code": "KC_0"
       }
      }
     ],
-    "position": 2,
+    "position": 3,
     "title": "Numpad"
    },
    {
@@ -981,7 +1207,7 @@
       }
      }
     ],
-    "position": 3,
+    "position": 4,
     "title": "Mouse"
    },
    {
@@ -993,51 +1219,10 @@
      {},
      {},
      {},
+     {},
      {
       "tap": {
-       "code": "KC_TRANSPARENT",
-       "macro": {
-        "keys": [
-         {
-          "code": "KC_EQUAL",
-          "delay": 5,
-          "modifiers": null
-         },
-         {
-          "code": "KC_EQUAL",
-          "delay": 5,
-          "modifiers": null
-         }
-        ]
-       }
-      }
-     },
-     {
-      "tap": {
-       "code": "KC_TRANSPARENT",
-       "macro": {
-        "keys": [
-         {
-          "code": "KC_EQUAL",
-          "delay": 5,
-          "modifiers": {
-           "leftAlt": false,
-           "leftCtrl": false,
-           "leftGui": false,
-           "leftShift": true,
-           "rightAlt": false,
-           "rightCtrl": false,
-           "rightGui": false,
-           "rightShift": false
-          }
-         },
-         {
-          "code": "KC_SPACE",
-          "delay": 5,
-          "modifiers": null
-         }
-        ]
-       }
+       "code": "KC_S"
       }
      },
      {
@@ -1094,11 +1279,7 @@
       }
      },
      {},
-     {
-      "tap": {
-       "code": "SE_PIPE"
-      }
-     },
+     {},
      {
       "tap": {
        "code": "KC_G"
@@ -1110,6 +1291,12 @@
       }
      },
      {
+      "hold": {
+       "code": "KC_J",
+       "modifiers": {
+        "leftShift": true
+       }
+      },
       "tap": {
        "code": "KC_J"
       }
@@ -1155,34 +1342,7 @@
        "code": "SE_AA"
       }
      },
-     {
-      "tap": {
-       "code": "KC_TRANSPARENT",
-       "macro": {
-        "keys": [
-         {
-          "code": "KC_RBRC",
-          "delay": 5,
-          "modifiers": {
-           "leftAlt": true,
-           "leftCtrl": false,
-           "leftGui": false,
-           "leftShift": false,
-           "rightAlt": false,
-           "rightCtrl": false,
-           "rightGui": false,
-           "rightShift": false
-          }
-         },
-         {
-          "code": "KC_SPACE",
-          "delay": 5,
-          "modifiers": null
-         }
-        ]
-       }
-      }
-     },
+     {},
      {},
      {
       "tap": {
@@ -1251,7 +1411,7 @@
      {},
      {}
     ],
-    "position": 4,
+    "position": 5,
     "title": "Alpha+"
    },
    {
@@ -1399,22 +1559,22 @@
      {},
      {
       "tap": {
-       "code": "KC_NO"
+       "code": "KC_V"
       }
      },
      {
       "tap": {
-       "code": "KC_NO"
+       "code": "KC_Y"
       }
      },
      {
       "tap": {
-       "code": "KC_NO"
+       "code": "KC_I"
       }
      },
      {
       "tap": {
-       "code": "KC_NO"
+       "code": "KC_W"
       }
      },
      {},
@@ -1434,7 +1594,11 @@
        "code": "KC_NO"
       }
      },
-     {},
+     {
+      "tap": {
+       "code": "KC_C"
+      }
+     },
      {
       "tap": {
        "code": "KC_NO"
@@ -1647,11 +1811,7 @@
       }
      },
      {},
-     {
-      "tap": {
-       "code": "KC_H"
-      }
-     },
+     {},
      {
       "tap": {
        "code": "KC_J"
@@ -1833,7 +1993,7 @@
       }
      }
     ],
-    "position": 5,
+    "position": 6,
     "title": "Vim"
    },
    {
@@ -1861,7 +2021,7 @@
      {
       "tap": {
        "code": "OSL",
-       "layer": 7
+       "layer": 8
       }
      },
      {
@@ -1975,7 +2135,7 @@
      {
       "tap": {
        "code": "TO",
-       "layer": 2
+       "layer": 3
       }
      },
      {
@@ -2051,7 +2211,7 @@
      {},
      {}
     ],
-    "position": 6,
+    "position": 7,
     "title": "Navigate"
    },
    {
@@ -2229,7 +2389,7 @@
      {},
      {}
     ],
-    "position": 7,
+    "position": 8,
     "title": "Function"
    },
    {
@@ -2399,12 +2559,12 @@
      {},
      {}
     ],
-    "position": 8,
+    "position": 9,
     "title": "Hex"
    }
   ],
   "model": "v1",
   "qmkVersion": "25.0",
-  "title": "MEH"
+  "title": "Keyboard layout edited."
  }
 }

@@ -34,9 +34,20 @@ parse_config:
     "&kp SE_PERCENT": "%"
     "&kp SE_EXCLAM": "!"
     "&kp SE_POUND": "#"
+    "&kp SE_MICRO": "µ"
+    "&kp SE_EURO": "€"
+    "&kp SE_STERLING": "£"
     "&kp SE_ADIA": "Ä"
     "&kp SE_AA": "Å"
     "&kp SE_OO": "Ö"
+    # Dead-key macros: each taps the dead key and then the character that
+    # completes it, so they draw as the composed result, not the dead key.
+    "&acut": "´"
+    "&grav": "`"
+    "&tilde": "~"
+    "&circ": "^"
+    "&eacut": "é"
+    "&ocirc": "ô"
     "&AK_Q": {t: "Q", s: "N→Y"}
     "&msc SCRL_LEFT": "Scroll ←"
     "&msc SCRL_RIGHT": "Scroll →"

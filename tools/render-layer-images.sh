@@ -19,9 +19,20 @@ OUT="${1:-$REPO/companion/images}"
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK"' EXIT
 
-# Layer name in the keymap -> image basename, in layer-index order (0..9).
-LAYERS=(Graphmod:graphmod Symbols:symbols Numpad:numpad Mouse:mouse Alpha+:alpha+ \
-        Navigate:navigate Vim:vim Functions:functions B:b Hex:hex)
+# Layer name in the keymap -> image basename, in layer-index order (0..10).
+LAYERS=(
+    Graphmod:graphmod
+    Symbols:symbols
+    Symbols+:symbols+
+    Numpad:numpad
+    Mouse:mouse
+    Alpha+:alpha+
+    Navigate:navigate
+    Vim:vim
+    Functions:functions
+    B:b
+    Hex:hex
+)
 
 mkdir -p "$OUT"
 "$KM" -c "$CONFIG" parse -z "$KEYMAP" -o "$WORK/kibard.yaml"

@@ -54,22 +54,23 @@ Defined in `config/kibard.keymap`. Layer indices:
 |---|------|-----------|
 | 0 | Graphmod (default) | base layer |
 | 1 | Symbols | left thumb hold (`LT_TH L_SYM SPACE`, pos 30) |
-| 2 | Numpad | left thumb hold (`LT_TH L_NUM ESC`, pos 31), or `to L_NUM` from Navigate |
-| 3 | Mouse | `LT_TH L_MOUSE N` hold (pos 10) |
-| 4 | Alpha+ | right thumb hold (`LT_TH L_ALPHAP RET`, pos 33), or `lt L_ALPHAP N0` on Numpad (pos 33) |
-| 5 | Navigate | right thumb hold (`LT_TH L_NAV TAB`, pos 32) |
-| 6 | Vim | `lt L_VIM B` (pos 14) |
-| 7 | Functions | `to L_FUNC` from Navigate |
-| 8 | B (Bluetooth/system) | `to L_B` from Navigate |
-| 9 | Hex | `LT_TH L_HEX SE_PLUS` on Numpad (pos 19) |
-| 10 | Mouse fast | left thumb hold (pos 31) on Mouse |
-| 11 | Mouse slow | left thumb hold (pos 30) on Mouse |
+| 2 | Symbols+ | `LT_TH L_SYMP SE_AT` hold on Symbols (pos 10) |
+| 3 | Numpad | left thumb hold (`LT_TH L_NUM ESC`, pos 31), or `to L_NUM` from Navigate |
+| 4 | Mouse | `LT_TH L_MOUSE N` hold (pos 10) |
+| 5 | Alpha+ | right thumb hold (`LT_TH L_ALPHAP RET`, pos 33), or `lt L_ALPHAP N0` on Numpad (pos 33) |
+| 6 | Navigate | right thumb hold (`LT_TH L_NAV TAB`, pos 32) |
+| 7 | Vim | `lt L_VIM B` (pos 14) |
+| 8 | Functions | `to L_FUNC` from Navigate |
+| 9 | B (Bluetooth/system) | `to L_B` from Navigate |
+| 10 | Hex | `LT_TH L_HEX SE_PLUS` on Numpad (pos 19) |
+| 11 | Mouse fast | left thumb hold (pos 31) on Mouse |
+| 12 | Mouse slow | left thumb hold (pos 30) on Mouse |
 
 `L_MAIN` always equals `L_GRAPHMOD` (layer 0); `&to L_MAIN` on the Numpad, Mouse, Navigate, Functions and B layers is the way back. The only combo defined is `combo_esc`: positions `1+2` within 40 ms sends `ESC`.
 
 ### Mouse speed
 
-Layers 10 (`L_MFAST`) and 11 (`L_MSLOW`) hold nothing but `&trans` — they exist
+Layers 11 (`L_MFAST`) and 12 (`L_MSLOW`) hold nothing but `&trans` — they exist
 so the pointing input listeners can scale events while one is held from the
 Mouse layer. The scaling lives in the `&mmv_input_listener` / `&msc_input_listener`
 overrides near the top of `kibard.keymap`; the two numbers are
@@ -110,5 +111,5 @@ rename or reorder in Oryx fails loudly instead of diffing the wrong layers:
 - `POSITION_MAP` — Voyager key index → Kibård position (the Kibård uses the
   Voyager's inner 5 columns of rows 1–3, plus both thumb pairs).
 - `LAYER_MAP` — Oryx layer → ZMK layer. The two differ in order: Oryx
-  4 Mouse → ZMK 6, Oryx 6 Navigate → ZMK 4, Oryx 8 Hex → ZMK 9. ZMK layer 8
+  5 Vim → ZMK 7, Oryx 6 Navigate → ZMK 6, Oryx 8 Hex → ZMK 10. ZMK layer 9
   (Bluetooth) has no Oryx counterpart, so nothing maps onto it.

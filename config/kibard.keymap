@@ -41,24 +41,28 @@
 #define SE_PERCENT LS(N5)
 #define SE_EXCLAM LS(N1)
 #define SE_POUND LS(N3)
+#define SE_MICRO RA(M)
+#define SE_EURO RA(N5)
+#define SE_STERLING RA(N3)
 #define SE_ADIA APOS
 #define SE_AA LEFT_BRACKET
 #define SE_OO SEMI
 
 #define L_GRAPHMOD 0
 #define L_SYM 1
-#define L_NUM 2
-#define L_MOUSE 3
-#define L_ALPHAP 4
-#define L_NAV 5
-#define L_VIM 6
-#define L_FUNC 7
-#define L_B 8
-#define L_HEX 9
+#define L_SYMP 2
+#define L_NUM 3
+#define L_MOUSE 4
+#define L_ALPHAP 5
+#define L_NAV 6
+#define L_VIM 7
+#define L_FUNC 8
+#define L_B 9
+#define L_HEX 10
 // Speed modifiers for the Mouse layer: all-&trans layers that exist only so the
 // pointer/scroll input listeners can scale their events while one is held.
-#define L_MFAST 10
-#define L_MSLOW 11
+#define L_MFAST 11
+#define L_MSLOW 12
 #define L_MAIN L_GRAPHMOD
 
 // MEH = Ctrl + Shift + Alt
@@ -327,6 +331,24 @@
                 , <&macro_tap &kp SPACE>
                 ;
         };
+
+        eacut: eacut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SE_ACUT>
+                , <&macro_tap &kp E>
+                ;
+        };
+
+        ocirc: ocirc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SE_CIRC>
+                , <&macro_tap &kp O>
+                ;
+        };
     };
 };
 
@@ -352,7 +374,7 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &kp J             &kp W             &kp D             &kp G             &AK_Q                                    &kp BSPC          &kp F             &kp O             &kp U             &kp SE_AA
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &LT_TH L_MOUSE N  &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &kp V             &HMR LALT H       &HMR RCTRL A      &HMR RSHIFT E     &HMR MEH I
+                    &LT_TH L_MOUSE N  &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &HMR LALT H       &HMR RCTRL A      &HMR RSHIFT E     &HMR MEH I
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp Y             &kp M             &kp P             &kp C             &kp COMMA                                &kp DOT           &kp L             &kp SE_ADIA       &kp K             &kp SE_OO
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
@@ -367,11 +389,26 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &kp SE_ACUT       &kp SE_GRAV       &kp SE_COLON      &kp SE_AMPR       &kp SE_CIRC                              &kp BSPC          &kp SE_LBRACKET   &kp SE_RBRACKET   &kp SE_BSLS       &kp SE_TILDE
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp SE_AT         &HML LSHIFT SE_SLASH  &HML LCTRL SE_QUES  &HML LALT SE_DQUOT  &kp SE_EQUAL                     &kp SE_ASTR       &HMR LALT SE_LPAR   &HMR RCTRL SE_RPAR  &HMR RSHIFT SE_APOS  &kp SE_PLUS
+                    &LT_TH L_SYMP SE_AT  &HML LSHIFT SE_SLASH  &HML LCTRL SE_QUES  &HML LALT SE_DQUOT  &kp SE_EQUAL                  &kp SE_ASTR       &HMR LALT SE_LPAR   &HMR RCTRL SE_RPAR  &HMR RSHIFT SE_APOS  &kp SE_PLUS
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp SE_PIPE       &kp SE_LESS       &kp SE_GRTR       &kp SE_EXCLAM     &kp SE_DOLLAR                            &kp SE_PERCENT    &kp SE_LBRACE     &kp SE_RBRACE     &kp SE_POUND      &kp SE_MINUS
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &trans                                   &kp SPACE         &kp SE_UNDER
+                //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
+            >;
+        };
+
+        symbolplus_layer {
+            display-name = "Symbols+";
+            bindings = <
+                //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
+                    &none             &grav             &acut             &trans            &circ                                    &trans            &trans            &ocirc            &kp SE_MICRO      &trans
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &trans            &trans            &trans            &trans            &trans                                   &trans            &trans            &trans            &eacut            &tilde
+                //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+                    &trans            &trans            &trans            &trans            &kp SE_EURO                              &trans            &kp SE_STERLING   &trans            &trans            &trans
+                //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
+                                                                          &trans            &trans                                   &kp SPACE         &lt L_ALPHAP N0
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
             >;
         };
@@ -410,11 +447,11 @@
             display-name = "Alpha+";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &acut             &grav             &kp F             &kp DEL           &kp K_VOL_UP                             &kp PSCRN         &kp I             &kp Z             &kp SE_AA         &tilde
+                    &none             &kp S             &kp F             &kp DEL           &kp K_VOL_UP                             &kp PSCRN         &kp I             &kp Z             &kp SE_AA         &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &HML LGUI N       &HML LSHIFT R     &HML LCTRL D      &HML LALT Y       &kp K_VOL_DN                             &kp RET           &HMR LALT P       &HMR LCTRL X      &HMR RSHIFT E     &kp SE_OO
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp SE_PIPE       &kp G             &kp A             &kp J             &kp K_MUTE                               &kp CAPS          &kp LS(INS)       &kp SE_ADIA       &kp SE_UNDER      &kp SE_MINUS
+                    &kp SE_PIPE       &kp G             &kp A             &HML LS(J) J      &kp K_MUTE                               &kp CAPS          &kp LS(INS)       &kp SE_ADIA       &kp SE_UNDER      &kp SE_MINUS
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &kp SPACE         &caps_word                               &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
@@ -442,9 +479,9 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &trans            &vim_force_write  &trans            &trans            &trans                                   &vim_discard      &vim_write        &vim_gwrite       &vim_close        &vim_close_all
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &trans            &trans            &trans            &trans            &trans                                   &kp H             &kp J             &kp K             &kp L             &trans
+                    &kp V             &kp Y             &kp I             &kp W             &trans                                   &kp H             &kp J             &kp K             &kp L             &trans
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &trans            &to L_VIM         &trans            &trans            &trans                                   &vim_win_left     &vim_win_down     &vim_win_up       &vim_win_right    &trans
+                    &trans            &to L_VIM         &trans            &kp C             &trans                                   &vim_win_left     &vim_win_down     &vim_win_up       &vim_win_right    &trans
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &trans                                   &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯

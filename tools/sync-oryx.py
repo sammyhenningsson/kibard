@@ -61,15 +61,16 @@ POSITION_MAP = [
 # asserted on every run: if you rename or reorder layers in Oryx the tool stops
 # rather than silently diffing the wrong pair.
 LAYER_MAP = [
-    ("Graphish", 0, "Graphmod"),
-    ("Symbols",  1, "Symbols"),
-    ("Numpad",   2, "Numpad"),
-    ("Mouse",    3, "Mouse"),
-    ("Alpha+",   4, "Alpha+"),
-    ("Vim",      5, "Vim"),
-    ("Navigate", 6, "Navigate"),
-    ("Function", 7, "Functions"),
-    ("Hex",      9, "Hex"),
+    ("Graphish", 0,  "Graphmod"),
+    ("Symbols",  1,  "Symbols"),
+    ("Symbols+", 2,  "Symbols+"),
+    ("Numpad",   3,  "Numpad"),
+    ("Mouse",    4,  "Mouse"),
+    ("Alpha+",   5,  "Alpha+"),
+    ("Vim",      7,  "Vim"),
+    ("Navigate", 6,  "Navigate"),
+    ("Function", 8,  "Functions"),
+    ("Hex",      10, "Hex"),
 ]
 
 # ---------------------------------------------------------------- keycodes ---
@@ -127,9 +128,10 @@ MOD_WRAP = [("leftCtrl", "LC"), ("leftShift", "LS"), ("leftAlt", "LA"),
 
 # Oryx layer index -> ZMK layer index, for MO/TO/OSL targets.
 ZMK_LAYER = {i: z for i, (_t, z, _n) in enumerate(LAYER_MAP)}
-ZMK_LAYER_NAME = {0: "L_GRAPHMOD", 1: "L_SYM", 2: "L_NUM", 3: "L_MOUSE",
-                  4: "L_ALPHAP", 5: "L_NAV", 6: "L_VIM", 7: "L_FUNC", 8: "L_B",
-                  9: "L_HEX"}   # ZMK 8 is Bluetooth, which Oryx has no equivalent for
+ZMK_LAYER_NAME = {0: "L_GRAPHMOD", 1: "L_SYM", 2: "L_SYMP", 3: "L_NUM",
+                  4: "L_MOUSE", 5: "L_ALPHAP", 6: "L_NAV", 7: "L_VIM",
+                  8: "L_FUNC", 9: "L_B", 10: "L_HEX"}
+# ZMK 9 is Bluetooth, which Oryx has no equivalent for
 
 # ------------------------------------------------------------------ fetch ---
 
