@@ -447,11 +447,11 @@
             display-name = "Alpha+";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &none             &kp S             &kp F             &kp DEL           &kp K_VOL_UP                             &kp PSCRN         &kp I             &kp Z             &kp SE_AA         &none
+                    &none             &kp S             &kp F             &kp DEL           &kp V                                    &kp PSCRN         &kp I             &kp Z             &kp SE_AA         &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML LGUI N       &HML LSHIFT R     &HML LCTRL D      &HML LALT Y       &kp K_VOL_DN                             &kp RET           &HMR LALT P       &HMR LCTRL X      &HMR RSHIFT E     &kp SE_OO
+                    &HML LGUI N       &HML LSHIFT R     &HML LCTRL D      &HML LALT Y       &kp L                                    &kp RET           &HMR LALT P       &HMR LCTRL X      &HMR RSHIFT E     &kp SE_OO
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp SE_PIPE       &kp G             &kp A             &HML LS(J) J      &kp K_MUTE                               &kp CAPS          &kp LS(INS)       &kp SE_ADIA       &kp SE_UNDER      &kp SE_MINUS
+                    &kp SE_PIPE       &kp G             &kp A             &HML LS(J) J      &none                                    &kp CAPS          &kp LS(INS)       &kp SE_ADIA       &kp SE_UNDER      &kp SE_MINUS
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &kp SPACE         &caps_word                               &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
