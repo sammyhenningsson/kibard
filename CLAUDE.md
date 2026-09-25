@@ -8,7 +8,9 @@ ZMK firmware configuration for **Kibård**, a custom split keyboard. The firmwar
 
 ## Building firmware
 
-Firmware is built via GitHub Actions — push to the repo and download the `.uf2` artifacts from the Actions run. The build matrix is defined in `build.yaml` and produces two artifacts: `kibard_left` and `kibard_right`.
+Firmware is built via GitHub Actions — push to the repo and download the `.uf2` artifacts from the Actions run. The build matrix is defined in `build.yaml` and produces two artifacts: `kibard_left` and `kibard_right` (plus `settings_reset`).
+
+The board target is `nice_nano//zmk`, not `nice_nano_v2` — Zephyr 4.1's hardware model v2 replaced the old name with `nice_nano@2.0.0//zmk`, and ZMK board definitions now require the `zmk` variant. Since `config/west.yml` tracks ZMK `main`, `.github/workflows/build.yml` calls `build-user-config.yml@main` to match.
 
 There is no local build command in this repo. Local ZMK builds require a separate Zephyr/West development environment (see [ZMK docs](https://zmk.dev/docs/development/setup)).
 

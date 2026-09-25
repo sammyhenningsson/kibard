@@ -18,10 +18,18 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
+# Board target is Zephyr hardware-model v2: `nice_nano_v2` became
+# `nice_nano@2.0.0//zmk`, short `nice_nano//zmk` (2.0.0 is the default
+# revision, and ZMK board definitions now require the `zmk` variant).
+# `artifact-name` keeps the download names clean — the workflow would
+# otherwise fold the slashes into `kibard_left-nice_nano__zmk-zmk`.
 include:
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: kibard_left
-  - board: nice_nano_v2
+    artifact-name: kibard_left
+  - board: nice_nano//zmk
     shield: kibard_right
-  - board: nice_nano_v2
+    artifact-name: kibard_right
+  - board: nice_nano//zmk
     shield: settings_reset
+    artifact-name: settings_reset
