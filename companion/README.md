@@ -11,7 +11,9 @@ app checkout so a new machine only needs `git clone` of this repo.
 
 The firmware side is `CONFIG_ZMK_LAYER_STATUS_BLE_HID=y` in `config/kibard_left.conf`,
 which stuffs the active layer number into the reserved byte of the keyboard HID
-report — so this works over BLE *and* USB, on the central half only.
+report — so this works over BLE *and* USB, on the central half only. That code is
+vendored in [`src/appcompanion/`](../src/appcompanion) rather than pulled in as a
+west module; its README says why.
 
 ## Setting up a machine
 

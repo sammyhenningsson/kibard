@@ -41,6 +41,8 @@ Left half = BLE central + USB host. Right half = BLE peripheral only.
 | `config/kibard_left.conf` | Left: split central + BLE |
 | `config/kibard_right.conf` | Right: split peripheral + BLE + USB |
 | `config/west.yml` | ZMK revision pin (`main` — see Layer lock) |
+| `src/appcompanion/` | Vendored layer-status firmware source — see its README |
+| `CMakeLists.txt`, `Kconfig`, `zephyr/module.yml` | Make this repo a Zephyr module: shield board root plus the vendored sources |
 | `build.yaml` | GitHub Actions build matrix |
 | `companion/` | Layer-display host files (`config.ini` + rendered layer images) — see `companion/README.md` |
 | `tools/render-layer-images.sh` | Regenerates `companion/images/` from the keymap via keymap-drawer |
