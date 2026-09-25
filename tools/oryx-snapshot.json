@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "DzKw9N",
+  "hashId": "9DPXw7",
   "layers": [
    {
     "keys": [
@@ -123,6 +123,9 @@
       }
      },
      {
+      "hold": {
+       "code": "MEH_T"
+      },
       "tap": {
        "code": "KC_M"
       }
@@ -631,11 +634,7 @@
      {},
      {},
      {},
-     {
-      "tap": {
-       "code": "SE_EURO"
-      }
-     },
+     {},
      {},
      {},
      {},
@@ -738,7 +737,11 @@
        "code": "SE_PND"
       }
      },
-     {},
+     {
+      "tap": {
+       "code": "SE_EURO"
+      }
+     },
      {},
      {},
      {},
@@ -882,23 +885,20 @@
       }
      },
      {
-      "hold": {
-       "code": "SE_CIRC"
-      },
       "tap": {
        "code": "KC_9"
       }
      },
      {
-      "hold": {
-       "code": "TO"
-      },
       "tap": {
-       "code": "SE_EQL"
+       "code": "KC_NO"
       }
      },
      {},
      {
+      "hold": {
+       "code": "SE_CIRC"
+      },
       "tap": {
        "code": "SE_ASTR"
       }
@@ -920,6 +920,9 @@
       }
      },
      {
+      "hold": {
+       "code": "SE_EQL"
+      },
       "tap": {
        "code": "KC_6"
       }
@@ -967,6 +970,9 @@
       }
      },
      {
+      "hold": {
+       "code": "TO"
+      },
       "tap": {
        "code": "SE_MINS"
       }
@@ -1222,7 +1228,7 @@
      {},
      {
       "tap": {
-       "code": "KC_S"
+       "code": "KC_L"
       }
      },
      {
@@ -1275,11 +1281,15 @@
      },
      {
       "tap": {
-       "code": "KC_L"
+       "code": "KC_S"
       }
      },
      {},
-     {},
+     {
+      "tap": {
+       "code": "KC_M"
+      }
+     },
      {
       "tap": {
        "code": "KC_G"
@@ -1303,7 +1313,7 @@
      },
      {
       "tap": {
-       "code": "KC_NO"
+       "code": "KC_PSCR"
       }
      },
      {
@@ -1324,7 +1334,7 @@
      {},
      {
       "tap": {
-       "code": "KC_PSCR"
+       "code": "KC_BSPC"
       }
      },
      {
@@ -2007,10 +2017,7 @@
      {},
      {
       "tap": {
-       "code": "KC_L",
-       "modifiers": {
-        "leftGui": true
-       }
+       "code": "KC_NO"
       }
      },
      {
@@ -2087,11 +2094,7 @@
       }
      },
      {},
-     {
-      "tap": {
-       "code": "SE_SECT"
-      }
-     },
+     {},
      {},
      {
       "tap": {
@@ -2134,8 +2137,10 @@
      },
      {
       "tap": {
-       "code": "TO",
-       "layer": 3
+       "code": "KC_L",
+       "modifiers": {
+        "leftGui": true
+       }
       }
      },
      {
@@ -2172,30 +2177,23 @@
      {},
      {
       "tap": {
+       "code": "KC_NO"
+      }
+     },
+     {
+      "tap": {
        "code": "KC_MS_WH_LEFT"
       }
      },
      {
       "tap": {
-       "code": "KC_LEFT",
-       "modifiers": {
-        "leftAlt": true,
-        "leftCtrl": true
-       }
-      }
-     },
-     {
-      "tap": {
-       "code": "KC_RIGHT",
-       "modifiers": {
-        "leftAlt": true,
-        "leftCtrl": true
-       }
-      }
-     },
-     {
-      "tap": {
        "code": "KC_MS_WH_RIGHT"
+      }
+     },
+     {
+      "tap": {
+       "code": "TO",
+       "layer": 3
       }
      },
      {
@@ -2532,7 +2530,7 @@
      {},
      {
       "tap": {
-       "code": "KC_NO"
+       "code": "KC_PERC"
       }
      },
      {
@@ -2556,8 +2554,16 @@
       }
      },
      {},
-     {},
-     {}
+     {
+      "tap": {
+       "code": "KC_SPACE"
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_0"
+      }
+     }
     ],
     "position": 9,
     "title": "Hex"
