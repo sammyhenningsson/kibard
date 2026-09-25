@@ -38,7 +38,7 @@ Left half = BLE central + USB host. Right half = BLE peripheral only.
 | `config/kibard.keymap` | All layers, behaviors, macros, combos |
 | `config/kibard_left.conf` | Left: split central + BLE |
 | `config/kibard_right.conf` | Right: split peripheral + BLE + USB |
-| `config/west.yml` | ZMK version pin (v0.3) |
+| `config/west.yml` | ZMK revision pin (`main` — see Layer lock) |
 | `build.yaml` | GitHub Actions build matrix |
 | `companion/` | Layer-display host files (`config.ini` + rendered layer images) — see `companion/README.md` |
 | `tools/render-layer-images.sh` | Regenerates `companion/images/` from the keymap via keymap-drawer |
@@ -67,6 +67,19 @@ Defined in `config/kibard.keymap`. Layer indices:
 | 12 | Mouse slow | left thumb hold (pos 30) on Mouse |
 
 `L_MAIN` always equals `L_GRAPHMOD` (layer 0); `&to L_MAIN` on the Numpad, Mouse, Navigate, Functions and B layers is the way back. The only combo defined is `combo_esc`: positions `1+2` within 40 ms sends `ESC`.
+
+### Layer lock
+
+Position 21 (`M` on the base layer) is a lock key on the Numpad, Mouse,
+Navigate and Vim layers: `&tog L_NUM`, `&tog L_MOUSE`, `&tog L_NAV`,
+`&tog L_VIM`. Hold the layer's activation key, tap position 21, release the
+hold — the layer stays on; tap it again to drop back to Graphmod.
+
+This relies on ZMK's layer *locking* ([zmk#2717](https://github.com/zmkfirmware/zmk/pull/2717)):
+`&to` and `&tog` mark a layer locked, and a locked layer ignores deactivation
+from non-locking behaviors such as the `&mo` inside `LT_TH`/`&lt`. It is not in
+v0.3, which is why `config/west.yml` tracks ZMK `main`. Custom layer behaviors
+opt in with a `locking;` property; `&mo` deliberately does not lock.
 
 ### Mouse speed
 

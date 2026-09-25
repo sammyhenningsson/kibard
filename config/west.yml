@@ -1,6 +1,9 @@
 manifest:
   defaults:
-    revision: v0.3
+    # Tracks ZMK `main`: layer locking (`&tog`/`&to` pinning a momentary layer
+    # active) landed after the v0.3 release and is unreleased as of 2026-09.
+    # Move back to a tag once v0.4 ships.
+    revision: main
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -16,7 +19,7 @@ manifest:
       import: app/west.yml
     - name: zmk-adaptive-key
       remote: urob
-      revision: v0.3 # Should match the ZMK release above.
+      revision: main # Should match the ZMK revision above.
     # Reports the active layer to the Keyboard Layers App Companion desktop app.
     # Untagged upstream — only `main` exists.
     - name: zmk-feature-appcompanion
