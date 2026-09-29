@@ -64,7 +64,7 @@ Defined in `config/kibard.keymap`. Layer indices:
 | 5 | Alpha+ | right thumb hold (`LT_TH L_ALPHAP RET`, pos 33), or `lt L_ALPHAP N0` on Numpad (pos 33) |
 | 6 | Navigate | right thumb hold (`LT_TH L_NAV TAB`, pos 32) |
 | 7 | Vim | `lt L_VIM B` (pos 14) |
-| 8 | Functions | `to L_FUNC` from Navigate |
+| 8 | Functions | `sl L_FUNC` from Navigate (sticky: off after the next key press, or 5 s idle) |
 | 9 | B (Bluetooth/system) | `to L_B` from Navigate |
 | 10 | Hex | `LT_TH L_HEX SE_PLUS` on Numpad (pos 19) |
 | 11 | Mouse fast | left thumb hold (pos 31) on Mouse |
