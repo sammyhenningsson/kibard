@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "DzKLdE",
+  "hashId": "jZjjgZ",
   "layers": [
    {
     "keys": [
@@ -1304,11 +1304,7 @@
        "code": "KC_PSCR"
       }
      },
-     {
-      "tap": {
-       "code": "KC_R"
-      }
-     },
+     {},
      {
       "tap": {
        "code": "CW_TOGG"
@@ -1618,7 +1614,7 @@
      },
      {
       "tap": {
-       "code": "KC_NO"
+       "code": "KC_G"
       }
      },
      {
@@ -1631,7 +1627,11 @@
        "code": "KC_NO"
       }
      },
-     {},
+     {
+      "tap": {
+       "code": "SE_SCLN"
+      }
+     },
      {},
      {},
      {},
@@ -1980,10 +1980,7 @@
      {},
      {
       "tap": {
-       "code": "KC_W",
-       "modifiers": {
-        "leftCtrl": true
-       }
+       "code": "SE_COLN"
       }
      }
     ],
@@ -2536,6 +2533,6 @@
   ],
   "model": "v1",
   "qmkVersion": "25.0",
-  "title": "Keyboard layout edited."
+  "title": "Drop alpha thumb"
  }
 }
