@@ -49,7 +49,14 @@ parse_config:
     "&circ": "^"
     "&eacut": "é"
     "&ocirc": "ô"
-    "&AK_Q": {t: "Q", s: "N→Y"}
+    # Adaptive swaps: the shifted legend reads "after X, this key types Y".
+    "&AS_E": {t: "E", h: "RSHIFT", s: "U→O K→H"}
+    "&AS_O": {t: "O", s: "U→E"}
+    "&AS_H": {t: "H", h: "LALT", s: "K→E"}
+    "&AS_G": {t: "G", s: "F→L"}
+    "&AS_L": {t: "L", s: "F→G"}
+    "&AS_D": {t: "D", s: "S→C"}
+    "&AS_C": {t: "C", s: "S→D"}
     # Vim macros: label each with the command it types.
     "&vim_write": ":w"
     "&vim_force_write": ":w!"

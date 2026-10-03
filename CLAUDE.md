@@ -97,6 +97,15 @@ overrides near the top of `kibard.keymap`; the two numbers are
 
 `HML` (left hand) and `HMR` (right hand) are `zmk,behavior-hold-tap` with `flavor = "balanced"`, `tapping-term-ms = 250`, `quick-tap-ms = 175`, `require-prior-idle-ms = 150`, `hold-trigger-on-release`, and positional `hold-trigger-key-positions` restricting each to the opposite hand. Home row mod order, index→pinky (inner to outer): Alt / Ctrl / Shift.
 
+### Adaptive swaps
+
+`AS_*` behaviors in `kibard.keymap` implement adaptive swaps `[X, Y, Z]`: right
+after X, keys Y and Z trade places (rules: `[U, E, O]`, `[F, G, L]`, `[S, D, C]`,
+`[K, E, H]`). Each is a `zmk,behavior-adaptive-key` (urob's `zmk-adaptive-key`
+module) on Y and on Z, pointing at each other. They have no timeout. Swapped
+output is a plain `&kp` with no home-row-mod hold. A new swapped key needs an
+`EQUIVALENT` entry in `tools/sync-oryx.py` and a label in `tools/keymap-drawer.yaml`.
+
 ### Swedish key defines
 
 All `SE_*` macros at the top of `kibard.keymap` map Swedish characters and symbols to their positions on a Swedish keyboard layout (e.g. `SE_AA`, `SE_ADIA`, `SE_OO` for å, ä, ö). On the base layer å/ä/ö sit directly on keys (`SE_AA` at pos 9, `SE_ADIA` at pos 27, `SE_OO` at pos 29).
