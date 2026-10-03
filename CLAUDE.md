@@ -103,8 +103,15 @@ overrides near the top of `kibard.keymap`; the two numbers are
 after X, keys Y and Z trade places (rules: `[U, E, O]`, `[F, G, L]`, `[S, D, C]`,
 `[K, E, H]`). Each is a `zmk,behavior-adaptive-key` (urob's `zmk-adaptive-key`
 module) on Y and on Z, pointing at each other. They have no timeout. Swapped
-output is a plain `&kp` with no home-row-mod hold. A new swapped key needs an
-`EQUIVALENT` entry in `tools/sync-oryx.py` and a label in `tools/keymap-drawer.yaml`.
+output is a plain `&kp` with no home-row-mod hold.
+
+`AK_*` are one-way adaptive keys on Alpha+ (layer 5): `JX → JU`, `JZ → JO`,
+`ÅS → ÅR`. J, Å, X and Z live only on Alpha+, so these finish common bigrams
+without releasing the layer. Only Alpha+'s S changes; the base-layer S doesn't
+(`låst`, `påse`).
+
+A new `AS_*` or `AK_*` key needs an `EQUIVALENT` entry in `tools/sync-oryx.py`
+and a label in `tools/keymap-drawer.yaml`.
 
 ### Swedish key defines
 

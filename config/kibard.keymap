@@ -196,6 +196,33 @@
 
             as_sc { trigger-keys = <S>; bindings = <&kp D>; };
         };
+
+        // One-way adaptive keys on Alpha+: right after J or Å, a key on the
+        // same layer types the base-layer letter that usually follows, so the
+        // thumb never has to let go of Alpha+. JX -> JU, JZ -> JO, ÅS -> ÅR.
+        AK_X: AK_X {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&HMR LCTRL X>;
+
+            ak_jx { trigger-keys = <J>; bindings = <&kp U>; };
+        };
+
+        AK_Z: AK_Z {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp Z>;
+
+            ak_jz { trigger-keys = <J>; bindings = <&kp O>; };
+        };
+
+        AK_S: AK_S {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&HML LSHIFT S>;
+
+            ak_aas { trigger-keys = <SE_AA>; bindings = <&kp R>; };
+        };
     };
 };
 
@@ -533,9 +560,9 @@
             display-name = "Alpha+";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &none             &kp L             &kp F             &kp DEL           &kp V                                    &kp BSPC          &kp I             &kp Z             &kp SE_AA         &none
+                    &none             &kp L             &kp F             &kp DEL           &kp V                                    &kp BSPC          &kp I             &AK_Z             &kp SE_AA         &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML LGUI N       &HML LSHIFT S     &HML LCTRL D      &HML LALT Y       &kp C                                    &kp RET           &HMR LALT P       &HMR LCTRL X      &HMR RSHIFT E     &kp SE_OO
+                    &HML LGUI N       &AK_S             &HML LCTRL D      &HML LALT Y       &kp C                                    &kp RET           &HMR LALT P       &AK_X             &HMR RSHIFT E     &kp SE_OO
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp M             &kp G             &kp A             &HML LS(J) J      &kp PSCRN                                &kp CAPS          &kp LS(INS)       &kp SE_ADIA       &kp SE_UNDER      &kp SE_MINUS
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯

@@ -205,7 +205,7 @@ def label(key):
 
 def zmk_binding(key):
     """Best-effort ZMK binding for an Oryx key. A suggestion, not a rule --
-    the Kibard deliberately diverges (adaptive swaps, macros, HML/HMR)."""
+    the Kibard deliberately diverges (adaptive keys, macros, HML/HMR)."""
     tap, hold = key.get("tap") or {}, key.get("hold") or {}
     if not tap and not hold:
         return "&trans"
@@ -283,6 +283,8 @@ EQUIVALENT = {
     # Adaptive swaps: compare as the key's unswapped binding.
     "AS_E": "mt LSHIFT E", "AS_H": "mt LALT H",
     "AS_O": "kp O", "AS_G": "kp G", "AS_L": "kp L", "AS_D": "kp D", "AS_C": "kp C",
+    # One-way adaptive keys on Alpha+: compare as the default binding.
+    "AK_X": "mt LCTRL X", "AK_Z": "kp Z", "AK_S": "mt LSHIFT S",
 }
 
 
@@ -386,7 +388,7 @@ def cmd_compare(args, revision):
         for pos, lab, want, have in rows:
             print(f"  pos {pos:>2}   oryx {lab:<20} ~ {want:<24} zmk {have}")
         print()
-    print(f"{total} position(s) differ. Expect some: adaptive swaps, macros and\n"
+    print(f"{total} position(s) differ. Expect some: adaptive keys, macros and\n"
           f"ZMK-only bindings have no Oryx equivalent. --hide-blank drops the\n"
           f"&none/&trans mismatches.")
     return 1 if total else 0
