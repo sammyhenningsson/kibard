@@ -49,6 +49,8 @@ parse_config:
     "&circ": "^"
     "&eacut": "é"
     "&ocirc": "ô"
+    # Also matches the tap half of &LT_REP.
+    "&key_repeat": "Rep"
     # Adaptive swaps and keys: the shifted legend reads "after X, this key types Y".
     "&AS_E": {t: "E", h: "RSHIFT", s: "U→O K→H"}
     "&AS_O": {t: "O", s: "U→E"}
