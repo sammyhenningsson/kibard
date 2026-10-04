@@ -135,19 +135,6 @@
             flavor = "tap-preferred";
         };
 
-        // LT_TH with key repeat on tap. &key_repeat takes no parameter; the
-        // hold-tap's second cell is ignored, so bind it as `&LT_REP layer 0`.
-        LT_REP: LT_REP {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
-            flavor = "tap-preferred";
-        };
-
         // Adaptive swaps [X, Y, Z]: right after X, keys Y and Z trade places.
         // Each swap is a pair of adaptive keys pointing at each other, so both
         // letters stay reachable and no timeout is needed. Swapped output is a
@@ -513,7 +500,7 @@
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp Y             &HML MEH M        &kp P             &AS_C             &kp COMMA                                &kp DOT           &AS_L             &kp SE_ADIA       &kp K             &kp SE_OO
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
-                                                                          &LT_TH L_SYM SPACE  &LT_REP L_NUM 0                        &LT_TH L_NAV TAB  &LT_TH L_ALPHAP RET
+                                                                          &LT_TH L_SYM SPACE  &LT_TH L_NUM ESC                       &LT_TH L_NAV TAB  &LT_TH L_ALPHAP RET
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
             >;
         };

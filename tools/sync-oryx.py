@@ -280,7 +280,6 @@ KEYMAP = REPO / "config" / "kibard.keymap"
 EQUIVALENT = {
     "HML": "mt", "HMR": "mt", "NUM": "mt",   # tuned home-row / numpad hold-taps
     "LT_TH": "lt",                           # thumb layer-tap
-    "LT_REP": "lt",                          # thumb layer-tap, key repeat on tap (Oryx: Esc)
     # Adaptive swaps: compare as the key's unswapped binding.
     "AS_E": "mt LSHIFT E", "AS_H": "mt LALT H",
     "AS_O": "kp O", "AS_G": "kp G", "AS_L": "kp L", "AS_D": "kp D", "AS_C": "kp C",
