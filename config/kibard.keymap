@@ -152,7 +152,7 @@
         // Each swap is a pair of adaptive keys pointing at each other, so both
         // letters stay reachable and no timeout is needed. Swapped output is a
         // plain &kp: the swap only fires mid-word, where a hold is unwanted.
-        //   [U, E, O]  [F, G, L]  [S, D, C]  [K, E, H]
+        //   [U, E, O]  [F, G, L]  [S, D, C]  [K, E, H]  [L, C, F]
         AS_E: AS_E {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
@@ -208,6 +208,15 @@
             bindings = <&kp C>;
 
             as_sc { trigger-keys = <S>; bindings = <&kp D>; };
+            as_lc { trigger-keys = <L>; bindings = <&kp F>; };
+        };
+
+        AS_F: AS_F {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&lt L_FUNC F>;
+
+            as_lf { trigger-keys = <L>; bindings = <&kp C>; };
         };
 
         // One-way adaptive keys on Alpha+: right after J or Å, a key on the
@@ -498,7 +507,7 @@
             display-name = "Graphmod";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &none             &kp W             &AS_D             &AS_G             &kp Q                                    &kp BSPC          &lt L_FUNC F      &AS_O             &kp U             &none
+                    &none             &kp W             &AS_D             &AS_G             &kp Q                                    &kp BSPC          &AS_F             &AS_O             &kp U             &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &LT_TH L_MOUSE N  &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &AS_H             &HMR RCTRL A      &AS_E             &HMR MEH I
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
