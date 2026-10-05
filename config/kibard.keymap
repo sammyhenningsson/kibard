@@ -140,6 +140,7 @@
         // letters stay reachable and no timeout is needed. Swapped output is a
         // plain &kp: the swap only fires mid-word, where a hold is unwanted.
         //   [U, E, O]  [F, G, L]  [S, D, C]  [K, E, H]  [L, C, F]
+        // Alpha+ has its own: [M, G, Ö] (AS_P*, P for plus, since AS_G is taken).
         AS_E: AS_E {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
@@ -204,6 +205,22 @@
             bindings = <&lt L_FUNC F>;
 
             as_lf { trigger-keys = <L>; bindings = <&kp C>; };
+        };
+
+        AS_PG: AS_PG {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp G>;
+
+            as_mg { trigger-keys = <M>; bindings = <&kp SE_OO>; };
+        };
+
+        AS_POO: AS_POO {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp SE_OO>;
+
+            as_moo { trigger-keys = <M>; bindings = <&kp G>; };
         };
 
         // One-way adaptive keys on Alpha+: right after J or Å, a key on the
@@ -571,9 +588,9 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &none             &kp L             &kp T             &kp DEL           &kp V                                    &kp BSPC          &kp I             &AK_Z             &kp SE_AA         &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML LGUI N       &AK_S             &HML LCTRL D      &HML LALT Y       &kp C                                    &kp RET           &HMR LALT P       &AK_X             &HMR RSHIFT E     &kp SE_OO
+                    &HML LGUI N       &AK_S             &HML LCTRL D      &HML LALT Y       &kp C                                    &kp RET           &HMR LALT P       &AK_X             &HMR RSHIFT E     &AS_POO
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp M             &kp G             &kp A             &HML LS(J) J      &kp PSCRN                                &kp CAPS          &kp LS(INS)       &kp SE_ADIA       &kp SE_UNDER      &kp SE_MINUS
+                    &kp M             &AS_PG            &kp A             &HML LS(J) J      &kp PSCRN                                &kp CAPS          &kp LS(INS)       &kp SE_ADIA       &kp SE_UNDER      &kp SE_MINUS
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &caps_word                               &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
