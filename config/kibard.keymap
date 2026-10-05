@@ -141,13 +141,20 @@
         // plain &kp: the swap only fires mid-word, where a hold is unwanted.
         //   [U, E, O]  [F, G, L]  [S, D, C]  [K, E, H]  [L, C, F]
         // Alpha+ has its own: [M, G, Ö] (AS_P*, P for plus, since AS_G is taken).
+        //
+        // A swap only fires while typing: X must have been pressed less than
+        // AS_IDLE_MS ago, with no modifier other than Shift (strict-modifiers
+        // plus the shifted triggers), so Ctrl+F then L still types L.
+#define AS_IDLE_MS 250
+#define AS_TRIGGER(k) k LS(k) RS(k)
+#define AS_GUARD max-prior-idle-ms = <AS_IDLE_MS>; strict-modifiers;
         AS_E: AS_E {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&HMR RSHIFT E>;
 
-            as_ue { trigger-keys = <U>; bindings = <&kp O>; };
-            as_ke { trigger-keys = <K>; bindings = <&kp H>; };
+            as_ue { trigger-keys = <AS_TRIGGER(U)>; bindings = <&kp O>; AS_GUARD };
+            as_ke { trigger-keys = <AS_TRIGGER(K)>; bindings = <&kp H>; AS_GUARD };
         };
 
         AS_O: AS_O {
@@ -155,7 +162,7 @@
             #binding-cells = <0>;
             bindings = <&kp O>;
 
-            as_uo { trigger-keys = <U>; bindings = <&kp E>; };
+            as_uo { trigger-keys = <AS_TRIGGER(U)>; bindings = <&kp E>; AS_GUARD };
         };
 
         AS_H: AS_H {
@@ -163,7 +170,7 @@
             #binding-cells = <0>;
             bindings = <&HMR LALT H>;
 
-            as_kh { trigger-keys = <K>; bindings = <&kp E>; };
+            as_kh { trigger-keys = <AS_TRIGGER(K)>; bindings = <&kp E>; AS_GUARD };
         };
 
         AS_G: AS_G {
@@ -171,7 +178,7 @@
             #binding-cells = <0>;
             bindings = <&kp G>;
 
-            as_fg { trigger-keys = <F>; bindings = <&kp L>; };
+            as_fg { trigger-keys = <AS_TRIGGER(F)>; bindings = <&kp L>; AS_GUARD };
         };
 
         AS_L: AS_L {
@@ -179,7 +186,7 @@
             #binding-cells = <0>;
             bindings = <&kp L>;
 
-            as_fl { trigger-keys = <F>; bindings = <&kp G>; };
+            as_fl { trigger-keys = <AS_TRIGGER(F)>; bindings = <&kp G>; AS_GUARD };
         };
 
         AS_D: AS_D {
@@ -187,7 +194,7 @@
             #binding-cells = <0>;
             bindings = <&kp D>;
 
-            as_sd { trigger-keys = <S>; bindings = <&kp C>; };
+            as_sd { trigger-keys = <AS_TRIGGER(S)>; bindings = <&kp C>; AS_GUARD };
         };
 
         AS_C: AS_C {
@@ -195,8 +202,8 @@
             #binding-cells = <0>;
             bindings = <&kp C>;
 
-            as_sc { trigger-keys = <S>; bindings = <&kp D>; };
-            as_lc { trigger-keys = <L>; bindings = <&kp F>; };
+            as_sc { trigger-keys = <AS_TRIGGER(S)>; bindings = <&kp D>; AS_GUARD };
+            as_lc { trigger-keys = <AS_TRIGGER(L)>; bindings = <&kp F>; AS_GUARD };
         };
 
         AS_F: AS_F {
@@ -204,7 +211,7 @@
             #binding-cells = <0>;
             bindings = <&lt L_FUNC F>;
 
-            as_lf { trigger-keys = <L>; bindings = <&kp C>; };
+            as_lf { trigger-keys = <AS_TRIGGER(L)>; bindings = <&kp C>; AS_GUARD };
         };
 
         AS_PG: AS_PG {
@@ -212,7 +219,7 @@
             #binding-cells = <0>;
             bindings = <&kp G>;
 
-            as_mg { trigger-keys = <M>; bindings = <&kp SE_OO>; };
+            as_mg { trigger-keys = <AS_TRIGGER(M)>; bindings = <&kp SE_OO>; AS_GUARD };
         };
 
         AS_POO: AS_POO {
@@ -220,7 +227,7 @@
             #binding-cells = <0>;
             bindings = <&kp SE_OO>;
 
-            as_moo { trigger-keys = <M>; bindings = <&kp G>; };
+            as_moo { trigger-keys = <AS_TRIGGER(M)>; bindings = <&kp G>; AS_GUARD };
         };
 
         // One-way adaptive keys on Alpha+: right after J or Å, a key on the
