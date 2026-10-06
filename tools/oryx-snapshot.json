@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "zLx0ZM",
+  "hashId": "or74ge",
   "layers": [
    {
     "keys": [
@@ -1361,7 +1361,7 @@
      },
      {
       "tap": {
-       "code": "SE_OSLH"
+       "code": "SE_ADIA"
       }
      },
      {},
@@ -1380,7 +1380,7 @@
      },
      {
       "tap": {
-       "code": "SE_ADIA"
+       "code": "SE_MINS"
       }
      },
      {
@@ -2525,6 +2525,6 @@
   ],
   "model": "v1",
   "qmkVersion": "25.0",
-  "title": "Rotate Lock Layer, Del and Backspace"
+  "title": "Keyboard layout edited."
  }
 }
