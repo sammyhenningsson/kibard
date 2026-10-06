@@ -111,8 +111,8 @@ so shortcuts like Ctrl+F don't trigger it. Swapped output is a plain `&kp` with
 no home-row-mod or layer hold.
 
 `AK_*` are one-way adaptive keys on Alpha+ (layer 5): `JX → JU`, `JZ → JO`,
-`ÅS → ÅR`, `FT → FÖ`, `ÖS → ÖR`. J, Å, X and Z live only on Alpha+, so these
-finish common bigrams without releasing the layer. The last two chain: base F,
+`ÅS → ÅR`, `FT → FÖ`, `MD → MÖ`, `ÖS → ÖR`. J, Å, X and Z live only on Alpha+, so these
+finish common bigrams without releasing the layer. `FT` and `ÖS` chain: base F,
 then T and S on Alpha+, types `för`. Like the swaps, they fire only within
 `AS_IDLE_MS` of the trigger, but without `strict-modifiers`. Only Alpha+'s S changes; the base-layer S doesn't
 (`låst`, `påse`).

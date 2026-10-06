@@ -230,11 +230,11 @@
             as_moo { trigger-keys = <AS_TRIGGER(M)>; bindings = <&kp G>; AS_GUARD };
         };
 
-        // One-way adaptive keys on Alpha+: right after J, Å, F or Ö, a key on
-        // the same layer types the letter that usually follows, so the thumb
-        // never has to let go of Alpha+. JX -> JU, JZ -> JO, ÅS -> ÅR,
-        // FT -> FÖ, ÖS -> ÖR. The last two chain: F, then T and S on Alpha+,
-        // types FÖR. Like the swaps, they only fire within AS_IDLE_MS of the
+        // One-way adaptive keys on Alpha+: right after J, Å, F, M or Ö, a key
+        // on the same layer types the letter that usually follows, so the
+        // thumb never has to let go of Alpha+. JX -> JU, JZ -> JO, ÅS -> ÅR,
+        // FT -> FÖ, MD -> MÖ, ÖS -> ÖR. FT and ÖS chain: F, then T and S on
+        // Alpha+, types FÖR. Like the swaps, they only fire within AS_IDLE_MS of the
         // trigger; modifiers aren't checked.
         AK_X: AK_X {
             compatible = "zmk,behavior-adaptive-key";
@@ -266,6 +266,14 @@
             bindings = <&kp T>;
 
             ak_ft { trigger-keys = <F>; bindings = <&kp SE_OO>; max-prior-idle-ms = <AS_IDLE_MS>; };
+        };
+
+        AK_D: AK_D {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&HML LCTRL D>;
+
+            ak_md { trigger-keys = <M>; bindings = <&kp SE_OO>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
     };
 };
@@ -606,7 +614,7 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &none             &kp L             &AK_T             &kp F             &kp V                                    &kp BSPC          &kp I             &AK_Z             &kp SE_AA         &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML LGUI N       &AK_S             &HML LCTRL D      &HML LALT Y       &kp C                                    &kp DEL           &HMR LALT P       &AK_X             &HMR RSHIFT E     &AS_POO
+                    &HML LGUI N       &AK_S             &AK_D             &HML LALT Y       &kp C                                    &kp DEL           &HMR LALT P       &AK_X             &HMR RSHIFT E     &AS_POO
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp M             &AS_PG            &kp A             &HML LS(J) J      &kp PSCRN                                &kp CAPS          &kp LS(INS)       &kp SE_ADIA       &kp SE_UNDER      &kp RET
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
