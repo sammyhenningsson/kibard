@@ -230,9 +230,11 @@
             as_moo { trigger-keys = <AS_TRIGGER(M)>; bindings = <&kp G>; AS_GUARD };
         };
 
-        // One-way adaptive keys on Alpha+: right after J or Å, a key on the
-        // same layer types the base-layer letter that usually follows, so the
-        // thumb never has to let go of Alpha+. JX -> JU, JZ -> JO, ÅS -> ÅR.
+        // One-way adaptive keys on Alpha+: right after J, Å, F or Ö, a key on
+        // the same layer types the letter that usually follows, so the thumb
+        // never has to let go of Alpha+. JX -> JU, JZ -> JO, ÅS -> ÅR,
+        // FT -> FÖ, ÖS -> ÖR. The last two chain: F, then T and S on Alpha+,
+        // types FÖR.
         AK_X: AK_X {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
@@ -254,7 +256,15 @@
             #binding-cells = <0>;
             bindings = <&HML LSHIFT S>;
 
-            ak_aas { trigger-keys = <SE_AA>; bindings = <&kp R>; };
+            ak_aas { trigger-keys = <SE_AA SE_OO>; bindings = <&kp R>; };
+        };
+
+        AK_T: AK_T {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp T>;
+
+            ak_ft { trigger-keys = <F>; bindings = <&kp SE_OO>; };
         };
     };
 };
@@ -593,7 +603,7 @@
             display-name = "Alpha+";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &none             &kp L             &kp T             &kp DEL           &kp V                                    &kp BSPC          &kp I             &AK_Z             &kp SE_AA         &none
+                    &none             &kp L             &AK_T             &kp DEL           &kp V                                    &kp BSPC          &kp I             &AK_Z             &kp SE_AA         &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &HML LGUI N       &AK_S             &HML LCTRL D      &HML LALT Y       &kp C                                    &kp RET           &HMR LALT P       &AK_X             &HMR RSHIFT E     &AS_POO
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
