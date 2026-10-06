@@ -234,13 +234,14 @@
         // the same layer types the letter that usually follows, so the thumb
         // never has to let go of Alpha+. JX -> JU, JZ -> JO, ÅS -> ÅR,
         // FT -> FÖ, ÖS -> ÖR. The last two chain: F, then T and S on Alpha+,
-        // types FÖR.
+        // types FÖR. Like the swaps, they only fire within AS_IDLE_MS of the
+        // trigger; modifiers aren't checked.
         AK_X: AK_X {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&HMR LCTRL X>;
 
-            ak_jx { trigger-keys = <J>; bindings = <&kp U>; };
+            ak_jx { trigger-keys = <J>; bindings = <&kp U>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
 
         AK_Z: AK_Z {
@@ -248,7 +249,7 @@
             #binding-cells = <0>;
             bindings = <&kp Z>;
 
-            ak_jz { trigger-keys = <J>; bindings = <&kp O>; };
+            ak_jz { trigger-keys = <J>; bindings = <&kp O>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
 
         AK_S: AK_S {
@@ -256,7 +257,7 @@
             #binding-cells = <0>;
             bindings = <&HML LSHIFT S>;
 
-            ak_aas { trigger-keys = <SE_AA SE_OO>; bindings = <&kp R>; };
+            ak_aas { trigger-keys = <SE_AA SE_OO>; bindings = <&kp R>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
 
         AK_T: AK_T {
@@ -264,7 +265,7 @@
             #binding-cells = <0>;
             bindings = <&kp T>;
 
-            ak_ft { trigger-keys = <F>; bindings = <&kp SE_OO>; };
+            ak_ft { trigger-keys = <F>; bindings = <&kp SE_OO>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
     };
 };
