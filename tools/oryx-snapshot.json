@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "jZjjgZ",
+  "hashId": "zLx0ZM",
   "layers": [
    {
     "keys": [
@@ -779,7 +779,7 @@
      },
      {
       "tap": {
-       "code": "KC_DELETE"
+       "code": "QK_LLCK"
       }
      },
      {
@@ -836,12 +836,12 @@
      },
      {
       "tap": {
-       "code": "QK_LLCK"
+       "code": "KC_BSPC"
       }
      },
      {
       "tap": {
-       "code": "KC_BSPC"
+       "code": "KC_DELETE"
       }
      },
      {
@@ -1024,7 +1024,7 @@
      },
      {
       "tap": {
-       "code": "KC_DELETE"
+       "code": "QK_LLCK"
       }
      },
      {
@@ -1083,12 +1083,12 @@
      },
      {
       "tap": {
-       "code": "QK_LLCK"
+       "code": "KC_BSPC"
       }
      },
      {
       "tap": {
-       "code": "KC_BSPC"
+       "code": "KC_DELETE"
       }
      },
      {
@@ -1104,16 +1104,8 @@
        "code": "KC_NO"
       }
      },
-     {
-      "tap": {
-       "code": "KC_MS_BTN1"
-      }
-     },
-     {
-      "tap": {
-       "code": "KC_MS_BTN2"
-      }
-     },
+     {},
+     {},
      {},
      {},
      {},
@@ -1221,12 +1213,12 @@
      },
      {
       "tap": {
-       "code": "KC_F"
+       "code": "KC_T"
       }
      },
      {
       "tap": {
-       "code": "KC_DELETE"
+       "code": "KC_F"
       }
      },
      {
@@ -1340,7 +1332,7 @@
      {},
      {
       "tap": {
-       "code": "KC_ENTER"
+       "code": "KC_DELETE"
       }
      },
      {
@@ -1398,7 +1390,7 @@
      },
      {
       "tap": {
-       "code": "SE_MINS"
+       "code": "KC_ENTER"
       }
      },
      {},
@@ -1546,6 +1538,11 @@
      },
      {
       "tap": {
+       "code": "QK_LLCK"
+      }
+     },
+     {
+      "tap": {
        "code": "KC_TRANSPARENT",
        "macro": {
         "endEnter": true,
@@ -1579,7 +1576,6 @@
       }
      },
      {},
-     {},
      {
       "tap": {
        "code": "KC_V"
@@ -1607,11 +1603,7 @@
        "code": "TO"
       }
      },
-     {
-      "tap": {
-       "code": "QK_LLCK"
-      }
-     },
+     {},
      {
       "tap": {
        "code": "KC_G"
@@ -2010,7 +2002,7 @@
      },
      {
       "tap": {
-       "code": "KC_DELETE"
+       "code": "QK_LLCK"
       }
      },
      {
@@ -2052,12 +2044,12 @@
      },
      {
       "tap": {
-       "code": "QK_LLCK"
+       "code": "KC_BSPC"
       }
      },
      {
       "tap": {
-       "code": "KC_BSPC"
+       "code": "KC_DELETE"
       }
      },
      {
@@ -2533,6 +2525,6 @@
   ],
   "model": "v1",
   "qmkVersion": "25.0",
-  "title": "Drop alpha thumb"
+  "title": "Rotate Lock Layer, Del and Backspace"
  }
 }

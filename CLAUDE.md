@@ -74,10 +74,12 @@ Defined in `config/kibard.keymap`. Layer indices:
 
 ### Layer lock
 
-Position 21 (`M` on the base layer) is a lock key on the Numpad, Mouse,
-Navigate and Vim layers: `&tog L_NUM`, `&tog L_MOUSE`, `&tog L_NAV`,
-`&tog L_VIM`. Hold the layer's activation key, tap position 21, release the
-hold — the layer stays on; tap it again to drop back to Graphmod.
+Each of the Numpad, Mouse, Navigate and Vim layers has a lock key at
+position 3 (`G` on the base layer): `&tog L_NUM`, `&tog L_MOUSE`, `&tog L_NAV`,
+`&tog L_VIM`. On Numpad, Mouse and Navigate, Backspace and Delete sit below it
+at positions 21 and 22. Hold the layer's activation key,
+tap its lock key, release the hold — the layer stays on; tap the lock key again
+to drop back to Graphmod.
 
 This relies on ZMK's layer *locking* ([zmk#2717](https://github.com/zmkfirmware/zmk/pull/2717)):
 `&to` and `&tog` mark a layer locked, and a locked layer ignores deactivation
