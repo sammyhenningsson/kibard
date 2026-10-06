@@ -144,7 +144,7 @@
         // A swap only fires while typing: X must have been pressed less than
         // AS_IDLE_MS ago, with no modifier other than Shift (strict-modifiers
         // plus the shifted triggers), so Ctrl+F then L still types L.
-#define AS_IDLE_MS 250
+#define AS_IDLE_MS 300
 #define AS_TRIGGER(k) k LS(k) RS(k)
 #define AS_GUARD max-prior-idle-ms = <AS_IDLE_MS>; strict-modifiers;
         AS_E: AS_E {

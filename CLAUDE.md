@@ -105,7 +105,7 @@ overrides near the top of `kibard.keymap`; the two numbers are
 after X, keys Y and Z trade places (rules: `[U, E, O]`, `[F, G, L]`, `[S, D, C]`,
 `[K, E, H]`, `[L, C, F]`). Each is a `zmk,behavior-adaptive-key` (urob's `zmk-adaptive-key`
 module) on Y and on Z, pointing at each other. A swap fires only while typing:
-X must be pressed less than `AS_IDLE_MS` (250 ms) earlier, with no modifier
+X must be pressed less than `AS_IDLE_MS` (300 ms) earlier, with no modifier
 other than Shift (`strict-modifiers` plus `LS`/`RS` triggers via `AS_TRIGGER`),
 so shortcuts like Ctrl+F don't trigger it. Swapped output is a plain `&kp` with
 no home-row-mod or layer hold.
