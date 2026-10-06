@@ -103,7 +103,7 @@ overrides near the top of `kibard.keymap`; the two numbers are
 
 `AS_*` behaviors in `kibard.keymap` implement adaptive swaps `[X, Y, Z]`: right
 after X, keys Y and Z trade places (rules: `[U, E, O]`, `[F, G, L]`, `[S, D, C]`,
-`[K, E, H]`, `[L, C, F]`, and on Alpha+ `[M, G, Ö]` as `AS_PG`/`AS_POO`). Each is a `zmk,behavior-adaptive-key` (urob's `zmk-adaptive-key`
+`[K, E, H]`, `[L, C, F]`). Each is a `zmk,behavior-adaptive-key` (urob's `zmk-adaptive-key`
 module) on Y and on Z, pointing at each other. A swap fires only while typing:
 X must be pressed less than `AS_IDLE_MS` (250 ms) earlier, with no modifier
 other than Shift (`strict-modifiers` plus `LS`/`RS` triggers via `AS_TRIGGER`),

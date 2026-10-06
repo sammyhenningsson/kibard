@@ -58,8 +58,6 @@ parse_config:
     "&AS_D": {t: "D", s: "S→C"}
     "&AS_C": {t: "C", s: "S→D L→F"}
     "&AS_F": {t: "F", h: "Functions", s: "L→C"}
-    "&AS_PG": {t: "G", s: "M→Ö"}
-    "&AS_POO": {t: "Ö", s: "M→G"}
     "&AK_X": {t: "X", h: "LCTRL", s: "J→U"}
     "&AK_Z": {t: "Z", s: "J→O"}
     "&AK_S": {t: "S", h: "LSHIFT", s: "Å/Ö→R"}

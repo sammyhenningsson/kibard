@@ -283,7 +283,7 @@ EQUIVALENT = {
     # Adaptive swaps: compare as the key's unswapped binding.
     "AS_E": "mt LSHIFT E", "AS_H": "mt LALT H",
     "AS_O": "kp O", "AS_G": "kp G", "AS_L": "kp L", "AS_D": "kp D", "AS_C": "kp C",
-    "AS_F": "lt 8 F", "AS_PG": "kp G", "AS_POO": "kp SE_OO",
+    "AS_F": "lt 8 F",
     # One-way adaptive keys on Alpha+: compare as the default binding.
     "AK_X": "mt LCTRL X", "AK_Z": "kp Z", "AK_S": "mt LSHIFT S",
     "AK_T": "kp T", "AK_D": "mt LCTRL D",
