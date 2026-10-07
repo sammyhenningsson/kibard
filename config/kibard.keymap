@@ -509,6 +509,8 @@
             timeout-ms = <40>;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
+            // Base layer only: on Alpha+, 1+2 are L and T and roll inside words.
+            layers = <L_GRAPHMOD>;
         };
     };
 };

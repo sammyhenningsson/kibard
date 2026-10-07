@@ -70,7 +70,7 @@ Defined in `config/kibard.keymap`. Layer indices:
 | 11 | Mouse fast | left thumb hold (pos 31) on Mouse |
 | 12 | Mouse slow | left thumb hold (pos 30) on Mouse |
 
-`L_MAIN` always equals `L_GRAPHMOD` (layer 0); `&to L_MAIN` on the Numpad, Mouse, Navigate, Functions and B layers is the way back. The only combo defined is `combo_esc`: positions `1+2` within 40 ms sends `ESC`.
+`L_MAIN` always equals `L_GRAPHMOD` (layer 0); `&to L_MAIN` on the Numpad, Mouse, Navigate, Functions and B layers is the way back. The only combo defined is `combo_esc`: positions `1+2` within 40 ms sends `ESC`, on the Graphmod layer only (on Alpha+ those keys are L and T).
 
 ### Layer lock
 
