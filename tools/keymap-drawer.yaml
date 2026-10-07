@@ -55,7 +55,7 @@ parse_config:
     # Adaptive keys: the shifted legend reads "after X, this key types Y".
     "&AS_E": {t: "E", h: "RSHIFT", s: "U→O"}
     "&AS_O": {t: "O", s: "U→E"}
-    "&AS_H": {t: "H", h: "LALT", s: "M→N"}
+    "&AS_H": {t: "H", h: "LALT", s: "M→N R→M"}
     "&AS_D": {t: "D", s: "S→C H→Å"}
     "&AS_C": {t: "C", s: "S→D K→E F→L L→F"}
     "&AK_X": {t: "X", h: "LCTRL", s: "J→U"}
