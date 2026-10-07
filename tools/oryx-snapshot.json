@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "or74ge",
+  "hashId": "3vAjgA",
   "layers": [
    {
     "keys": [
@@ -1324,6 +1324,12 @@
       }
      },
      {
+      "hold": {
+       "code": "SE_AA",
+       "modifiers": {
+        "leftShift": true
+       }
+      },
       "tap": {
        "code": "SE_AA"
       }

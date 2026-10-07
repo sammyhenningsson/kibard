@@ -99,6 +99,10 @@ overrides near the top of `kibard.keymap`; the two numbers are
 
 `HML` (left hand) and `HMR` (right hand) are `zmk,behavior-hold-tap` with `flavor = "balanced"`, `tapping-term-ms = 250`, `quick-tap-ms = 175`, `require-prior-idle-ms = 150`, `hold-trigger-on-release`, and positional `hold-trigger-key-positions` restricting each to the opposite hand. Home row mod order, index→pinky (inner to outer): Alt / Ctrl / Shift.
 
+`CAP(k)` (tap `k`, hold for `Shift+k`) is a plain time-based hold-tap on the
+`NUM` behavior, not a home-row mod: Alpha+ uses it for Å and J. `tools/sync-oryx.py`
+expands one-argument `#define`s like this before reading bindings.
+
 ### Adaptive swaps
 
 `AS_*` behaviors in `kibard.keymap` implement adaptive swaps `[X, Y, Z]`: right

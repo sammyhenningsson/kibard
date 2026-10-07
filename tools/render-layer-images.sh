@@ -42,8 +42,8 @@ mkdir -p "$OUT"
 sed -i 's|^layout: .*|layout: {ortho_layout: {split: true, rows: 3, columns: 5, thumbs: 2}}|' \
     "$WORK/kibard.yaml"
 
-# Drop combos: the single combo (combo_esc, positions 1+2) is the same on every
-# layer and drawing it adds a second, near-empty keyboard diagram to each image.
+# Drop combos: drawing the single combo (combo_esc, positions 1+2, Graphmod
+# only) adds a second, near-empty keyboard diagram to each image.
 python3 -c "import sys; p=sys.argv[1]; s=open(p).read(); open(p,'w').write(s.split('combos:')[0].rstrip()+'\n')" \
     "$WORK/kibard.yaml"
 

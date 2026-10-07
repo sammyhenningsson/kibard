@@ -123,6 +123,10 @@
             require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
         };
+// CAP(k): tap for k, hold for Shift+k. Uses NUM, not a home-row mod: the
+// hold is a capital letter, so only hold time should decide, not what the
+// other hand presses.
+#define CAP(k) &NUM LS(k) k
 
         LT_TH: LT_TH {
             compatible = "zmk,behavior-hold-tap";
@@ -601,11 +605,11 @@
             display-name = "Alpha+";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &none             &kp L             &AK_T             &kp F             &kp V                                    &kp BSPC          &kp I             &AK_Z             &kp SE_AA         &none
+                    &none             &kp L             &AK_T             &kp F             &kp V                                    &kp BSPC          &kp I             &AK_Z             CAP(SE_AA)        &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &HML LGUI N       &AK_S             &AK_D             &HML LALT Y       &kp C                                    &kp DEL           &HMR LALT P       &AK_X             &HMR RSHIFT E     &kp SE_ADIA
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp M             &kp G             &kp A             &HML LS(J) J      &kp PSCRN                                &kp CAPS          &kp LS(INS)       &kp SE_MINUS      &kp SE_UNDER      &kp RET
+                    &kp M             &kp G             &kp A             CAP(J)            &kp PSCRN                                &kp CAPS          &kp LS(INS)       &kp SE_MINUS      &kp SE_UNDER      &kp RET
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &caps_word                               &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯

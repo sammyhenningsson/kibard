@@ -293,6 +293,12 @@ EQUIVALENT = {
 def parse_keymap(path=KEYMAP):
     """{zmk layer index: [34 binding strings]} from config/kibard.keymap."""
     text = re.sub(r"//[^\n]*", "", path.read_text())
+    # Expand one-argument macros like CAP(k) -> &NUM LS(k) k, so each binding
+    # still starts with "&" when split into tokens below.
+    for name, param, body in re.findall(
+            r"^#define\s+(\w+)\((\w+)\)\s+(.+?)\s*$", text, re.M):
+        text = re.sub(rf"\b{name}\((\w+)\)",
+                      lambda m: re.sub(rf"\b{param}\b", m.group(1), body), text)
     layers = {}
     for idx, block in enumerate(re.findall(
             r"display-name\s*=\s*\"([^\"]+)\";\s*bindings\s*=\s*<(.*?)>;",
