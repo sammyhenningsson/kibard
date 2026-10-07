@@ -52,15 +52,12 @@ parse_config:
     "&circ": "^"
     "&eacut": "é"
     "&ocirc": "ô"
-    # Adaptive swaps and keys: the shifted legend reads "after X, this key types Y".
-    "&AS_E": {t: "E", h: "RSHIFT", s: "U→O K→H"}
+    # Adaptive keys: the shifted legend reads "after X, this key types Y".
+    "&AS_E": {t: "E", h: "RSHIFT", s: "U→O"}
     "&AS_O": {t: "O", s: "U→E"}
-    "&AS_H": {t: "H", h: "LALT", s: "K→E"}
-    "&AS_G": {t: "G", s: "F→L"}
-    "&AS_L": {t: "L", s: "F→G"}
+    "&AS_H": {t: "H", h: "LALT", s: "M→N"}
     "&AS_D": {t: "D", s: "S→C H→Å"}
-    "&AS_C": {t: "C", s: "S→D L→F"}
-    "&AS_F": {t: "F", h: "Functions", s: "L→C"}
+    "&AS_C": {t: "C", s: "S→D K→E F→L L→F"}
     "&AK_X": {t: "X", h: "LCTRL", s: "J→U"}
     "&AK_Z": {t: "Z", s: "J→O"}
     "&AK_S": {t: "S", h: "LSHIFT", s: "Å/Ö→R"}

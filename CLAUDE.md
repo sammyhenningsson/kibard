@@ -103,22 +103,23 @@ overrides near the top of `kibard.keymap`; the two numbers are
 `NUM` behavior, not a home-row mod: Alpha+ uses it for Å and J. `tools/sync-oryx.py`
 expands one-argument `#define`s like this before reading bindings.
 
-### Adaptive swaps
+### Adaptive keys
 
-`AS_*` behaviors in `kibard.keymap` implement adaptive swaps `[X, Y, Z]`: right
-after X, keys Y and Z trade places (rules: `[U, E, O]`, `[F, G, L]`, `[S, D, C]`,
-`[K, E, H]`, `[L, C, F]`). Each is a `zmk,behavior-adaptive-key` (urob's `zmk-adaptive-key`
-module) on Y and on Z, pointing at each other. A swap fires only while typing:
-X must be pressed less than `AS_IDLE_MS` (300 ms) earlier, with no modifier
+`AS_*` behaviors in `kibard.keymap` are one-way adaptive keys on Graphmod
+(urob's `zmk-adaptive-key` module): right after the trigger, a key types a
+different letter. Two are swaps `[X, Y, Z]`, where right after X keys Y and Z
+trade places (a pair of adaptive keys pointing at each other): `[U, E, O]` and
+`[S, D, C]`. The rest are one-way: `HD → HÅ`, `KC → KE`, `FC → FL`, `LC → LF`, `MH → MN`.
+They live on `AS_E`, `AS_O`, `AS_H`, `AS_D` and `AS_C`. A rule fires only while typing: the
+trigger must be pressed less than `AS_IDLE_MS` (300 ms) earlier, with no modifier
 other than Shift (`strict-modifiers` plus `LS`/`RS` triggers via `AS_TRIGGER`),
-so shortcuts like Ctrl+F don't trigger it. Swapped output is a plain `&kp` with
-no home-row-mod or layer hold. `AS_D` also carries one one-way rule, `HD → HÅ`,
-with the same guard.
+so shortcuts like Ctrl+F don't trigger it. Adapted output is a plain `&kp` with
+no home-row-mod or layer hold.
 
 `AK_*` are one-way adaptive keys on Alpha+ (layer 5): `JX → JU`, `JZ → JO`,
 `ÅS → ÅR`, `FT → FÖ`, `MD → MÖ`, `ÖS → ÖR`. J, Å, X and Z live only on Alpha+, so these
 finish common bigrams without releasing the layer. `FT` and `ÖS` chain: base F,
-then T and S on Alpha+, types `för`. Like the swaps, they fire only within
+then T and S on Alpha+, types `för`. Like the `AS_*` keys, they fire only within
 `AS_IDLE_MS` of the trigger, but without `strict-modifiers`. Only Alpha+'s S changes; the base-layer S doesn't
 (`låst`, `påse`).
 

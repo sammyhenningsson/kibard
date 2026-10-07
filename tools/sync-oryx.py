@@ -280,10 +280,8 @@ KEYMAP = REPO / "config" / "kibard.keymap"
 EQUIVALENT = {
     "HML": "mt", "HMR": "mt", "NUM": "mt",   # tuned home-row / numpad hold-taps
     "LT_TH": "lt",                           # thumb layer-tap
-    # Adaptive swaps: compare as the key's unswapped binding.
-    "AS_E": "mt LSHIFT E", "AS_H": "mt LALT H",
-    "AS_O": "kp O", "AS_G": "kp G", "AS_L": "kp L", "AS_D": "kp D", "AS_C": "kp C",
-    "AS_F": "lt 8 F",
+    # Adaptive keys on Graphmod: compare as the default binding.
+    "AS_E": "mt LSHIFT E", "AS_H": "mt LALT H", "AS_O": "kp O", "AS_D": "kp D", "AS_C": "kp C",
     # One-way adaptive keys on Alpha+: compare as the default binding.
     "AK_X": "mt LCTRL X", "AK_Z": "kp Z", "AK_S": "mt LSHIFT S",
     "AK_T": "kp T", "AK_D": "mt LCTRL D",
