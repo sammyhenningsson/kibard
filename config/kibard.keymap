@@ -140,6 +140,7 @@
         // letters stay reachable and no timeout is needed. Swapped output is a
         // plain &kp: the swap only fires mid-word, where a hold is unwanted.
         //   [U, E, O]  [F, G, L]  [S, D, C]  [K, E, H]  [L, C, F]
+        // plus one one-way rule on D: HD -> HÅ.
         //
         // A swap only fires while typing: X must have been pressed less than
         // AS_IDLE_MS ago, with no modifier other than Shift (strict-modifiers
@@ -194,6 +195,8 @@
             bindings = <&kp D>;
 
             as_sd { trigger-keys = <AS_TRIGGER(S)>; bindings = <&kp C>; AS_GUARD };
+            // One-way, not part of a swap: HD -> HÅ.
+            as_hd { trigger-keys = <AS_TRIGGER(H)>; bindings = <&kp SE_AA>; AS_GUARD };
         };
 
         AS_C: AS_C {

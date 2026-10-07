@@ -108,7 +108,8 @@ module) on Y and on Z, pointing at each other. A swap fires only while typing:
 X must be pressed less than `AS_IDLE_MS` (300 ms) earlier, with no modifier
 other than Shift (`strict-modifiers` plus `LS`/`RS` triggers via `AS_TRIGGER`),
 so shortcuts like Ctrl+F don't trigger it. Swapped output is a plain `&kp` with
-no home-row-mod or layer hold.
+no home-row-mod or layer hold. `AS_D` also carries one one-way rule, `HD → HÅ`,
+with the same guard.
 
 `AK_*` are one-way adaptive keys on Alpha+ (layer 5): `JX → JU`, `JZ → JO`,
 `ÅS → ÅR`, `FT → FÖ`, `MD → MÖ`, `ÖS → ÖR`. J, Å, X and Z live only on Alpha+, so these
