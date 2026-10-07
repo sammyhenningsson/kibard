@@ -123,7 +123,7 @@ and a label in `tools/keymap-drawer.yaml`.
 
 ### Swedish key defines
 
-All `SE_*` macros at the top of `kibard.keymap` map Swedish characters and symbols to their positions on a Swedish keyboard layout (e.g. `SE_AA`, `SE_ADIA`, `SE_OO` for å, ä, ö). On the base layer å/ä/ö sit directly on keys (`SE_AA` at pos 9, `SE_ADIA` at pos 27, `SE_OO` at pos 29).
+All `SE_*` macros at the top of `kibard.keymap` map Swedish characters and symbols to their positions on a Swedish keyboard layout (e.g. `SE_AA`, `SE_ADIA`, `SE_OO` for å, ä, ö). On the base layer ä and ö sit directly on keys (`SE_ADIA` at pos 27, `SE_OO` at pos 29); pos 9 is `&none`. Å lives on Alpha+ (`SE_AA` at pos 8), and on the base layer D types it right after H (`HD → HÅ`).
 
 ### Vim macros
 
