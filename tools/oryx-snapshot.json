@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "3vAjgA",
+  "hashId": "jZjr0x",
   "layers": [
    {
     "keys": [
@@ -1582,24 +1582,12 @@
       }
      },
      {},
+     {},
+     {},
+     {},
      {
       "tap": {
-       "code": "KC_V"
-      }
-     },
-     {
-      "tap": {
-       "code": "KC_Y"
-      }
-     },
-     {
-      "tap": {
-       "code": "KC_I"
-      }
-     },
-     {
-      "tap": {
-       "code": "KC_W"
+       "code": "KC_G"
       }
      },
      {},
@@ -1610,16 +1598,8 @@
       }
      },
      {},
-     {
-      "tap": {
-       "code": "KC_G"
-      }
-     },
-     {
-      "tap": {
-       "code": "KC_C"
-      }
-     },
+     {},
+     {},
      {
       "tap": {
        "code": "KC_NO"
@@ -1806,17 +1786,17 @@
      {},
      {
       "tap": {
-       "code": "KC_J"
+       "code": "KC_Y"
       }
      },
      {
       "tap": {
-       "code": "KC_K"
+       "code": "KC_C"
       }
      },
      {
       "tap": {
-       "code": "KC_L"
+       "code": "KC_I"
       }
      },
      {
