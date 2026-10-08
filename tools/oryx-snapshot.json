@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "jZjr0x",
+  "hashId": "9DPZPO",
   "layers": [
    {
     "keys": [
@@ -72,8 +72,7 @@
      },
      {
       "hold": {
-       "code": "MO",
-       "layer": 4
+       "code": "KC_LEFT_GUI"
       },
       "tap": {
        "code": "KC_N"
@@ -136,6 +135,10 @@
       }
      },
      {
+      "hold": {
+       "code": "MO",
+       "layer": 4
+      },
       "tap": {
        "code": "KC_C"
       }
@@ -1036,7 +1039,17 @@
       }
      },
      {},
-     {},
+     {
+      "hold": {
+       "code": "KC_LEFT_GUI"
+      },
+      "tap": {
+       "code": "KC_N",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     },
      {
       "hold": {
        "code": "KC_LEFT_SHIFT"
@@ -1091,14 +1104,7 @@
        "code": "KC_DELETE"
       }
      },
-     {
-      "tap": {
-       "code": "KC_C",
-       "modifiers": {
-        "leftCtrl": true
-       }
-      }
-     },
+     {},
      {
       "tap": {
        "code": "KC_NO"
@@ -1132,7 +1138,7 @@
      {},
      {
       "tap": {
-       "code": "KC_NO"
+       "code": "QK_LLCK"
       }
      },
      {

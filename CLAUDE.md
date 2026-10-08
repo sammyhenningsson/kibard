@@ -60,7 +60,7 @@ Defined in `config/kibard.keymap`. Layer indices:
 | 1 | Symbols | left thumb hold (`LT_TH L_SYM SPACE`, pos 30) |
 | 2 | Symbols+ | `LT_TH L_SYMP SE_AT` hold on Symbols (pos 10) |
 | 3 | Numpad | left thumb hold (`LT_TH L_NUM ESC`, pos 31), or `to L_NUM` from Navigate |
-| 4 | Mouse | `LT_TH L_MOUSE N` hold (pos 10) |
+| 4 | Mouse | `HML_LT L_MOUSE C` hold inside `AS_C` (pos 23) |
 | 5 | Alpha+ | right thumb hold (`LT_TH L_ALPHAP RET`, pos 33), or `lt L_ALPHAP N0` on Numpad (pos 33) |
 | 6 | Navigate | right thumb hold (`LT_TH L_NAV TAB`, pos 32) |
 | 7 | Vim | `lt L_VIM B` (pos 14) |
@@ -114,7 +114,9 @@ They live on `AS_E`, `AS_O`, `AS_H`, `AS_D` and `AS_C`. A rule fires only while 
 trigger must be pressed less than `AS_IDLE_MS` (300 ms) earlier, with no modifier
 other than Shift (`strict-modifiers` plus `LS`/`RS` triggers via `AS_TRIGGER`),
 so shortcuts like Ctrl+F don't trigger it. Adapted output is a plain `&kp` with
-no home-row-mod or layer hold.
+no home-row-mod or layer hold. `AS_C`'s default binding is `HML_LT L_MOUSE C`: an
+HML-tuned hold-tap whose hold is `&mo L_MOUSE` (the thumbs count as hold
+triggers too, for the mouse speed layers).
 
 `AK_*` are one-way adaptive keys on Alpha+ (layer 5): `JX → JU`, `JZ → JO`,
 `ÅS → ÅR`, `FT → FÖ`, `MD → MÖ`, `ÖS → ÖR`. J, Å, X and Z live only on Alpha+, so these
