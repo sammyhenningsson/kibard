@@ -44,6 +44,11 @@ parse_config:
     # CAP(k) keys: tap for the letter, hold for its capital.
     "CAP(SE_AA)": {t: "Å", h: "⇧"}
     "CAP(J)": {t: "J", h: "⇧"}
+    # MEH is LC(LS(LALT)): Ctrl+Shift on the Alt keycode, which keymap-drawer
+    # draws as "Ctl+Sft+LALT" instead of recognizing it as Meh.
+    "&HMR MEH I": {t: I, h: MEH}
+    "&HML MEH M": {t: M, h: MEH}
+    "&HMR MEH F14": {t: F14, h: MEH}
     # Dead-key macros: each taps the dead key and then the character that
     # completes it, so they draw as the composed result, not the dead key.
     "&acut": "´"
