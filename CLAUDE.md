@@ -60,7 +60,7 @@ Defined in `config/kibard.keymap`. Layer indices:
 | 1 | Symbols | left thumb hold (`LT_TH L_SYM SPACE`, pos 30) |
 | 2 | Symbols+ | `LT_TH L_SYMP SE_AT` hold on Symbols (pos 10) |
 | 3 | Numpad | left thumb hold (`LT_TH L_NUM ESC`, pos 31), or `to L_NUM` from Navigate |
-| 4 | Mouse | `HML_LT L_MOUSE C` hold inside `AS_C` (pos 23) |
+| 4 | Mouse | `HML_LT L_MOUSE Y` hold (pos 20) |
 | 5 | Alpha+ | right thumb hold (`LT_TH L_ALPHAP RET`, pos 33), or `lt L_ALPHAP N0` on Numpad (pos 33) |
 | 6 | Navigate | right thumb hold (`LT_TH L_NAV TAB`, pos 32) |
 | 7 | Vim | `lt L_VIM B` (pos 14) |
@@ -99,6 +99,9 @@ overrides near the top of `kibard.keymap`; the two numbers are
 
 `HML` (left hand) and `HMR` (right hand) are `zmk,behavior-hold-tap` with `flavor = "balanced"`, `tapping-term-ms = 250`, `quick-tap-ms = 175`, `require-prior-idle-ms = 150`, `hold-trigger-on-release`, and positional `hold-trigger-key-positions` restricting each to the opposite hand. Home row mod order, index→pinky (inner to outer): Alt / Ctrl / Shift.
 
+`HML_LT` is `HML` with `&mo` as the hold, used for Y (pos 20) → Mouse; the
+thumbs count as hold triggers too, so the mouse speed layers work right after it.
+
 `CAP(k)` (tap `k`, hold for `Shift+k`) is a plain time-based hold-tap on the
 `NUM` behavior, not a home-row mod: Alpha+ uses it for Å and J. `tools/sync-oryx.py`
 expands one-argument `#define`s like this before reading bindings.
@@ -114,9 +117,7 @@ They live on `AS_E`, `AS_O`, `AS_H`, `AS_D` and `AS_C`. A rule fires only while 
 trigger must be pressed less than `AS_IDLE_MS` (300 ms) earlier, with no modifier
 other than Shift (`strict-modifiers` plus `LS`/`RS` triggers via `AS_TRIGGER`),
 so shortcuts like Ctrl+F don't trigger it. Adapted output is a plain `&kp` with
-no home-row-mod or layer hold. `AS_C`'s default binding is `HML_LT L_MOUSE C`: an
-HML-tuned hold-tap whose hold is `&mo L_MOUSE` (the thumbs count as hold
-triggers too, for the mouse speed layers).
+no home-row-mod or layer hold.
 
 `AK_*` are one-way adaptive keys on Alpha+ (layer 5): `JX → JU`, `JZ → JO`,
 `ÅS → ÅR`, `FT → FÖ`, `MD → MÖ`, `ÖS → ÖR`. J, Å, X and Z live only on Alpha+, so these
