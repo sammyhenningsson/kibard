@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "3vAZAW",
+  "hashId": "jZj3N7",
   "layers": [
    {
     "keys": [
@@ -455,7 +455,7 @@
      {},
      {
       "tap": {
-       "code": "SE_ASTR"
+       "code": "SE_UNDS"
       }
      },
      {
@@ -525,7 +525,7 @@
        "layer": 5
       },
       "tap": {
-       "code": "SE_UNDS"
+       "code": "SE_ASTR"
       }
      }
     ],
@@ -1100,7 +1100,14 @@
        "code": "KC_DELETE"
       }
      },
-     {},
+     {
+      "tap": {
+       "code": "KC_C",
+       "modifiers": {
+        "leftCtrl": true
+       }
+      }
+     },
      {
       "tap": {
        "code": "KC_NO"
