@@ -158,8 +158,9 @@
         // Adaptive keys on Graphmod. Two are swaps [X, Y, Z]: right after X,
         // keys Y and Z trade places, via a pair of adaptive keys pointing at
         // each other: [U, E, O] and [S, D, C]. The rest are one-way:
-        // HD -> HÅ, KC -> KE, FC -> FL, LC -> LF, MH -> MN, RH -> RM. Output
-        // is a plain &kp: a rule only fires mid-word, where a hold is unwanted.
+        // HD -> HÅ, KC -> KE, FC -> FL, LC -> LF, MH -> MN, RH -> RM, FG -> FJ.
+        // Output is a plain &kp: a rule only fires mid-word, where a hold is
+        // unwanted.
         //
         // A rule only fires while typing: the trigger must have been pressed
         // less than AS_IDLE_MS ago, with no modifier other than Shift
@@ -211,6 +212,14 @@
             as_kc { trigger-keys = <AS_TRIGGER(K)>; bindings = <&kp E>; AS_GUARD };
             as_fc { trigger-keys = <AS_TRIGGER(F)>; bindings = <&kp L>; AS_GUARD };
             as_lc { trigger-keys = <AS_TRIGGER(L)>; bindings = <&kp F>; AS_GUARD };
+        };
+
+        AS_G: AS_G {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp G>;
+
+            as_fg { trigger-keys = <AS_TRIGGER(F)>; bindings = <&kp J>; AS_GUARD };
         };
 
 
@@ -524,7 +533,7 @@
             display-name = "Graphmod";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &none             &kp W             &AS_D             &kp G             &kp Q                                    &kp BSPC          &lt L_FUNC F      &AS_O             &kp U             &none
+                    &none             &kp W             &AS_D             &AS_G             &kp Q                                    &kp BSPC          &lt L_FUNC F      &AS_O             &kp U             &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &HML LGUI N       &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &AS_H             &HMR RCTRL A      &AS_E             &HMR MEH I
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
