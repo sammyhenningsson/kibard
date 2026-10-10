@@ -158,7 +158,8 @@
         // Adaptive keys on Graphmod. Two are swaps [X, Y, Z]: right after X,
         // keys Y and Z trade places, via a pair of adaptive keys pointing at
         // each other: [U, E, O] and [S, D, C]. The rest are one-way:
-        // HD -> HÅ, KC -> KE, FC -> FL, LC -> LF, MH -> MN, RH -> RM, FQ -> FJ.
+        // HD -> HÅ, KC -> KE, KP -> KO, FC -> FL, LC -> LF, MH -> MN, RH -> RM,
+        // FQ -> FJ.
         // Output is a plain &kp: a rule only fires mid-word, where a hold is
         // unwanted.
         //
@@ -220,6 +221,14 @@
             bindings = <&kp Q>;
 
             as_fq { trigger-keys = <AS_TRIGGER(F)>; bindings = <&kp J>; AS_GUARD };
+        };
+
+        AS_P: AS_P {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp P>;
+
+            as_kp { trigger-keys = <AS_TRIGGER(K)>; bindings = <&kp O>; AS_GUARD };
         };
 
 
@@ -537,7 +546,7 @@
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &HML LGUI N       &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &AS_H             &HMR RCTRL A      &AS_E             &HMR MEH I
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML_LT L_MOUSE Y &HML MEH M        &kp P             &AS_C             &kp COMMA                                &kp DOT           &kp L             &kp SE_ADIA       &kp K             &kp SE_OO
+                    &HML_LT L_MOUSE Y &HML MEH M        &AS_P             &AS_C             &kp COMMA                                &kp DOT           &kp L             &kp SE_ADIA       &kp K             &kp SE_OO
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &LT_TH L_SYM SPACE  &LT_TH L_NUM ESC                       &LT_TH L_NAV TAB  &LT_TH L_ALPHAP RET
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
