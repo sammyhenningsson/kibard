@@ -166,7 +166,7 @@
         // less than AS_IDLE_MS ago, with no modifier other than Shift
         // (strict-modifiers plus the shifted triggers), so Ctrl+F then C
         // still types C.
-#define AS_IDLE_MS 300
+#define AS_IDLE_MS 400
 #define AS_TRIGGER(k) k LS(k) RS(k)
 #define AS_GUARD max-prior-idle-ms = <AS_IDLE_MS>; strict-modifiers;
         AS_E: AS_E {
@@ -293,7 +293,7 @@
 //
 // The parameters are <multiplier divisor>, max 16 each. Tune here only.
 &mmv_input_listener {
-    fast { layers = <L_MFAST>; input-processors = <&zip_xy_scaler 3 1>; };
+    fast { layers = <L_MFAST>; input-processors = <&zip_xy_scaler 2 1>; };
     slow { layers = <L_MSLOW>; input-processors = <&zip_xy_scaler 1 4>; };
 };
 
