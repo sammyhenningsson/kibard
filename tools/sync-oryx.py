@@ -282,7 +282,7 @@ EQUIVALENT = {
     "LT_TH": "lt",                           # thumb layer-tap
     # Adaptive keys on Graphmod: compare as the default binding.
     "AS_E": "mt LSHIFT E", "AS_H": "mt LALT H", "AS_O": "kp O", "AS_D": "kp D", "AS_C": "kp C",
-    "AS_G": "kp G",
+    "AS_Q": "kp Q",
     # One-way adaptive keys on Alpha+: compare as the default binding.
     "AK_X": "mt LCTRL X", "AK_Z": "kp Z", "AK_S": "mt LSHIFT S",
     "AK_T": "kp T", "AK_D": "mt LCTRL D",
