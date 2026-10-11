@@ -155,11 +155,10 @@
             flavor = "tap-preferred";
         };
 
-        // Adaptive keys on Graphmod. Two are swaps [X, Y, Z]: right after X,
+        // Adaptive keys on Graphmod. Three are swaps [X, Y, Z]: right after X,
         // keys Y and Z trade places, via a pair of adaptive keys pointing at
-        // each other: [U, E, O] and [S, D, C]. The rest are one-way:
-        // HD -> HÅ, HK -> HJ, KC -> KE, KP -> KO, FC -> FL, LC -> LF, MH -> MN,
-        // RH -> RM, FQ -> FJ.
+        // each other: [U, E, O], [S, D, C] and [R, H, M]. The rest are one-way:
+        // HD -> HÅ, HK -> HJ, KC -> KE, KP -> KO, FC -> FL, LC -> LF, FQ -> FJ.
         // Output is a plain &kp: a rule only fires mid-word, where a hold is
         // unwanted.
         //
@@ -191,7 +190,6 @@
             #binding-cells = <0>;
             bindings = <&HMR LALT H>;
 
-            as_mh { trigger-keys = <AS_TRIGGER(M)>; bindings = <&kp N>; AS_GUARD };
             as_rh { trigger-keys = <AS_TRIGGER(R)>; bindings = <&kp M>; AS_GUARD };
         };
 
@@ -237,6 +235,14 @@
             bindings = <&kp K>;
 
             as_hk { trigger-keys = <AS_TRIGGER(H)>; bindings = <&kp J>; AS_GUARD };
+        };
+
+        AS_M: AS_M {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&HML MEH M>;
+
+            as_rm { trigger-keys = <AS_TRIGGER(R)>; bindings = <&kp H>; AS_GUARD };
         };
 
 
@@ -554,7 +560,7 @@
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &HML LGUI N       &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &AS_H             &HMR RCTRL A      &AS_E             &HMR MEH I
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML_LT L_MOUSE Y &HML MEH M        &AS_P             &AS_C             &kp COMMA                                &kp DOT           &kp L             &kp SE_ADIA       &AS_K             &kp SE_OO
+                    &HML_LT L_MOUSE Y &AS_M             &AS_P             &AS_C             &kp COMMA                                &kp DOT           &kp L             &kp SE_ADIA       &AS_K             &kp SE_OO
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &LT_TH L_SYM SPACE  &LT_TH L_NUM ESC                       &LT_TH L_NAV TAB  &LT_TH L_ALPHAP RET
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
