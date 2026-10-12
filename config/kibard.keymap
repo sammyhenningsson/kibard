@@ -573,9 +573,9 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &trans            &kp SE_GRAV       &kp SE_COLON      &kp SE_AMPR       &kp SE_CIRC                              &kp BSPC          &kp SE_LBRACKET   &kp SE_RBRACKET   &kp SE_BSLS       &trans
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &LT_TH L_SYMP SE_AT  &HML LSHIFT SE_SLASH  &HML LCTRL SE_QUES  &HML LALT SE_DQUOT  &kp SE_EQUAL                  &kp SE_UNDER      &HMR LALT SE_LPAR   &HMR RCTRL SE_RPAR  &HMR RSHIFT SE_APOS  &kp SE_PLUS
+                    &LT_TH L_SYMP SE_AT  &HML LSHIFT SE_SLASH  &HML LCTRL SE_QUES  &HML LALT SE_DQUOT  &kp SE_POUND                  &kp SE_EQUAL      &HMR LALT SE_LPAR   &HMR RCTRL SE_RPAR  &HMR RSHIFT SE_APOS  &kp SE_PLUS
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp SE_PIPE       &kp SE_LESS       &kp SE_GRTR       &kp SE_EXCLAM     &kp SE_DOLLAR                            &kp SE_PERCENT    &kp SE_LBRACE     &kp SE_RBRACE     &kp SE_POUND      &kp SE_MINUS
+                    &kp SE_PIPE       &kp SE_LESS       &kp SE_GRTR       &kp SE_EXCLAM     &kp SE_DOLLAR                            &kp SE_PERCENT    &kp SE_LBRACE     &kp SE_RBRACE     &kp SE_UNDER      &kp SE_MINUS
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &trans                                   &kp SPACE         &kp SE_ASTR
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
@@ -588,7 +588,7 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &none             &grav             &acut             &trans            &circ                                    &trans            &trans            &ocirc            &kp SE_MICRO      &trans
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &trans            &kp SE_GRAV       &kp SE_ACUT       &trans            &trans                                   &trans            &trans            &trans            &eacut            &tilde
+                    &trans            &kp SE_GRAV       &kp SE_ACUT       &trans            &trans                                   &trans            &kp SE_SLASH      &trans            &eacut            &tilde
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &trans            &trans            &trans            &trans            &trans                                   &trans            &kp SE_STERLING   &kp SE_EURO       &trans            &trans
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
@@ -605,7 +605,7 @@
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp RET           &HML LSHIFT LC(R) &kp LC(T)         &kp LC(S)         &kp SE_POUND                             &NUM SE_CIRC SE_ASTR  &NUM SE_LPAR N4  &NUM SE_RPAR N5   &NUM SE_EQUAL N6  &LT_TH L_HEX SE_PLUS
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &to L_MAIN        &kp BSPC          &kp DEL           &kp LC(C)         &kp SE_EQUAL                             &HT_TO L_MAIN SE_SLASH  &NUM SE_COLON N1  &NUM COMMA N2  &NUM DOT N3    &NUM C_AL_CALC SE_MINUS
+                    &to L_MAIN        &kp BSPC          &kp DEL           &kp LC(C)         &kp LC(Z)                                &HT_TO L_MAIN SE_SLASH  &NUM SE_COLON N1  &NUM COMMA N2  &NUM DOT N3    &NUM C_AL_CALC SE_MINUS
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &trans                                   &kp SPACE         &lt L_ALPHAP N0
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯

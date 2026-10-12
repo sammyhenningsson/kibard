@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "jZj3N7",
+  "hashId": "LvRl0R",
   "layers": [
    {
     "keys": [
@@ -394,7 +394,7 @@
      },
      {
       "tap": {
-       "code": "SE_EQL"
+       "code": "KC_HASH"
       }
      },
      {},
@@ -455,7 +455,7 @@
      {},
      {
       "tap": {
-       "code": "SE_UNDS"
+       "code": "SE_EQL"
       }
      },
      {
@@ -505,7 +505,7 @@
      },
      {
       "tap": {
-       "code": "KC_HASH"
+       "code": "SE_UNDS"
       }
      },
      {
@@ -684,7 +684,11 @@
      {},
      {},
      {},
-     {},
+     {
+      "tap": {
+       "code": "SE_SLSH"
+      }
+     },
      {},
      {
       "tap": {
@@ -857,7 +861,10 @@
      },
      {
       "tap": {
-       "code": "SE_EQL"
+       "code": "KC_Z",
+       "modifiers": {
+        "leftCtrl": true
+       }
       }
      },
      {},
