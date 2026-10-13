@@ -152,7 +152,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
         };
 
         // Adaptive keys on Graphmod. Three are swaps [X, Y, Z]: right after X,
