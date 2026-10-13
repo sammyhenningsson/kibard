@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "LvRl0R",
+  "hashId": "QzeEMV",
   "layers": [
    {
     "keys": [
@@ -72,7 +72,8 @@
      },
      {
       "hold": {
-       "code": "KC_LEFT_GUI"
+       "code": "MO",
+       "layer": 4
       },
       "tap": {
        "code": "KC_N"
@@ -117,10 +118,6 @@
       }
      },
      {
-      "hold": {
-       "code": "MO",
-       "layer": 4
-      },
       "tap": {
        "code": "KC_Y"
       }
@@ -1046,17 +1043,7 @@
       }
      },
      {},
-     {
-      "hold": {
-       "code": "KC_LEFT_GUI"
-      },
-      "tap": {
-       "code": "KC_N",
-       "modifiers": {
-        "leftCtrl": true
-       }
-      }
-     },
+     {},
      {
       "hold": {
        "code": "KC_LEFT_SHIFT"

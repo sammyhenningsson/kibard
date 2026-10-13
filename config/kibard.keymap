@@ -104,7 +104,7 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24>;
         };
 
-        // HML with a momentary layer as the hold (Y -> Mouse). The thumbs also
+        // HML with a momentary layer as the hold (N -> Mouse). The thumbs also
         // count as hold triggers, so the Mouse layer's speed keys (pos 30/31)
         // work right after pressing it.
         HML_LT: HML_LT {
@@ -558,9 +558,9 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &none             &kp W             &AS_D             &kp G             &AS_Q                                    &kp BSPC          &lt L_FUNC F      &AS_O             &kp U             &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML LGUI N       &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &AS_H             &HMR RCTRL A      &AS_E             &HMR MEH I
+                    &HML_LT L_MOUSE N &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &AS_H             &HMR RCTRL A      &AS_E             &HMR MEH I
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML_LT L_MOUSE Y &AS_M             &AS_P             &AS_C             &kp COMMA                                &kp DOT           &kp L             &kp SE_ADIA       &AS_K             &kp SE_OO
+                    &kp Y             &AS_M             &AS_P             &AS_C             &kp COMMA                                &kp DOT           &kp L             &kp SE_ADIA       &AS_K             &kp SE_OO
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &LT_TH L_SYM SPACE  &LT_TH L_NUM ESC                       &LT_TH L_NAV TAB  &LT_TH L_ALPHAP RET
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
@@ -618,7 +618,7 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                       ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &trans            &kp LC(V)         &kp LC(D)         &tog L_MOUSE      &kp LC(F)                                 &kp BSPC          &msc SCRL_LEFT    &mmv MOVE_UP      &msc SCRL_RIGHT   &trans
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                       ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML LCTRL LC(N)  &HML LSHIFT LC(R) &HML LCTRL LC(T)  &HML LALT LC(S)   &none                                     &tog L_MOUSE      &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &msc SCRL_UP
+                    &trans            &HML LSHIFT LC(R) &HML LCTRL LC(T)  &HML LALT LC(S)   &none                                     &tog L_MOUSE      &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &msc SCRL_UP
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                       ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &trans            &kp BSPC          &kp DEL           &kp LC(C)         &none                                     &to L_MAIN        &mkp MB1          &mkp MB3          &mkp MB2          &msc SCRL_DOWN
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                       ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
