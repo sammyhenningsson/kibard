@@ -158,7 +158,7 @@
         // Adaptive keys on Graphmod. Two are swaps [X, Y, Z]: right after X,
         // keys Y and Z trade places, via a pair of adaptive keys pointing at
         // each other: [U, E, O] and [S, D, C]. The rest are one-way: HD -> HÅ,
-        // HK -> HJ, KC -> KE, KP -> KO, PC -> PR, FC -> FL, LC -> LF, FQ -> FJ.
+        // HK -> HJ, KH -> KI, KC -> KE, KP -> KO, PC -> PR, FC -> FL, LC -> LF, FQ -> FJ.
         // Output is a plain &kp: a rule only fires mid-word, where a hold is
         // unwanted.
         //
@@ -228,6 +228,14 @@
             bindings = <&kp K>;
 
             as_hk { trigger-keys = <AS_TRIGGER(H)>; bindings = <&kp J>; AS_GUARD };
+        };
+
+        AS_H: AS_H {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&HMR LALT H>;
+
+            as_kh { trigger-keys = <AS_TRIGGER(K)>; bindings = <&kp I>; AS_GUARD };
         };
 
 
@@ -544,7 +552,7 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &none             &kp W             &AS_D             &kp G             &AS_Q                                    &kp BSPC          &lt L_FUNC F      &AS_O             &kp U             &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML_LT L_MOUSE N &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &HMR LALT H       &HMR RCTRL A      &AS_E             &HMR MEH I
+                    &HML_LT L_MOUSE N &HML LSHIFT R     &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &AS_H             &HMR RCTRL A      &AS_E             &HMR MEH I
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp Y             &AS_P             &HML MEH M        &AS_C             &kp COMMA                                &kp DOT           &kp L             &kp SE_ADIA       &AS_K             &kp SE_OO
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
