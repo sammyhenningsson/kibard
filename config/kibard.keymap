@@ -158,7 +158,8 @@
         // Adaptive keys on Graphmod. Two are swaps [X, Y, Z]: right after X,
         // keys Y and Z trade places, via a pair of adaptive keys pointing at
         // each other: [U, E, O] and [S, D, C]. The rest are one-way: HD -> HÅ,
-        // HK -> HJ, KC -> KE, KP -> KO, PC -> PR, FC -> FL, LC -> LF, FQ -> FJ.
+        // HK -> HJ, KC -> KE, KP -> KO, PK -> PO, PC -> PR, FC -> FL, LC -> LF,
+        // FQ -> FJ.
         // Output is a plain &kp: a rule only fires mid-word, where a hold is
         // unwanted.
         //
@@ -228,6 +229,7 @@
             bindings = <&kp K>;
 
             as_hk { trigger-keys = <AS_TRIGGER(H)>; bindings = <&kp J>; AS_GUARD };
+            as_pk { trigger-keys = <AS_TRIGGER(P)>; bindings = <&kp O>; AS_GUARD };
         };
 
 
