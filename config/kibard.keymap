@@ -158,7 +158,7 @@
         // Adaptive keys on Graphmod. Two are swaps [X, Y, Z]: right after X,
         // keys Y and Z trade places, via a pair of adaptive keys pointing at
         // each other: [U, E, O] and [S, D, C]. The rest are one-way: HD -> HÅ,
-        // HK -> HJ, KC -> KE, KP -> KO, PK -> PO, PC -> PR, FC -> FL, LC -> LF,
+        // HK -> HJ, KC -> KE, KP -> KO, PK -> PO, PC -> PR, FC -> FL, LC -> LL,
         // FQ -> FJ.
         // Output is a plain &kp: a rule only fires mid-word, where a hold is
         // unwanted.
@@ -203,7 +203,7 @@
             as_sc { trigger-keys = <AS_TRIGGER(S)>; bindings = <&kp D>; AS_GUARD };
             as_kc { trigger-keys = <AS_TRIGGER(K)>; bindings = <&kp E>; AS_GUARD };
             as_fc { trigger-keys = <AS_TRIGGER(F)>; bindings = <&kp L>; AS_GUARD };
-            as_lc { trigger-keys = <AS_TRIGGER(L)>; bindings = <&kp F>; AS_GUARD };
+            as_lc { trigger-keys = <AS_TRIGGER(L)>; bindings = <&kp L>; AS_GUARD };
             as_pc { trigger-keys = <AS_TRIGGER(P)>; bindings = <&kp R>; AS_GUARD };
         };
 
@@ -233,10 +233,10 @@
         };
 
 
-        // One-way adaptive keys on Alpha+: right after J, P, Å, F, L, M or Ö, a key
+        // One-way adaptive keys on Alpha+: right after J, Å, F, M or Ö, a key
         // on the same layer types the letter that usually follows, so the
         // thumb never has to let go of Alpha+. JX -> JU, PX -> PP, JZ -> JO,
-        // ÅZ -> ÅE, ÅS -> ÅR, FT -> FÖ, LT -> LL, MD -> MÖ, ÖS -> ÖR. FT and ÖS chain: F, then T
+        // ÅZ -> ÅE, ÅS -> ÅR, FT -> FÖ, MD -> MÖ, ÖS -> ÖR. FT and ÖS chain: F, then T
         // and S on Alpha+, types FÖR. Like the Graphmod ones, they only fire within
         // AS_IDLE_MS of the trigger; modifiers aren't checked.
         AK_X: AK_X {
@@ -271,7 +271,6 @@
             bindings = <&kp T>;
 
             ak_ft { trigger-keys = <F>; bindings = <&kp SE_OO>; max-prior-idle-ms = <AS_IDLE_MS>; };
-            ak_lt { trigger-keys = <L>; bindings = <&kp L>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
 
         AK_D: AK_D {
