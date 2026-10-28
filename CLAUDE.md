@@ -65,7 +65,7 @@ Defined in `config/kibard.keymap`. Layer indices:
 | 6 | Navigate | right thumb hold (`LT_TH L_NAV TAB`, pos 32) |
 | 7 | Vim | `lt L_VIM B` (pos 14) |
 | 8 | Functions | `sl L_FUNC` from Navigate (sticky: off after the next key press, or 5 s idle) |
-| 9 | B (Bluetooth/system) | `to L_B` from Navigate |
+| 9 | B (Bluetooth/system) | `lt L_B W` / `lt L_B U` hold on Graphmod (pos 1, 8) |
 | 10 | Hex | `LT_TH L_HEX SE_PLUS` on Numpad (pos 19) |
 | 11 | Mouse fast | left thumb hold (pos 31) on Mouse |
 | 12 | Mouse slow | left thumb hold (pos 30) on Mouse |
@@ -74,9 +74,9 @@ Defined in `config/kibard.keymap`. Layer indices:
 
 ### Layer lock
 
-Each of the Numpad, Mouse, Navigate and Vim layers has a lock key at
+Each of the Numpad, Mouse, Navigate, Vim and B layers has a lock key at
 position 3 (`G` on the base layer): `&tog L_NUM`, `&tog L_MOUSE`, `&tog L_NAV`,
-`&tog L_VIM`. On Numpad, Mouse and Navigate, Backspace and Delete sit below it
+`&tog L_VIM`, `&tog L_B`. On Numpad, Mouse and Navigate, Backspace and Delete sit below it
 at positions 21 and 22. Hold the layer's activation key,
 tap its lock key, release the hold — the layer stays on; tap the lock key again
 to drop back to Graphmod.
