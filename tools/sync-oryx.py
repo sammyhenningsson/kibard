@@ -285,7 +285,7 @@ EQUIVALENT = {
     "AS_Q": "kp Q", "AS_P": "kp P", "AS_K": "kp K",
     # One-way adaptive keys on Alpha+: compare as the default binding.
     "AK_X": "mt LCTRL X", "AK_Z": "kp Z", "AK_S": "mt LSHIFT S",
-    "AK_T": "kp T", "AK_D": "mt LCTRL D",
+    "AK_D": "kp D", "AK_T": "mt LCTRL T",
 }
 
 

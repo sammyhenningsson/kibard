@@ -68,8 +68,8 @@ parse_config:
     "&AK_X": {t: "X", h: "LCTRL", s: "J→U P→P"}
     "&AK_Z": {t: "Z", s: "J→O S→K Å→E"}
     "&AK_S": {t: "S", h: "LSHIFT", s: "Å/Ö→R"}
-    "&AK_T": {t: "T", s: "F→Ö"}
-    "&AK_D": {t: "D", h: "LCTRL", s: "M→Ö"}
+    "&AK_D": {t: "D", s: "F→Ö"}
+    "&AK_T": {t: "T", h: "LCTRL", s: "M→Ö"}
     # Vim macros: label each with the command it types.
     "&vim_write": ":w"
     "&vim_force_write": ":w!"
