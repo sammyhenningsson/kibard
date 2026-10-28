@@ -314,12 +314,6 @@
     slow { layers = <L_MSLOW>; input-processors = <&zip_scroll_scaler 1 3>; };
 };
 
-// Functions is a sticky layer (&sl from Navigate): it stays on until the next
-// key press, or until this timeout passes with nothing pressed.
-&sl {
-    release-after-ms = <5000>;
-};
-
 / {
     macros {
         vim_write: vim_write {
