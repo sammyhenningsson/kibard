@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "40xlXz",
+  "hashId": "LvRKoX",
   "layers": [
    {
     "keys": [
@@ -1216,7 +1216,7 @@
      },
      {
       "tap": {
-       "code": "KC_T"
+       "code": "KC_D"
       }
      },
      {
@@ -1251,7 +1251,7 @@
        "code": "KC_LEFT_CTRL"
       },
       "tap": {
-       "code": "KC_D"
+       "code": "KC_T"
       }
      },
      {
