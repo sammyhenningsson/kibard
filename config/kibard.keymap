@@ -281,6 +281,25 @@
 
             ak_mt { trigger-keys = <M>; bindings = <&kp SE_OO>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
+
+        // Contractions on Symbols: right after the apostrophe, ( types T and
+        // ) types S, so don't and it's end without leaving the layer. Same
+        // AS_IDLE_MS window as the rest.
+        AK_LPAR: AK_LPAR {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&HMR LALT SE_LPAR>;
+
+            ak_apos_lpar { trigger-keys = <SE_APOS>; bindings = <&kp T>; max-prior-idle-ms = <AS_IDLE_MS>; };
+        };
+
+        AK_RPAR: AK_RPAR {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&HMR RCTRL SE_RPAR>;
+
+            ak_apos_rpar { trigger-keys = <SE_APOS>; bindings = <&kp S>; max-prior-idle-ms = <AS_IDLE_MS>; };
+        };
     };
 };
 
@@ -556,7 +575,7 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &trans            &kp SE_GRAV       &kp SE_COLON      &kp SE_AMPR       &kp SE_CIRC                              &kp BSPC          &kp SE_LBRACKET   &kp SE_RBRACKET   &kp SE_BSLS       &trans
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &LT_TH L_SYMP SE_AT  &HML LSHIFT SE_SLASH  &HML LCTRL SE_QUES  &HML LALT SE_DQUOT  &kp SE_POUND                  &kp SE_EQUAL      &HMR LALT SE_LPAR   &HMR RCTRL SE_RPAR  &HMR RSHIFT SE_APOS  &kp SE_PLUS
+                    &LT_TH L_SYMP SE_AT  &HML LSHIFT SE_SLASH  &HML LCTRL SE_QUES  &HML LALT SE_DQUOT  &kp SE_POUND                  &kp SE_EQUAL      &AK_LPAR            &AK_RPAR            &HMR RSHIFT SE_APOS  &kp SE_PLUS
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp SE_PIPE       &kp SE_LESS       &kp SE_GRTR       &kp SE_EXCLAM     &kp SE_DOLLAR                            &kp SE_PERCENT    &kp SE_LBRACE     &kp SE_RBRACE     &kp SE_UNDER      &kp SE_MINUS
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯

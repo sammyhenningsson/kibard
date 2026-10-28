@@ -126,6 +126,10 @@ then D and S on Alpha+, types `för`. Like the `AS_*` keys, they fire only withi
 `AS_IDLE_MS` of the trigger, but without `strict-modifiers`. Only Alpha+'s S changes; the base-layer S doesn't
 (`låst`, `påse`).
 
+`AK_LPAR` and `AK_RPAR` do the same on Symbols, for contractions: right after
+`'`, `(` types T and `)` types S (`don't`, `it's`). Because `')` is common in
+code (`f('x')`), a fast `'` then `)` types `'S`. Backspace, then `)`, gets the paren.
+
 A new `AS_*` or `AK_*` key needs an `EQUIVALENT` entry in `tools/sync-oryx.py`
 and a label in `tools/keymap-drawer.yaml`.
 

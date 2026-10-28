@@ -286,6 +286,8 @@ EQUIVALENT = {
     # One-way adaptive keys on Alpha+: compare as the default binding.
     "AK_X": "mt LCTRL X", "AK_Z": "kp Z", "AK_S": "mt LSHIFT S",
     "AK_D": "kp D", "AK_T": "mt LCTRL T",
+    # Contraction adaptive keys on Symbols.
+    "AK_LPAR": "mt LALT SE_LPAR", "AK_RPAR": "mt LCTRL SE_RPAR",
 }
 
 
