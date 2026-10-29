@@ -234,10 +234,10 @@
         };
 
 
-        // One-way adaptive keys on Alpha+: right after J, P, S, Å, F, M or Ö, a key
+        // One-way adaptive keys on Alpha+: right after J, P, S, N, Å, F, M or Ö, a key
         // on the same layer types the letter that usually follows, so the
         // thumb never has to let go of Alpha+. JX -> JU, PX -> PP, JZ -> JO,
-        // SZ -> SK, ÅZ -> ÅE, ÅS -> ÅR, FD -> FÖ, MT -> MÖ, ÖS -> ÖR. FD and ÖS chain: F, then D
+        // SZ -> SK, ÅZ -> ÅE, NS -> NN, ÅS -> ÅR, FD -> FÖ, MT -> MÖ, ÖS -> ÖR. FD and ÖS chain: F, then D
         // and S on Alpha+, types FÖR. Like the Graphmod ones, they only fire within
         // AS_IDLE_MS of the trigger; modifiers aren't checked.
         AK_X: AK_X {
@@ -265,6 +265,7 @@
             bindings = <&HML LSHIFT S>;
 
             ak_aas { trigger-keys = <SE_AA SE_OO>; bindings = <&kp R>; max-prior-idle-ms = <AS_IDLE_MS>; };
+            ak_ns { trigger-keys = <N>; bindings = <&kp N>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
 
         AK_D: AK_D {
