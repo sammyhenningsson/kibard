@@ -61,7 +61,7 @@ parse_config:
     "&AS_E": {t: "E", h: "RSHIFT", s: "U→O"}
     "&AS_O": {t: "O", s: "U→E"}
     "&AS_D": {t: "D", s: "S→C H→Å"}
-    "&AS_C": {t: "C", s: "S→D K→E F→L L→L P→R"}
+    "&AS_C": {t: "C", s: "S→D K→E F→L P→R LNRTM×2"}
     "&AS_Q": {t: "Q", s: "F→J"}
     "&AS_P": {t: "P", s: "K→O"}
     "&AS_K": {t: "K", s: "H→J P→O"}
