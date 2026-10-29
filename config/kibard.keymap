@@ -159,8 +159,7 @@
         // keys Y and Z trade places, via a pair of adaptive keys pointing at
         // each other: [U, E, O] and [S, D, C]. The rest are one-way: HD -> HÅ,
         // HK -> HJ, KC -> KE, KP -> KO, PK -> PO, PC -> PR, FC -> FL, FQ -> FJ,
-        // and C repeats L, N, R, T or M: LC -> LL, NC -> NN, RC -> RR,
-        // TC -> TT, MC -> MM.
+        // and C repeats L or M: LC -> LL, MC -> MM.
         // Output is a plain &kp: a rule only fires mid-word, where a hold is
         // unwanted.
         //
@@ -205,9 +204,6 @@
             as_kc { trigger-keys = <AS_TRIGGER(K)>; bindings = <&kp E>; AS_GUARD };
             as_fc { trigger-keys = <AS_TRIGGER(F)>; bindings = <&kp L>; AS_GUARD };
             as_lc { trigger-keys = <AS_TRIGGER(L)>; bindings = <&kp L>; AS_GUARD };
-            as_nc { trigger-keys = <AS_TRIGGER(N)>; bindings = <&kp N>; AS_GUARD };
-            as_rc { trigger-keys = <AS_TRIGGER(R)>; bindings = <&kp R>; AS_GUARD };
-            as_tc { trigger-keys = <AS_TRIGGER(T)>; bindings = <&kp T>; AS_GUARD };
             as_mc { trigger-keys = <AS_TRIGGER(M)>; bindings = <&kp M>; AS_GUARD };
             as_pc { trigger-keys = <AS_TRIGGER(P)>; bindings = <&kp R>; AS_GUARD };
         };
