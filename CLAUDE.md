@@ -99,6 +99,8 @@ overrides near the top of `kibard.keymap`; the two numbers are
 
 `HML` (left hand) and `HMR` (right hand) are `zmk,behavior-hold-tap` with `flavor = "balanced"`, `tapping-term-ms = 250`, `quick-tap-ms = 175`, `require-prior-idle-ms = 150`, `hold-trigger-on-release`, and positional `hold-trigger-key-positions` restricting each to the opposite hand. Home row mod order, index→pinky (inner to outer): Alt / Ctrl / Shift.
 
+`HML_SFT` / `HMR_SFT` are the same but with `require-prior-idle-ms = 100`, and every Shift home-row mod uses them. `require-prior-idle-ms` is a per-behavior property, so a separate behavior is the only way to give Shift a different value than Ctrl/Alt.
+
 `HML_LT` is `HML` with `&mo` as the hold, used for N (pos 10) → Mouse; the
 thumbs count as hold triggers too, so the mouse speed layers work right after it.
 

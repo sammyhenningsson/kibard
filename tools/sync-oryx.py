@@ -278,7 +278,8 @@ KEYMAP = REPO / "config" / "kibard.keymap"
 # ZMK behaviours that are equivalent to a plainer form for comparison purposes:
 # the Kibard uses tuned hold-taps where Oryx has the stock QMK behaviour.
 EQUIVALENT = {
-    "HML": "mt", "HMR": "mt", "NUM": "mt", "HML_LT": "lt",   # tuned home-row / numpad hold-taps
+    "HML": "mt", "HMR": "mt", "HML_SFT": "mt", "HMR_SFT": "mt",
+    "NUM": "mt", "HML_LT": "lt",             # tuned home-row / numpad hold-taps
     "LT_TH": "lt",                           # thumb layer-tap
     # Adaptive keys on Graphmod: compare as the default binding.
     "AS_E": "mt LSHIFT E", "AS_O": "kp O", "AS_D": "kp D", "AS_C": "kp C",
