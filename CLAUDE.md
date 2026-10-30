@@ -61,8 +61,8 @@ Defined in `config/kibard.keymap`. Layer indices:
 | 2 | Symbols+ | `LT_TH L_SYMP SE_AT` hold on Symbols (pos 10) |
 | 3 | Numpad | left thumb hold (`LT_TH L_NUM ESC`, pos 31), or `to L_NUM` from Navigate |
 | 4 | Mouse | `HML_LT L_MOUSE N` hold (pos 10) |
-| 5 | Alpha+ | right thumb hold (`LT_TH L_ALPHAP RET`, pos 33), or `lt L_ALPHAP N0` on Numpad (pos 33) |
-| 6 | Navigate | right thumb hold (`LT_TH L_NAV TAB`, pos 32) |
+| 5 | Alpha+ | right thumb hold (`LT_TH L_ALPHAP TAB`, pos 33), or `lt L_ALPHAP N0` on Numpad (pos 33) |
+| 6 | Navigate | right thumb hold (`LT_TH L_NAV RET`, pos 32) |
 | 7 | Vim | `lt L_VIM B` (pos 14) |
 | 8 | Functions | `to L_FUNC` from Navigate (pos 2) |
 | 9 | B (Bluetooth/system) | `lt L_B W` / `lt L_B U` hold on Graphmod (pos 1, 8) |
