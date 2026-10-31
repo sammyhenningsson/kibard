@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "LvRKoX",
+  "hashId": "MaeENb",
   "layers": [
    {
     "keys": [
@@ -309,7 +309,7 @@
        "layer": 7
       },
       "tap": {
-       "code": "KC_TAB"
+       "code": "KC_ENTER"
       }
      },
      {
@@ -318,7 +318,7 @@
        "layer": 5
       },
       "tap": {
-       "code": "KC_ENTER"
+       "code": "KC_TAB"
       }
      }
     ],
@@ -1586,8 +1586,19 @@
      },
      {},
      {},
-     {},
-     {},
+     {
+      "tap": {
+       "code": "KC_N",
+       "modifiers": {
+        "leftShift": true
+       }
+      }
+     },
+     {
+      "tap": {
+       "code": "KC_N"
+      }
+     },
      {
       "tap": {
        "code": "KC_G"
@@ -2514,6 +2525,6 @@
   ],
   "model": "v1",
   "qmkVersion": "25.0",
-  "title": "Keyboard layout edited."
+  "title": "Vim: n and N"
  }
 }
