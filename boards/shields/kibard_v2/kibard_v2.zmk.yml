@@ -1,0 +1,12 @@
+file_format: "1"
+id: kibard_v2
+name: Kibård v2
+type: shield
+url: ""
+requires:
+  - nice_nano
+features:
+  - keys
+siblings:
+  - kibard_v2_left
+  - kibard_v2_right

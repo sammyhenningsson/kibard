@@ -8,7 +8,7 @@ ZMK firmware configuration for **Kibård**, a custom split keyboard. The firmwar
 
 ## Building firmware
 
-Firmware is built via GitHub Actions — push to the repo and download the `.uf2` artifacts from the Actions run. The build matrix is defined in `build.yaml` and produces two artifacts: `kibard_left` and `kibard_right` (plus `settings_reset`).
+Firmware is built via GitHub Actions — push to the repo and download the `.uf2` artifacts from the Actions run. The build matrix is defined in `build.yaml` and produces `kibard_left`, `kibard_right`, `kibard_v2_left` and `kibard_v2_right` (plus `settings_reset`).
 
 The board target is `nice_nano//zmk`, not `nice_nano_v2` — Zephyr 4.1's hardware model v2 replaced the old name with `nice_nano@2.0.0//zmk`, and ZMK board definitions now require the `zmk` variant. Since `config/west.yml` tracks ZMK `main`, `.github/workflows/build.yml` calls `build-user-config.yml@main` to match.
 
@@ -40,6 +40,9 @@ Left half = BLE central + USB host. Right half = BLE peripheral only.
 | `config/kibard.keymap` | All layers, behaviors, macros, combos |
 | `config/kibard_left.conf` | Left: split central + BLE |
 | `config/kibard_right.conf` | Right: split peripheral + BLE + USB |
+| `boards/shields/kibard_v2/` | v2 shield: same matrix via `kibard.dtsi`, its own pins, nice!view on both halves |
+| `config/kibard_v2.keymap` | Includes `kibard.keymap`, so both versions share one keymap |
+| `config/kibard_v2_left.conf`, `config/kibard_v2_right.conf` | v2 copies of the conf files, plus `CONFIG_ZMK_DISPLAY`. Settings changes must go in both versions |
 | `config/west.yml` | ZMK revision pin (`main` — see Layer lock) |
 | `src/appcompanion/` | Vendored layer-status firmware source — see its README |
 | `CMakeLists.txt`, `Kconfig`, `zephyr/module.yml` | Make this repo a Zephyr module: shield board root plus the vendored sources |
