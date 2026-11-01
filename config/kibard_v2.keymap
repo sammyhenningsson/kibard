@@ -1,0 +1,2 @@
+// Kibård v2 has the same keymap as v1, so config/kibard.keymap stays the only copy.
+#include "kibard.keymap"

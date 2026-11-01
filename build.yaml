@@ -31,5 +31,11 @@ include:
     shield: kibard_right
     artifact-name: kibard_right
   - board: nice_nano//zmk
+    shield: kibard_v2_left nice_view_adapter nice_view
+    artifact-name: kibard_v2_left
+  - board: nice_nano//zmk
+    shield: kibard_v2_right nice_view_adapter nice_view
+    artifact-name: kibard_v2_right
+  - board: nice_nano//zmk
     shield: settings_reset
     artifact-name: settings_reset
