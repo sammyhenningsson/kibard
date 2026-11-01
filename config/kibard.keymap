@@ -179,8 +179,18 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <150>;
             flavor = "hold-preferred";
+        };
+
+        LT_SPC: LT_SPC {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
         };
 
         // Adaptive keys on Graphmod. Two are swaps [X, Y, Z]: right after X,
@@ -610,7 +620,7 @@
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp Y             &AS_P             &HML MEH M        &AS_C             &kp COMMA                                &kp DOT           &kp L             &kp SE_ADIA       &AS_K             &kp SE_OO
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
-                                                                          &LT_TH L_SYM SPACE  &LT_TH L_NUM ESC                       &LT_TH L_NAV RET  &LT_TH L_ALPHAP TAB
+                                                                          &LT_SPC L_SYM SPACE  &LT_TH L_NUM ESC                      &LT_TH L_NAV RET  &LT_TH L_ALPHAP TAB
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
             >;
         };
