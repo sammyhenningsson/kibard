@@ -65,11 +65,11 @@ parse_config:
     "&AS_Q": {t: "Q", s: "F→J"}
     "&AS_P": {t: "P", s: "K→O"}
     "&AS_K": {t: "K", s: "H→J P→O"}
-    "&AK_X": {t: "X", h: "LCTRL", s: "J→U P→P"}
-    "&AK_Z": {t: "Z", s: "J→O S→K Å→E"}
-    "&AK_S": {t: "S", h: "LSHIFT", s: "Å/Ö→R N→N"}
+    "&AK_X": {t: "X", h: "LCTRL", s: "P→P"}
+    "&AK_Z": {t: "Z", s: "S→K Å→E"}
+    "&AK_S": {t: "S", h: "LSHIFT", s: "Å/Ö→R N→N J→O"}
     "&AK_D": {t: "D", s: "F→Ö"}
-    "&AK_T": {t: "T", h: "LCTRL", s: "M→Ö"}
+    "&AK_T": {t: "T", h: "LCTRL", s: "M→Ö J→U"}
     "&AK_LPAR": {t: "(", h: "LALT", s: "'→T"}
     "&AK_RPAR": {t: ")", h: "RCTRL", s: "'→S"}
     "&AK_EQUAL": {t: "=", s: "'→V"}

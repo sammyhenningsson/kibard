@@ -121,7 +121,7 @@ other than Shift (`strict-modifiers` plus `LS`/`RS` triggers via `AS_TRIGGER`),
 so shortcuts like Ctrl+F don't trigger it. Adapted output is a plain `&kp` with
 no home-row-mod or layer hold.
 
-`AK_*` are one-way adaptive keys on Alpha+ (layer 5): `JX → JU`, `PX → PP`, `JZ → JO`, `SZ → SK`, `ÅZ → ÅE`,
+`AK_*` are one-way adaptive keys on Alpha+ (layer 5): `JT → JU`, `PX → PP`, `JS → JO`, `SZ → SK`, `ÅZ → ÅE`,
 `NS → NN`, `ÅS → ÅR`, `FD → FÖ`, `MT → MÖ`, `ÖS → ÖR`. J, Å, X and Z live only on Alpha+, so these
 finish common bigrams without releasing the layer. `FD` and `ÖS` chain: base F,
 then D and S on Alpha+, types `för`. Like the `AS_*` keys, they fire only within
