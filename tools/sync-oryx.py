@@ -130,7 +130,7 @@ MOD_WRAP = [("leftCtrl", "LC"), ("leftShift", "LS"), ("leftAlt", "LA"),
 ZMK_LAYER = {i: z for i, (_t, z, _n) in enumerate(LAYER_MAP)}
 ZMK_LAYER_NAME = {0: "L_GRAPHMOD", 1: "L_SYM", 2: "L_SYMP", 3: "L_NUM",
                   4: "L_MOUSE", 5: "L_ALPHAP", 6: "L_NAV", 7: "L_VIM",
-                  8: "L_FUNC", 9: "L_B", 10: "L_HEX"}
+                  8: "L_FUNC", 9: "L_BT", 10: "L_HEX"}
 # ZMK 9 is Bluetooth, which Oryx has no equivalent for
 
 # ------------------------------------------------------------------ fetch ---
@@ -283,7 +283,7 @@ EQUIVALENT = {
     "LT_TH": "lt", "LT_SPC": "lt",           # thumb layer-taps
     # Adaptive keys on Graphmod: compare as the default binding.
     "AS_E": "mt LSHIFT E", "AS_O": "kp O", "AS_D": "kp D", "AS_C": "kp C",
-    "AS_Q": "kp Q", "AS_P": "kp P", "AS_K": "kp K",
+    "AS_Q": "kp Q", "AS_P": "kp P", "AS_K": "kp K", "AS_W": "lt 9 W",
     # One-way adaptive keys on Alpha+: compare as the default binding.
     "AK_X": "mt LCTRL X", "AK_Z": "kp Z", "AK_S": "mt LSHIFT S",
     "AK_D": "kp D", "AK_T": "mt LCTRL T",

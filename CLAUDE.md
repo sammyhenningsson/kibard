@@ -65,18 +65,18 @@ Defined in `config/kibard.keymap`. Layer indices:
 | 6 | Navigate | right thumb hold (`LT_TH L_NAV RET`, pos 32) |
 | 7 | Vim | `lt L_VIM B` (pos 14) |
 | 8 | Functions | `to L_FUNC` from Navigate (pos 2) |
-| 9 | B (Bluetooth/system) | `lt L_B W` / `lt L_B U` hold on Graphmod (pos 1, 8) |
+| 9 | BT (Bluetooth/system) | `AS_W` (`lt L_BT W`) / `lt L_BT U` hold on Graphmod (pos 1, 8) |
 | 10 | Hex | `LT_TH L_HEX SE_PLUS` on Numpad (pos 19) |
 | 11 | Mouse fast | left thumb hold (pos 31) on Mouse |
 | 12 | Mouse slow | left thumb hold (pos 30) on Mouse |
 
-`L_MAIN` always equals `L_GRAPHMOD` (layer 0); `&to L_MAIN` on the Numpad, Mouse, Navigate, Functions and B layers is the way back. The only combo defined is `combo_esc`: positions `1+2` within 40 ms sends `ESC`, on the Graphmod layer only (on Alpha+ those keys are L and T).
+`L_MAIN` always equals `L_GRAPHMOD` (layer 0); `&to L_MAIN` on the Numpad, Mouse, Navigate, Functions and BT layers is the way back. The only combo defined is `combo_esc`: positions `1+2` within 40 ms sends `ESC`, on the Graphmod layer only (on Alpha+ those keys are L and T).
 
 ### Layer lock
 
-Each of the Numpad, Mouse, Navigate, Vim and B layers has a lock key at
+Each of the Numpad, Mouse, Navigate, Vim and BT layers has a lock key at
 position 3 (`G` on the base layer): `&tog L_NUM`, `&tog L_MOUSE`, `&tog L_NAV`,
-`&tog L_VIM`, `&tog L_B`. On Numpad, Mouse and Navigate, Backspace and Delete sit below it
+`&tog L_VIM`, `&tog L_BT`. On Numpad, Mouse and Navigate, Backspace and Delete sit below it
 at positions 21 and 22. Hold the layer's activation key,
 tap its lock key, release the hold — the layer stays on; tap the lock key again
 to drop back to Graphmod.
@@ -127,8 +127,8 @@ expands one-argument `#define`s like this before reading bindings.
 (urob's `zmk-adaptive-key` module): right after the trigger, a key types a
 different letter. Two are swaps `[X, Y, Z]`, where right after X keys Y and Z
 trade places (a pair of adaptive keys pointing at each other): `[U, E, O]`
-and `[S, D, C]`. The rest are one-way: `HD → HÅ`, `HK → HJ`, `KC → KE`, `KP → KO`, `PK → PO`, `PC → PR`, `FC → FL`, `FQ → FJ`, `OQ → OA`, and C repeats L or M (`LC → LL`, `MC → MM`).
-They live on `AS_E`, `AS_O`, `AS_D`, `AS_C`, `AS_Q`, `AS_P` and `AS_K`. A rule fires only while typing: the
+and `[S, D, C]`. The rest are one-way: `HD → HÅ`, `HK → HJ`, `KC → KE`, `KP → KO`, `PK → PO`, `PC → PR`, `FC → FL`, `FQ → FJ`, `OQ → OA`, `GW → GS`, and C repeats L or M (`LC → LL`, `MC → MM`).
+They live on `AS_E`, `AS_O`, `AS_D`, `AS_C`, `AS_Q`, `AS_P`, `AS_K` and `AS_W` (which keeps the BT layer hold on W). A rule fires only while typing: the
 trigger must be pressed less than `AS_IDLE_MS` (400 ms) earlier, with no modifier
 other than Shift (`strict-modifiers` plus `LS`/`RS` triggers via `AS_TRIGGER`),
 so shortcuts like Ctrl+F don't trigger it. Adapted output is a plain `&kp` with

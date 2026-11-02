@@ -58,7 +58,7 @@
 #define L_NAV 6
 #define L_VIM 7
 #define L_FUNC 8
-#define L_B 9
+#define L_BT 9
 #define L_HEX 10
 // Speed modifiers for the Mouse layer: all-&trans layers that exist only so the
 // pointer/scroll input listeners can scale their events while one is held.
@@ -197,7 +197,7 @@
         // keys Y and Z trade places, via a pair of adaptive keys pointing at
         // each other: [U, E, O] and [S, D, C]. The rest are one-way: HD -> HÅ,
         // HK -> HJ, KC -> KE, KP -> KO, PK -> PO, PC -> PR, FC -> FL, FQ -> FJ,
-        // and C repeats L or M: LC -> LL, MC -> MM.
+        // OQ -> OA, GW -> GS, and C repeats L or M: LC -> LL, MC -> MM.
         // Output is a plain &kp: a rule only fires mid-word, where a hold is
         // unwanted.
         //
@@ -270,6 +270,14 @@
 
             as_hk { trigger-keys = <AS_TRIGGER(H)>; bindings = <&kp J>; AS_GUARD };
             as_pk { trigger-keys = <AS_TRIGGER(P)>; bindings = <&kp O>; AS_GUARD };
+        };
+
+        AS_W: AS_W {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&lt L_BT W>;
+
+            as_gw { trigger-keys = <AS_TRIGGER(G)>; bindings = <&kp S>; AS_GUARD };
         };
 
 
@@ -615,7 +623,7 @@
             display-name = "Graphmod";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &none             &lt L_B W         &AS_D             &kp G             &AS_Q                                    &kp BSPC          &lt L_FUNC F      &AS_O             &lt L_B U         &none
+                    &none             &AS_W             &AS_D             &kp G             &AS_Q                                    &kp BSPC          &lt L_FUNC F      &AS_O             &lt L_BT U        &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &HML_LT L_MOUSE N &HML_SFT LSHIFT R &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &HMR LALT H       &HMR RCTRL A      &AS_E             &HMR MEH I
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
@@ -746,11 +754,11 @@
             >;
         };
 
-        b_layer {
-            display-name = "B";
+        bt_layer {
+            display-name = "BT";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &none             &none             &bt BT_CLR        &tog L_B          &kp B                                    &bt BT_CLR_ALL    &kp T             &bt BT_CLR        &none             &none
+                    &none             &none             &bt BT_CLR        &tog L_BT         &kp B                                    &bt BT_CLR_ALL    &kp T             &bt BT_CLR        &none             &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4                             &bt BT_DISC 4     &bt BT_DISC 3     &bt BT_DISC 2     &bt BT_DISC 1     &bt BT_DISC 0
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤

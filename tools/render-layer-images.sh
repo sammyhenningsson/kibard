@@ -30,7 +30,7 @@ LAYERS=(
     Navigate:navigate
     Vim:vim
     Functions:functions
-    B:b
+    BT:bt
     Hex:hex
 )
 
