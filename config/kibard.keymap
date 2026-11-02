@@ -252,6 +252,7 @@
             bindings = <&kp Q>;
 
             as_fq { trigger-keys = <AS_TRIGGER(F)>; bindings = <&kp J>; AS_GUARD };
+            as_oq { trigger-keys = <AS_TRIGGER(O)>; bindings = <&kp A>; AS_GUARD };
         };
 
         AS_P: AS_P {

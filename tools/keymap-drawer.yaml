@@ -62,7 +62,7 @@ parse_config:
     "&AS_O": {t: "O", s: "U→E"}
     "&AS_D": {t: "D", s: "S→C H→Å"}
     "&AS_C": {t: "C", s: "S→D K→E F→L P→R LM×2"}
-    "&AS_Q": {t: "Q", s: "F→J"}
+    "&AS_Q": {t: "Q", s: "F→J O→A"}
     "&AS_P": {t: "P", s: "K→O"}
     "&AS_K": {t: "K", s: "H→J P→O"}
     "&AK_X": {t: "X", h: "LCTRL", s: "P→P"}
