@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "MaeENb",
+  "hashId": "aNjYz3",
   "layers": [
    {
     "keys": [
@@ -148,7 +148,7 @@
      {
       "hold": {
        "code": "MO",
-       "layer": 1
+       "layer": 3
       },
       "tap": {
        "code": "KC_SPACE"
@@ -157,7 +157,7 @@
      {
       "hold": {
        "code": "MO",
-       "layer": 3
+       "layer": 1
       },
       "tap": {
        "code": "KC_ESCAPE"
@@ -2525,6 +2525,6 @@
   ],
   "model": "v1",
   "qmkVersion": "25.0",
-  "title": "Vim: n and N"
+  "title": "Swap Symbols and Numpad layers"
  }
 }

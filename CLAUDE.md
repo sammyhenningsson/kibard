@@ -57,9 +57,9 @@ Defined in `config/kibard.keymap`. Layer indices:
 | # | Name | Activation |
 |---|------|-----------|
 | 0 | Graphmod (default) | base layer |
-| 1 | Symbols | left thumb hold (`LT_SPC L_SYM SPACE`, pos 30) |
+| 1 | Symbols | left thumb hold (`LT_TH L_SYM ESC`, pos 31) |
 | 2 | Symbols+ | `LT_TH L_SYMP SE_AT` hold on Symbols (pos 10) |
-| 3 | Numpad | left thumb hold (`LT_TH L_NUM ESC`, pos 31), or `to L_NUM` from Navigate |
+| 3 | Numpad | left thumb hold (`LT_SPC L_NUM SPACE`, pos 30), or `to L_NUM` from Navigate |
 | 4 | Mouse | `HML_LT L_MOUSE N` hold (pos 10) |
 | 5 | Alpha+ | right thumb hold (`LT_TH L_ALPHAP TAB`, pos 33), or `lt L_ALPHAP N0` on Numpad (pos 33) |
 | 6 | Navigate | right thumb hold (`LT_TH L_NAV RET`, pos 32) |
@@ -92,10 +92,10 @@ opt in with a `locking;` property; `&mo` deliberately does not lock.
 `LT_TH` and `LT_SPC` are the layer-tap hold-taps (`&mo` hold, `&kp` tap,
 `tapping-term-ms = 200`, `quick-tap-ms = 150`). They differ on purpose:
 
-- `LT_SPC` (Space/Symbols, pos 30) is `balanced` with `require-prior-idle-ms = 150`.
+- `LT_SPC` (Space/Numpad, pos 30) is `balanced` with `require-prior-idle-ms = 150`.
   Space is pressed mid-typing constantly, so within 150 ms of another key it
   taps instantly, and a roll where Space is released last stays a space.
-- `LT_TH` (every other layer-tap: Esc/Numpad, Return/Navigate, Tab/Alpha+, plus
+- `LT_TH` (every other layer-tap: Esc/Symbols, Return/Navigate, Tab/Alpha+, plus
   `@`/Symbols+ and `+`/Hex) is `hold-preferred` with no `require-prior-idle-ms`.
   Alpha+ and Navigate are held mid-word, so an idle guard would turn a fast
   hold into Tab or Return.
