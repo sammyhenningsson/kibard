@@ -118,7 +118,7 @@ overrides near the top of `kibard.keymap`; the two numbers are
 thumbs count as hold triggers too, so the mouse speed layers work right after it.
 
 `CAP(k)` (tap `k`, hold for `Shift+k`) is a plain time-based hold-tap on the
-`NUM` behavior, not a home-row mod: Alpha+ uses it for Å and J. `tools/sync-oryx.py`
+`NUM` behavior, not a home-row mod: Alpha+ uses it for J, and for P inside `AK_P`. `tools/sync-oryx.py`
 expands one-argument `#define`s like this before reading bindings.
 
 ### Adaptive keys
@@ -134,8 +134,8 @@ other than Shift (`strict-modifiers` plus `LS`/`RS` triggers via `AS_TRIGGER`),
 so shortcuts like Ctrl+F don't trigger it. Adapted output is a plain `&kp` with
 no home-row-mod or layer hold.
 
-`AK_*` are one-way adaptive keys on Alpha+ (layer 5): `JT → JU`, `PX → PP`, `JS → JO`, `SZ → SK`, `ÅZ → ÅE`,
-`NS → NN`, `ÅS → ÅR`, `FD → FÖ`, `MT → MÖ`, `ÖS → ÖR`. J, Å, X and Z live only on Alpha+, so these
+`AK_*` are one-way adaptive keys on Alpha+ (layer 5): `JT → JU`, `PX → PP`, `JS → JO`, `SX → SK`, `ÅX → ÅE`,
+`NS → NN`, `ÅS → ÅR`, `FD → FÖ`, `MT → MÖ`, `ÖS → ÖR`, `VP → VÄ`. J, Å, X and Z live only on Alpha+, so these
 finish common bigrams without releasing the layer. `FD` and `ÖS` chain: base F,
 then D and S on Alpha+, types `för`. Like the `AS_*` keys, they fire only within
 `AS_IDLE_MS` of the trigger, but without `strict-modifiers`. Only Alpha+'s S changes; the base-layer S doesn't
@@ -151,7 +151,7 @@ and a label in `tools/keymap-drawer.yaml`.
 
 ### Swedish key defines
 
-All `SE_*` macros at the top of `kibard.keymap` map Swedish characters and symbols to their positions on a Swedish keyboard layout (e.g. `SE_AA`, `SE_ADIA`, `SE_OO` for å, ä, ö). On the base layer ä and ö sit directly on keys (`SE_ADIA` at pos 27, `SE_OO` at pos 29); pos 9 is `&none`. Å lives on Alpha+ (`SE_AA` at pos 8), and on the base layer D types it right after H (`HD → HÅ`).
+All `SE_*` macros at the top of `kibard.keymap` map Swedish characters and symbols to their positions on a Swedish keyboard layout (e.g. `SE_AA`, `SE_ADIA`, `SE_OO` for å, ä, ö). On the base layer ä and ö sit directly on keys (`SE_ADIA` at pos 27, `SE_OO` at pos 29); pos 9 is `&none`. Å lives on Alpha+ (`SE_AA` at pos 18, with Shift on hold), and on the base layer D types it right after H (`HD → HÅ`).
 
 ### Vim macros
 

@@ -42,8 +42,9 @@ parse_config:
     "&kp SE_AA": "Å"
     "&kp SE_OO": "Ö"
     # CAP(k) keys: tap for the letter, hold for its capital.
-    "CAP(SE_AA)": {t: "Å", h: "⇧"}
     "CAP(J)": {t: "J", h: "⇧"}
+    # SE_AA preprocesses to LEFT_BRACKET, so the home-row mod needs its own label.
+    "&HMR_SFT RSHIFT SE_AA": {t: "Å", h: "RSHIFT"}
     # MEH is LC(LS(LALT)): Ctrl+Shift on the Alt keycode, which keymap-drawer
     # draws as "Ctl+Sft+LALT" instead of recognizing it as Meh.
     "&HMR MEH I": {t: I, h: MEH}
@@ -66,8 +67,8 @@ parse_config:
     "&AS_P": {t: "P", s: "K→O"}
     "&AS_K": {t: "K", s: "H→J P→O"}
     "&AS_W": {t: "W", h: "BT", s: "G→S"}
-    "&AK_X": {t: "X", h: "LCTRL", s: "P→P"}
-    "&AK_Z": {t: "Z", s: "S→K Å→E"}
+    "&AK_P": {t: "P", h: "Sft+P", s: "V→Ä"}
+    "&AK_X": {t: "X", h: "LCTRL", s: "P→P Å→E S→K"}
     "&AK_S": {t: "S", h: "LSHIFT", s: "Å/Ö→R N→N J→O"}
     "&AK_D": {t: "D", s: "F→Ö"}
     "&AK_T": {t: "T", h: "LCTRL", s: "M→Ö J→U"}

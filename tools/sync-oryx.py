@@ -285,7 +285,7 @@ EQUIVALENT = {
     "AS_E": "mt LSHIFT E", "AS_O": "kp O", "AS_D": "kp D", "AS_C": "kp C",
     "AS_Q": "kp Q", "AS_P": "kp P", "AS_K": "kp K", "AS_W": "lt 9 W",
     # One-way adaptive keys on Alpha+: compare as the default binding.
-    "AK_X": "mt LCTRL X", "AK_Z": "kp Z", "AK_S": "mt LSHIFT S",
+    "AK_X": "mt LCTRL X", "AK_P": "mt LS(P) P", "AK_S": "mt LSHIFT S",
     "AK_D": "kp D", "AK_T": "mt LCTRL T",
     # Contraction adaptive keys on Symbols.
     "AK_LPAR": "mt LALT SE_LPAR", "AK_RPAR": "mt LCTRL SE_RPAR",

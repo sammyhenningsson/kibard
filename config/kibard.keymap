@@ -281,10 +281,10 @@
         };
 
 
-        // One-way adaptive keys on Alpha+: right after J, P, S, N, Å, F, M or Ö, a key
+        // One-way adaptive keys on Alpha+: right after J, P, S, N, Å, F, M, Ö or V, a key
         // on the same layer types the letter that usually follows, so the
         // thumb never has to let go of Alpha+. JT -> JU, PX -> PP, JS -> JO,
-        // SZ -> SK, ÅZ -> ÅE, NS -> NN, ÅS -> ÅR, FD -> FÖ, MT -> MÖ, ÖS -> ÖR. FD and ÖS chain: F, then D
+        // SX -> SK, ÅX -> ÅE, NS -> NN, ÅS -> ÅR, FD -> FÖ, MT -> MÖ, ÖS -> ÖR, VP -> VÄ. FD and ÖS chain: F, then D
         // and S on Alpha+, types FÖR. Like the Graphmod ones, they only fire within
         // AS_IDLE_MS of the trigger; modifiers aren't checked.
         AK_X: AK_X {
@@ -293,15 +293,16 @@
             bindings = <&HMR LCTRL X>;
 
             ak_px { trigger-keys = <P>; bindings = <&kp P>; max-prior-idle-ms = <AS_IDLE_MS>; };
+            ak_aax { trigger-keys = <SE_AA>; bindings = <&kp E>; max-prior-idle-ms = <AS_IDLE_MS>; };
+            ak_sx { trigger-keys = <S>; bindings = <&kp K>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
 
-        AK_Z: AK_Z {
+        AK_P: AK_P {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp Z>;
+            bindings = <CAP(P)>;
 
-            ak_sz { trigger-keys = <S>; bindings = <&kp K>; max-prior-idle-ms = <AS_IDLE_MS>; };
-            ak_aaz { trigger-keys = <SE_AA>; bindings = <&kp E>; max-prior-idle-ms = <AS_IDLE_MS>; };
+            ak_vp { trigger-keys = <V>; bindings = <&kp SE_ADIA>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
 
         AK_S: AK_S {
@@ -698,11 +699,11 @@
             display-name = "Alpha+";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &none             &kp L             &AK_D             &kp F             &kp V                                    &kp BSPC          &kp I             &AK_Z             CAP(SE_AA)        &none
+                    &none             &kp L             &AK_D             &kp F             &none                                    &kp BSPC          &kp I             &kp Z             &kp E             &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML LGUI N       &AK_S             &AK_T             &HML LALT Y       &kp C                                    &kp DEL           CAP(P)            &AK_X             &HMR_SFT RSHIFT E &kp SE_ADIA
+                    &HML LGUI N       &AK_S             &AK_T             &HML LALT Y       &kp V                                    &kp DEL           &AK_P             &AK_X             &HMR_SFT RSHIFT SE_AA &kp RET
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp M             &kp G             &kp A             CAP(J)            &kp PSCRN                                &kp CAPS          &kp LS(INS)       &kp SE_MINUS      &kp SE_UNDER      &kp RET
+                    &kp M             &kp G             &kp A             CAP(J)            &kp PSCRN                                &kp CAPS          &kp LS(INS)       &kp SE_MINUS      &kp SE_UNDER      &none
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &caps_word                               &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
@@ -713,7 +714,7 @@
             display-name = "Navigate";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &trans            &none             &to L_FUNC        &tog L_NAV        &kp K_VOL_UP                             &kp LA(LEFT)      &kp HOME          &kp END           &kp LG(L)         &trans
+                    &trans            &kp LG(L)         &to L_FUNC        &tog L_NAV        &kp K_VOL_UP                             &kp LA(LEFT)      &kp HOME          &kp END           &none             &trans
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp LGUI          &kp LSHIFT        &kp RCTRL         &kp LALT          &kp K_VOL_DN                             &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT         &kp PG_UP
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
