@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "PBeja9",
+  "hashId": "3vAJJY",
   "layers": [
    {
     "keys": [
@@ -129,7 +129,10 @@
      },
      {
       "hold": {
-       "code": "MEH_T"
+       "code": "KC_LEFT_ALT",
+       "modifiers": {
+        "leftCtrl": true
+       }
       },
       "tap": {
        "code": "KC_M"
@@ -262,7 +265,10 @@
      },
      {
       "hold": {
-       "code": "MEH_T"
+       "code": "KC_LEFT_ALT",
+       "modifiers": {
+        "leftCtrl": true
+       }
       },
       "tap": {
        "code": "KC_I"

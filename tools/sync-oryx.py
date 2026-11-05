@@ -369,7 +369,7 @@ def cmd_compare(args, revision):
     """Oryx vs the checked-in ZMK keymap. Best-effort: the Kibard deliberately
     diverges in places, so this is a review list, not a list of errors."""
     zmk_layers = parse_keymap()
-    subs = {k: v for k, v in defines().items() if k.startswith("WS")}
+    subs = {k: v for k, v in defines().items() if k.startswith(("WS", "CTRL_ALT"))}
     print(f"Oryx revision {revision['hashId']}  {revision['title']!r}")
     print(f"vs {KEYMAP.relative_to(REPO)}\n")
     total = 0
