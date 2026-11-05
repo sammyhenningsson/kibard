@@ -197,7 +197,7 @@
         // keys Y and Z trade places, via a pair of adaptive keys pointing at
         // each other: [U, E, O] and [S, D, C]. The rest are one-way: HD -> HÅ,
         // HK -> HJ, KC -> KE, KP -> KO, PK -> PO, PC -> PR, FC -> FL, FQ -> FJ,
-        // OQ -> OA, GW -> GS, and C repeats L or M: LC -> LL, MC -> MM.
+        // OQ -> OA, GW -> GS, KW -> KU, and C repeats L or M: LC -> LL, MC -> MM.
         // Output is a plain &kp: a rule only fires mid-word, where a hold is
         // unwanted.
         //
@@ -278,6 +278,7 @@
             bindings = <&lt L_BT W>;
 
             as_gw { trigger-keys = <AS_TRIGGER(G)>; bindings = <&kp S>; AS_GUARD };
+            as_kw { trigger-keys = <AS_TRIGGER(K)>; bindings = <&kp U>; AS_GUARD };
         };
 
 

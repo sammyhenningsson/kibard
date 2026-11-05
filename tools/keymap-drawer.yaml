@@ -66,7 +66,7 @@ parse_config:
     "&AS_Q": {t: "Q", s: "F→J O→A"}
     "&AS_P": {t: "P", s: "K→O"}
     "&AS_K": {t: "K", s: "H→J P→O"}
-    "&AS_W": {t: "W", h: "BT", s: "G→S"}
+    "&AS_W": {t: "W", h: "BT", s: "G→S K→U"}
     "&AK_P": {t: "P", h: "Sft+P", s: "V→Ä"}
     "&AK_X": {t: "X", h: "LCTRL", s: "P→P Å→E S→K"}
     "&AK_S": {t: "S", h: "LSHIFT", s: "Å/Ö→R N→N J→O"}

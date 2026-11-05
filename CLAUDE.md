@@ -127,7 +127,7 @@ expands one-argument `#define`s like this before reading bindings.
 (urob's `zmk-adaptive-key` module): right after the trigger, a key types a
 different letter. Two are swaps `[X, Y, Z]`, where right after X keys Y and Z
 trade places (a pair of adaptive keys pointing at each other): `[U, E, O]`
-and `[S, D, C]`. The rest are one-way: `HD → HÅ`, `HK → HJ`, `KC → KE`, `KP → KO`, `PK → PO`, `PC → PR`, `FC → FL`, `FQ → FJ`, `OQ → OA`, `GW → GS`, and C repeats L or M (`LC → LL`, `MC → MM`).
+and `[S, D, C]`. The rest are one-way: `HD → HÅ`, `HK → HJ`, `KC → KE`, `KP → KO`, `PK → PO`, `PC → PR`, `FC → FL`, `FQ → FJ`, `OQ → OA`, `GW → GS`, `KW → KU`, and C repeats L or M (`LC → LL`, `MC → MM`).
 They live on `AS_E`, `AS_O`, `AS_D`, `AS_C`, `AS_Q`, `AS_P`, `AS_K` and `AS_W` (which keeps the BT layer hold on W). A rule fires only while typing: the
 trigger must be pressed less than `AS_IDLE_MS` (400 ms) earlier, with no modifier
 other than Shift (`strict-modifiers` plus `LS`/`RS` triggers via `AS_TRIGGER`),
