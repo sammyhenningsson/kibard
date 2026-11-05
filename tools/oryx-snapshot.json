@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "NowMD4",
+  "hashId": "PBeja9",
   "layers": [
    {
     "keys": [
@@ -1226,7 +1226,7 @@
      },
      {
       "tap": {
-       "code": "KC_NO"
+       "code": "KC_PSCR"
       }
      },
      {},
@@ -1296,7 +1296,7 @@
      },
      {
       "tap": {
-       "code": "KC_PSCR"
+       "code": "KC_NO"
       }
      },
      {},
