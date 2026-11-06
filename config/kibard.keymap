@@ -338,8 +338,9 @@
         };
 
         // Contractions on Symbols: right after the apostrophe, ( types T,
-        // ) types S, = types V and { types D, so don't, it's, I've and I'd
-        // end without leaving the layer. Same AS_IDLE_MS window as the rest.
+        // ) types S, = types V, { types D and } types M, so don't, it's,
+        // I've, I'd and I'm end without leaving the layer. Same AS_IDLE_MS
+        // window as the rest.
         AK_LPAR: AK_LPAR {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
@@ -370,6 +371,14 @@
             bindings = <&kp SE_LBRACE>;
 
             ak_apos_lbrace { trigger-keys = <SE_APOS>; bindings = <&kp D>; max-prior-idle-ms = <AS_IDLE_MS>; };
+        };
+
+        AK_RBRACE: AK_RBRACE {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp SE_RBRACE>;
+
+            ak_apos_rbrace { trigger-keys = <SE_APOS>; bindings = <&kp M>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
     };
 };
@@ -648,7 +657,7 @@
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &LT_TH L_SYMP SE_AT  &HML_SFT LSHIFT SE_SLASH &HML LCTRL SE_QUES  &HML LALT SE_DQUOT  &kp SE_POUND               &AK_EQUAL         &AK_LPAR          &AK_RPAR          &HMR_SFT RSHIFT SE_APOS &kp SE_PLUS
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp SE_PIPE       &kp SE_LESS       &kp SE_GRTR       &kp SE_EXCLAM     &kp SE_DOLLAR                            &kp SE_PERCENT    &AK_LBRACE        &kp SE_RBRACE     &kp SE_UNDER      &kp SE_MINUS
+                    &kp SE_PIPE       &kp SE_LESS       &kp SE_GRTR       &kp SE_EXCLAM     &kp SE_DOLLAR                            &kp SE_PERCENT    &AK_LBRACE        &AK_RBRACE        &kp SE_UNDER      &kp SE_MINUS
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &trans                                   &kp SPACE         &kp SE_ASTR
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯

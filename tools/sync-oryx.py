@@ -290,6 +290,7 @@ EQUIVALENT = {
     # Contraction adaptive keys on Symbols.
     "AK_LPAR": "mt LALT SE_LPAR", "AK_RPAR": "mt LCTRL SE_RPAR",
     "AK_EQUAL": "kp SE_EQUAL", "AK_LBRACE": "kp SE_LBRACE",
+    "AK_RBRACE": "kp SE_RBRACE",
 }
 
 
