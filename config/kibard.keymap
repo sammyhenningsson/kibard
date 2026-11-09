@@ -338,14 +338,6 @@
             ak_jt { trigger-keys = <J>; bindings = <&kp U>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
 
-        AK_B: AK_B {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&kp B>;
-
-            ak_ab { trigger-keys = <A>; bindings = <&kp G>; max-prior-idle-ms = <AS_IDLE_MS>; };
-        };
-
         // Contractions on Symbols: right after the apostrophe, ( types T,
         // ) types S, = types V, { types D and } types M, so don't, it's,
         // I've, I'd and I'm end without leaving the layer. Same AS_IDLE_MS
@@ -726,7 +718,7 @@
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &HML LGUI N       &AK_S             &AK_T             &HML LALT Y       &kp V                                    &kp DEL           &AK_P             &AK_X             &HMR_SFT RSHIFT SE_AA &kp RET
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp M             &AK_B             &kp A             CAP(J)            &none                                    &kp CAPS          &kp LS(INS)       &kp SE_MINUS      &kp SE_UNDER      &none
+                    &kp B             &kp G             &kp A             CAP(J)            &none                                    &kp CAPS          &kp LS(INS)       &kp SE_MINUS      &kp SE_UNDER      &none
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &caps_word                               &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
