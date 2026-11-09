@@ -285,10 +285,10 @@
         };
 
 
-        // One-way adaptive keys on Alpha+: right after J, P, S, N, Å, F, M, Ö or V, a key
+        // One-way adaptive keys on Alpha+: right after J, P, S, N, Å, F, M, Ö, V or A, a key
         // on the same layer types the letter that usually follows, so the
         // thumb never has to let go of Alpha+. JT -> JU, PX -> PP, JS -> JO,
-        // SX -> SK, ÅX -> ÅE, NS -> NN, ÅS -> ÅR, FD -> FÖ, MT -> MÖ, ÖS -> ÖR, VP -> VÄ, MS -> MC. FD and ÖS chain: F, then D
+        // SX -> SK, ÅX -> ÅE, NS -> NN, ÅS -> ÅR, FD -> FÖ, MT -> MÖ, ÖS -> ÖR, VP -> VÄ, MS -> MC, AB -> AG. FD and ÖS chain: F, then D
         // and S on Alpha+, types FÖR. Like the Graphmod ones, they only fire within
         // AS_IDLE_MS of the trigger; modifiers aren't checked.
         AK_X: AK_X {
@@ -335,6 +335,14 @@
 
             ak_mt { trigger-keys = <M>; bindings = <&kp SE_OO>; max-prior-idle-ms = <AS_IDLE_MS>; };
             ak_jt { trigger-keys = <J>; bindings = <&kp U>; max-prior-idle-ms = <AS_IDLE_MS>; };
+        };
+
+        AK_B: AK_B {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp B>;
+
+            ak_ab { trigger-keys = <A>; bindings = <&kp G>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
 
         // Contractions on Symbols: right after the apostrophe, ( types T,
@@ -717,7 +725,7 @@
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &HML LGUI N       &AK_S             &AK_T             &HML LALT Y       &kp V                                    &kp DEL           &AK_P             &AK_X             &HMR_SFT RSHIFT SE_AA &kp RET
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp M             &kp B             &kp A             CAP(J)            &none                                    &kp CAPS          &kp LS(INS)       &kp SE_MINUS      &kp SE_UNDER      &none
+                    &kp M             &AK_B             &kp A             CAP(J)            &none                                    &kp CAPS          &kp LS(INS)       &kp SE_MINUS      &kp SE_UNDER      &none
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &caps_word                               &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯

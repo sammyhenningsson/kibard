@@ -73,6 +73,7 @@ parse_config:
     "&AK_S": {t: "S", h: "LSHIFT", s: "Å/Ö→R N→N J→O M→C"}
     "&AK_D": {t: "D", s: "F→Ö"}
     "&AK_T": {t: "T", h: "LCTRL", s: "M→Ö J→U"}
+    "&AK_B": {t: "B", s: "A→G"}
     "&AK_LPAR": {t: "(", h: "LALT", s: "'→T"}
     "&AK_RPAR": {t: ")", h: "RCTRL", s: "'→S"}
     "&AK_EQUAL": {t: "=", s: "'→V"}
