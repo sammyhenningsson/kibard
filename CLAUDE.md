@@ -40,9 +40,9 @@ Left half = BLE central + USB host. Right half = BLE peripheral only.
 | `config/kibard.keymap` | All layers, behaviors, macros, combos |
 | `config/kibard_left.conf` | Left: split central + BLE |
 | `config/kibard_right.conf` | Right: split peripheral + BLE + USB |
-| `boards/shields/kibard_v2/` | v2 shield: same matrix via `kibard.dtsi`, its own pins, nice!view on both halves |
+| `boards/shields/kibard_v2/` | v2 shield: same matrix via `kibard.dtsi`, its own pins, nice!view on the left half only (the right half's rows 0 and 1 use the nice!view SPI pins P0.17 and P0.20, so it must not get the display shields) |
 | `config/kibard_v2.keymap` | Includes `kibard.keymap`, so both versions share one keymap |
-| `config/kibard_v2_left.conf`, `config/kibard_v2_right.conf` | v2 copies of the conf files, plus `CONFIG_ZMK_DISPLAY`. Settings changes must go in both versions |
+| `config/kibard_v2_left.conf`, `config/kibard_v2_right.conf` | v2 copies of the conf files, plus `CONFIG_ZMK_DISPLAY` on the left. Settings changes must go in both versions |
 | `config/west.yml` | ZMK revision pin (`main` — see Layer lock) |
 | `src/appcompanion/` | Vendored layer-status firmware source — see its README |
 | `CMakeLists.txt`, `Kconfig`, `zephyr/module.yml` | Make this repo a Zephyr module: shield board root plus the vendored sources |
