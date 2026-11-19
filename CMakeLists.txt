@@ -1,6 +1,7 @@
 # This repo is itself the Zephyr module the build loads via ZMK_EXTRA_MODULES
-# (see zephyr/module.yml): it supplies the kibard shield under boards/shields
-# and the vendored layer-status sources under src/appcompanion.
+# (see zephyr/module.yml): it supplies the kibard shield under boards/shields,
+# the vendored layer-status sources under src/appcompanion and the Strata
+# nice!view screen under src/strata.
 #
 # ZMK exports only `app/module/include` to Zephyr modules; core headers such as
 # <zmk/hid.h>, <zmk/endpoints.h> and <zmk/keymap.h> live in the app's own
@@ -24,4 +25,20 @@ endif()
 
 if(CONFIG_ZMK_LAYER_STATUS_BLE_HID)
     zephyr_library_sources(src/appcompanion/layer_status_ble_hid.c)
+endif()
+
+# Strata nice!view status screen (vendored in src/strata, see its README).
+# It provides zmk_display_status_screen(), as does ZMK's stock nice!view
+# widget, so only one of them can be on.
+if(CONFIG_NICE_VIEW_STRATA)
+    if(CONFIG_NICE_VIEW_WIDGET_STATUS)
+        message(FATAL_ERROR "CONFIG_NICE_VIEW_STRATA replaces the stock nice!view status screen; "
+            "set CONFIG_NICE_VIEW_WIDGET_STATUS=n")
+    endif()
+
+    target_sources(app PRIVATE
+        src/strata/assets.c
+        src/strata/draw.c
+        src/strata/screen.c
+    )
 endif()

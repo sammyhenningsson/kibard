@@ -1,0 +1,29 @@
+config NICE_VIEW_STRATA
+    bool "Strata vertical nice!view status screen"
+    depends on ZMK_DISPLAY && ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+    select LV_USE_CANVAS
+    select LV_USE_IMAGE
+    help
+      Connection, Bluetooth profile, layer name and battery, laid out vertically
+      for a nice!view mounted upright, as on a Corne. Drawn pixel for pixel
+      from 1-bit icons and a pixel font in src/strata/assets.
+      Requires CONFIG_NICE_VIEW_WIDGET_STATUS=n.
+
+if NICE_VIEW_STRATA
+
+config NICE_VIEW_STRATA_ANIMATION
+    bool "Animate the peripheral half's screen when it starts or connects"
+    default y
+    help
+      The swell lines on the peripheral half move for one loop (128 frames)
+      when the keyboard is switched on, reset or woken from deep sleep, and
+      when the link to the central half comes up. They are still the rest of
+      the time, so the display is not redrawn while typing.
+
+config NICE_VIEW_STRATA_ANIMATION_FRAME_MS
+    int "Time between animation frames, in milliseconds"
+    default 80
+    range 30 1000
+    depends on NICE_VIEW_STRATA_ANIMATION
+
+endif # NICE_VIEW_STRATA
