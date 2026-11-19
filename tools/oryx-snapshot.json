@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "EeKQNn",
+  "hashId": "qmWmqz",
   "layers": [
    {
     "keys": [
@@ -1301,8 +1301,8 @@
       }
      },
      {
-      "tap": {
-       "code": "KC_NO"
+      "hold": {
+       "code": "KC_CAPS"
       }
      },
      {},
@@ -1375,8 +1375,8 @@
      },
      {},
      {
-      "hold": {
-       "code": "KC_CAPS"
+      "tap": {
+       "code": "KC_NO"
       }
      },
      {
