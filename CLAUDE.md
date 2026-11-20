@@ -151,6 +151,10 @@ contractions: right after `'`, `(` types T, `)` types S, `=` types V, `{`
 types D and `}` types M (`don't`, `it's`, `I've`, `I'd`, `I'm`). Because `')` is common in
 code (`f('x')`), a fast `'` then `)` types `'S`. Backspace, then `)`, gets the paren.
 
+`AK_MINUS` on Alpha+ (pos 27) sends Enter right after `;`, to end a line
+without leaving the layer. Its trigger is `SE_SEMI` (Shift+comma), so a plain comma
+doesn't trigger it.
+
 A new `AS_*` or `AK_*` key needs an `EQUIVALENT` entry in `tools/sync-oryx.py`
 and a label in `tools/keymap-drawer.yaml`.
 
