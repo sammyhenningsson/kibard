@@ -12,7 +12,14 @@ Firmware is built via GitHub Actions — push to the repo and download the `.uf2
 
 The board target is `nice_nano//zmk`, not `nice_nano_v2` — Zephyr 4.1's hardware model v2 replaced the old name with `nice_nano@2.0.0//zmk`, and ZMK board definitions now require the `zmk` variant. Since `config/west.yml` tracks ZMK `main`, `.github/workflows/build.yml` calls `build-user-config.yml@main` to match.
 
-There is no local build command in this repo. Local ZMK builds require a separate Zephyr/West development environment (see [ZMK docs](https://zmk.dev/docs/development/setup)).
+`tools/build-firmware.sh` builds the same targets locally, in the Docker image CI
+uses (`zmkfirmware/zmk-build-arm:stable`), and writes `firmware/<artifact-name>.uf2`
+(git-ignored). Pass artifact names to build only some, e.g.
+`tools/build-firmware.sh kibard_v2_left`. The west workspace is kept in
+`~/.cache/kibard-zmk` (override with `KIBARD_ZMK_WS`). It is fetched once, and
+`west update` runs again only when `config/west.yml` changes or `--update` is
+passed. Without `--update`, a local build uses the ZMK `main` from the last fetch,
+while CI always builds the newest.
 
 ## Architecture
 
