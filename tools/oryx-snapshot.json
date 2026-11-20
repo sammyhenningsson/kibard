@@ -1,7 +1,7 @@
 {
  "layoutId": "6ye0X",
  "revision": {
-  "hashId": "qmWmqz",
+  "hashId": "bvov9V",
   "layers": [
    {
     "keys": [
@@ -123,6 +123,10 @@
       }
      },
      {
+      "hold": {
+       "code": "MO",
+       "layer": 1
+      },
       "tap": {
        "code": "KC_P"
       }
@@ -295,6 +299,10 @@
       }
      },
      {
+      "hold": {
+       "code": "MO",
+       "layer": 1
+      },
       "tap": {
        "code": "KC_K"
       }
@@ -406,11 +414,7 @@
        "code": "SE_PIPE"
       }
      },
-     {
-      "tap": {
-       "code": "SE_LESS"
-      }
-     },
+     {},
      {
       "tap": {
        "code": "SE_GRTR"
@@ -506,11 +510,7 @@
        "code": "SE_RCBR"
       }
      },
-     {
-      "tap": {
-       "code": "SE_UNDS"
-      }
-     },
+     {},
      {
       "tap": {
        "code": "SE_MINS"
@@ -1231,8 +1231,8 @@
       }
      },
      {
-      "tap": {
-       "code": "KC_PSCR"
+      "hold": {
+       "code": "KC_CAPS"
       }
      },
      {},
@@ -1301,8 +1301,11 @@
       }
      },
      {
-      "hold": {
-       "code": "KC_CAPS"
+      "tap": {
+       "code": "KC_INSERT",
+       "modifiers": {
+        "leftShift": true
+       }
       }
      },
      {},
@@ -1376,15 +1379,15 @@
      {},
      {
       "tap": {
-       "code": "KC_NO"
-      }
-     },
-     {
-      "tap": {
        "code": "KC_INSERT",
        "modifiers": {
         "leftShift": true
        }
+      }
+     },
+     {
+      "tap": {
+       "code": "SE_SCLN"
       }
      },
      {
@@ -1399,7 +1402,7 @@
      },
      {
       "tap": {
-       "code": "KC_NO"
+       "code": "SE_COLN"
       }
      },
      {},
@@ -2109,7 +2112,7 @@
      },
      {
       "tap": {
-       "code": "KC_NO"
+       "code": "KC_PSCR"
       }
      },
      {},

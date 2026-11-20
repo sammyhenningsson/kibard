@@ -93,7 +93,7 @@ KEYCODES = {
     "KC_MEDIA_NEXT_TRACK": "K_NEXT", "KC_MEDIA_PREV_TRACK": "K_PREV",
     "KC_MEDIA_STOP": "K_STOP2", "KC_CALCULATOR": "C_AL_CALC",
     # Swedish aliases: Oryx spelling -> this repo's #define spelling.
-    "SE_GRV": "SE_GRAV", "SE_COLN": "SE_COLON", "SE_DQUO": "SE_DQUOT",
+    "SE_GRV": "SE_GRAV", "SE_COLN": "SE_COLON", "SE_SCLN": "SE_SEMI", "SE_DQUO": "SE_DQUOT",
     "SE_SLSH": "SE_SLASH", "SE_MINS": "SE_MINUS", "SE_UNDS": "SE_UNDER",
     "SE_EQL": "SE_EQUAL", "SE_LBRC": "SE_LBRACKET", "SE_RBRC": "SE_RBRACKET",
     "SE_LCBR": "SE_LBRACE", "SE_RCBR": "SE_RBRACE", "SE_LPRN": "SE_LPAR",
@@ -283,7 +283,7 @@ EQUIVALENT = {
     "LT_TH": "lt", "LT_SPC": "lt",           # thumb layer-taps
     # Adaptive keys on Graphmod: compare as the default binding.
     "AS_E": "mt LSHIFT E", "AS_O": "kp O", "AS_D": "kp D", "AS_C": "kp C",
-    "AS_Q": "kp Q", "AS_P": "kp P", "AS_K": "kp K", "AS_W": "lt 9 W",
+    "AS_Q": "kp Q", "AS_P": "lt 1 P", "AS_K": "lt 1 K", "AS_W": "lt 9 W",
     # One-way adaptive keys on Alpha+: compare as the default binding.
     "AK_X": "mt LCTRL X", "AK_P": "mt LS(P) P", "AK_S": "mt LSHIFT S",
     "AK_D": "kp D", "AK_T": "mt LCTRL T", "AK_A": "kp A",

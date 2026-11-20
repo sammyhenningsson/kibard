@@ -261,7 +261,7 @@
         AS_P: AS_P {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp P>;
+            bindings = <&lt L_SYM P>;
 
             as_kp { trigger-keys = <AS_TRIGGER(K)>; bindings = <&kp O>; AS_GUARD };
         };
@@ -269,7 +269,7 @@
         AS_K: AS_K {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp K>;
+            bindings = <&lt L_SYM K>;
 
             as_hk { trigger-keys = <AS_TRIGGER(H)>; bindings = <&kp J>; AS_GUARD };
             as_pk { trigger-keys = <AS_TRIGGER(P)>; bindings = <&kp O>; AS_GUARD };
@@ -722,11 +722,11 @@
             display-name = "Alpha+";
             bindings = <
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
-                    &none             &kp L             &AK_D             &kp F             &none                                    &kp BSPC          &kp I             &kp Z             &kp E             &none
+                    &none             &kp L             &AK_D             &kp F             &kp CAPS                                 &kp BSPC          &kp I             &kp Z             &kp E             &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &HML LGUI N       &AK_S             &AK_T             &HML LALT Y       &kp V                                    &kp DEL           &AK_P             &AK_X             &HMR_SFT RSHIFT SE_AA &kp RET
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp B             &kp G             &AK_A             CAP(J)            &kp CAPS                                 &none             &kp LS(INS)       &kp SE_MINUS      &kp SE_UNDER      &none
+                    &kp B             &kp G             &AK_A             CAP(J)            &kp LS(INS)                              &kp LS(INS)       &kp SE_SEMI       &kp SE_MINUS      &kp SE_UNDER      &kp SE_COLON
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &caps_word                               &trans            &trans
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯

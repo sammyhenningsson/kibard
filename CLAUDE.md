@@ -62,7 +62,7 @@ Defined in `config/kibard.keymap`. Layer indices:
 | # | Name | Activation |
 |---|------|-----------|
 | 0 | Graphmod (default) | base layer |
-| 1 | Symbols | left thumb hold (`LT_TH L_SYM ESC`, pos 31) |
+| 1 | Symbols | left thumb hold (`LT_TH L_SYM ESC`, pos 31), or `AS_P` / `AS_K` hold on Graphmod (`lt L_SYM`, pos 21, 28) |
 | 2 | Symbols+ | `LT_TH L_SYMP SE_AT` hold on Symbols (pos 10) |
 | 3 | Numpad | left thumb hold (`LT_SPC L_NUM SPACE`, pos 30), or `to L_NUM` from Navigate |
 | 4 | Mouse | `HML_LT L_MOUSE N` hold (pos 10) |
@@ -133,7 +133,7 @@ expands one-argument `#define`s like this before reading bindings.
 different letter. Two are swaps `[X, Y, Z]`, where right after X keys Y and Z
 trade places (a pair of adaptive keys pointing at each other): `[U, E, O]`
 and `[S, D, C]`. The rest are one-way: `HD → HÅ`, `HK → HJ`, `GK → GY`, `KC → KE`, `KP → KO`, `PK → PO`, `PC → PR`, `FC → FL`, `FQ → FJ`, `OQ → OA`, `GW → GS`, `KW → KU`, and C repeats L or M (`LC → LL`, `MC → MM`).
-They live on `AS_E`, `AS_O`, `AS_D`, `AS_C`, `AS_Q`, `AS_P`, `AS_K` and `AS_W` (which keeps the BT layer hold on W). A rule fires only while typing: the
+They live on `AS_E`, `AS_O`, `AS_D`, `AS_C`, `AS_Q`, `AS_P`, `AS_K` and `AS_W` (which keep their layer holds: Symbols on P and K, BT on W). A rule fires only while typing: the
 trigger must be pressed less than `AS_IDLE_MS` (400 ms) earlier, with no modifier
 other than Shift (`strict-modifiers` plus `LS`/`RS` triggers via `AS_TRIGGER`),
 so shortcuts like Ctrl+F don't trigger it. Adapted output is a plain `&kp` with
@@ -178,6 +178,11 @@ from Oryx's public GraphQL API, folds the Voyager's 52 keys onto the Kibård's
 
 `tools/oryx-snapshot.json` is the last-synced state; it is the diff's baseline
 and belongs in the commit that ports the change.
+
+Oryx can't bind a key on the layer that its own hold activates, so on the
+Voyager Symbols has `&trans` under P and K (pos 21, 28), which hold Symbols. The
+Kibård keeps `<` and `_` there on purpose: `compare` lists them, and a sync
+should leave them alone.
 
 Two tables in the script encode the port and are asserted on every run, so a
 rename or reorder in Oryx fails loudly instead of diffing the wrong layers:
