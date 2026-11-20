@@ -22,6 +22,9 @@ at `e7f18e2097600fa5d8226dd572cb869d703bf487` (2026-11-19), MIT, see
   breaks it onto more lines when it is wider than the screen: at spaces
   first, and inside a word only when the word alone is too wide, in pieces of
   about equal width. A layer without a `display-name` shows its number.
+- **Edge margins.** The connection row and the battery sit 12 px (one
+  battery height) in from the top and bottom of the screen, which are hard
+  to see on the mounted panel.
 - **The font** is `assets/font.txt`: Noto Sans ExtraCondensed Bold at 17 px
   (SIL Open Font License 1.1), rasterised without anti-aliasing by
   `tools/strata-gen-font.py`. At that size each word of every layer name in
