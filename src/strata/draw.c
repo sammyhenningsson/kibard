@@ -20,9 +20,12 @@
 
 #define OUTPUT_H 21
 #define OUTPUT_INSET 0
-#define ROW_OUTPUT 0
+/* Kibård: the top and bottom rows sit one battery height (12 px) in from the
+ * screen's ends, where the edges of the panel are easier to see. */
+#define EDGE_MARGIN 12
+#define ROW_OUTPUT EDGE_MARGIN
 #define ROW_PROFILES (ROW_OUTPUT + OUTPUT_H + 8)
-#define ROW_BATTERY (SV_HEIGHT - 12)
+#define ROW_BATTERY (SV_HEIGHT - 12 - EDGE_MARGIN)
 
 /* Width of the battery icon without its terminal. */
 #define BATTERY_BODY 25
