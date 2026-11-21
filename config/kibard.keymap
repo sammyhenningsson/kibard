@@ -200,7 +200,7 @@
         // keys Y and Z trade places, via a pair of adaptive keys pointing at
         // each other: [U, E, O] and [S, D, C]. The rest are one-way: HD -> HÅ,
         // HK -> HJ, GK -> GY, KC -> KE, KP -> KO, PK -> PO, PC -> PR, FC -> FL, FQ -> FJ,
-        // OQ -> OA, GW -> GS, KW -> KU, and C repeats L or M: LC -> LL, MC -> MM.
+        // OQ -> OA, GW -> GS, KW -> KU, NR -> NN, and C repeats L or M: LC -> LL, MC -> MM.
         // Esc K -> Esc . is the one rule with a non-letter trigger.
         // Output is a plain &kp: a rule only fires mid-word, where a hold is
         // unwanted.
@@ -218,6 +218,14 @@
             bindings = <&HMR_SFT RSHIFT E>;
 
             as_ue { trigger-keys = <AS_TRIGGER(U)>; bindings = <&kp O>; AS_GUARD };
+        };
+
+        AS_R: AS_R {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&HML_SFT LSHIFT R>;
+
+            as_nr { trigger-keys = <AS_TRIGGER(N)>; bindings = <&kp N>; AS_GUARD };
         };
 
         AS_O: AS_O {
@@ -288,10 +296,10 @@
         };
 
 
-        // One-way adaptive keys on Alpha+: right after J, P, S, N, Å, F, M, Ö or V, a key
+        // One-way adaptive keys on Alpha+: right after J, P, S, Å, F, M, Ö or V, a key
         // on the same layer types the letter that usually follows, so the
         // thumb never has to let go of Alpha+. JT -> JU, PX -> PP, JS -> JO,
-        // SX -> SK, ÅX -> ÅE, NS -> NN, ÅS -> ÅR, FD -> FÖ, MT -> MÖ, ÖS -> ÖR, VP -> VÄ, MS -> MC, PA -> PL. FD and ÖS chain: F, then D
+        // SX -> SK, ÅX -> ÅE, ÅS -> ÅR, FD -> FÖ, MT -> MÖ, ÖS -> ÖR, VP -> VÄ, MS -> MC, PA -> PL. FD and ÖS chain: F, then D
         // and S on Alpha+, types FÖR. Like the Graphmod ones, they only fire within
         // AS_IDLE_MS of the trigger; modifiers aren't checked.
         AK_X: AK_X {
@@ -318,7 +326,6 @@
             bindings = <&HML_SFT LSHIFT S>;
 
             ak_aas { trigger-keys = <SE_AA SE_OO>; bindings = <&kp R>; max-prior-idle-ms = <AS_IDLE_MS>; };
-            ak_ns { trigger-keys = <N>; bindings = <&kp N>; max-prior-idle-ms = <AS_IDLE_MS>; };
             ak_js { trigger-keys = <J>; bindings = <&kp O>; max-prior-idle-ms = <AS_IDLE_MS>; };
             ak_ms { trigger-keys = <M>; bindings = <&kp C>; max-prior-idle-ms = <AS_IDLE_MS>; };
         };
@@ -661,7 +668,7 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &none             &AS_W             &AS_D             &kp G             &AS_Q                                    &kp BSPC          &lt L_FUNC F      &AS_O             &lt L_BT U        &none
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &HML_LT L_MOUSE N &HML_SFT LSHIFT R &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &HMR LALT H       &HMR RCTRL A      &AS_E             &HMR CTRL_ALT I
+                    &HML_LT L_MOUSE N &AS_R             &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &HMR LALT H       &HMR RCTRL A      &AS_E             &HMR CTRL_ALT I
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp Y             &AS_P             &HML CTRL_ALT M   &AS_C             &kp COMMA                                &kp DOT           &kp L             &kp SE_ADIA       &AS_K             &kp SE_OO
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
