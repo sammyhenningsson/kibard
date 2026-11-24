@@ -69,7 +69,7 @@
 // MEH = Ctrl + Shift + Alt
 #define MEH LC(LS(LALT))
 
-// Ctrl + Alt, on the M and I holds
+// Ctrl + Alt, on the I hold
 #define CTRL_ALT LC(LALT)
 
 // Shortcuts for workspaces
@@ -285,7 +285,7 @@
         AS_P: AS_P {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&lt L_SYM P>;
+            bindings = <&kp P>;
 
             as_kp { trigger-keys = <AS_TRIGGER(K)>; bindings = <&kp O>; AS_GUARD };
         };
@@ -293,7 +293,7 @@
         AS_K: AS_K {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&lt L_SYM K>;
+            bindings = <&kp K>;
 
             as_hk { trigger-keys = <AS_TRIGGER(H)>; bindings = <&kp J>; AS_GUARD };
             as_pk { trigger-keys = <AS_TRIGGER(P)>; bindings = <&kp O>; AS_GUARD };
@@ -685,7 +685,7 @@
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &HML_LT L_MOUSE N &AS_R             &HML LCTRL T      &HML LALT S       &lt L_VIM B                              &lt L_VIM V       &HMR LALT H       &HMR RCTRL A      &AS_E             &HMR CTRL_ALT I
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &kp Y             &AS_P             &HML CTRL_ALT M   &AS_C             &kp COMMA                                &kp DOT           &kp L             &kp SE_ADIA       &AS_K             &kp SE_OO
+                    &kp Y             &AS_P             &lt L_SYM M       &AS_C             &kp COMMA                                &kp DOT           &kp L             &lt L_SYM SE_ADIA &AS_K             &kp SE_OO
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &LT_SPC L_NUM SPACE  &LT_TH L_SYM ESC                      &LT_TH L_NAV RET  &LT_TH L_ALPHAP TAB
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯

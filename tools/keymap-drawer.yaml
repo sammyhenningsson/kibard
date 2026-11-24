@@ -50,7 +50,8 @@ parse_config:
     "&HMR MEH F14": {t: F14, h: MEH}
     # CTRL_ALT is LC(LALT), likewise drawn as "Ctl+LALT".
     "&HMR CTRL_ALT I": {t: I, h: "Ctrl+Alt"}
-    "&HML CTRL_ALT M": {t: M, h: "Ctrl+Alt"}
+    # SE_ADIA preprocesses to APOS, so its Symbols layer-tap needs its own label.
+    "&lt L_SYM SE_ADIA": {t: "Ä", h: "Symbols"}
     # Symbols+ layer-taps on Symbols: SE_PIPE and SE_MINUS preprocess to US keycodes.
     "&HML_LT L_SYMP SE_PIPE": {t: "|", h: "Symbols+"}
     "&HMR_LT L_SYMP SE_MINUS": {t: "-", h: "Symbols+"}
@@ -69,8 +70,8 @@ parse_config:
     "&AS_D": {t: "D", s: "S→C H→Å"}
     "&AS_C": {t: "C", s: "S→D K→E F→L P→R LM×2"}
     "&AS_Q": {t: "Q", s: "F→J O→A"}
-    "&AS_P": {t: "P", h: "Sym", s: "K→O"}
-    "&AS_K": {t: "K", h: "Sym", s: "H→J P→O G→Y ⎋→."}
+    "&AS_P": {t: "P", s: "K→O"}
+    "&AS_K": {t: "K", s: "H→J P→O G→Y ⎋→."}
     "&AS_W": {t: "W", h: "BT", s: "G→S K→U"}
     "&AK_P": {t: "P", h: "Sft+P", s: "V→Ä"}
     "&AK_X": {t: "X", h: "LCTRL", s: "P→P Å→E S→K"}
