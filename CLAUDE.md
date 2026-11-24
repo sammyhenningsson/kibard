@@ -69,13 +69,13 @@ Defined in `config/kibard.keymap`. Layer indices:
 | # | Name | Activation |
 |---|------|-----------|
 | 0 | Graphmod (default) | base layer |
-| 1 | Symbols | left thumb hold (`LT_TH L_SYM ESC`, pos 31), or M / Ä hold on Graphmod (`lt L_SYM`, pos 22, 27) |
+| 1 | Symbols | M / Ä hold on Graphmod (`lt L_SYM`, pos 22, 27) |
 | 2 | Symbols+ | `HML_LT L_SYMP SE_PIPE` / `HMR_LT L_SYMP SE_MINUS` hold on Symbols (pos 20, 29) |
 | 3 | Numpad | left thumb hold (`LT_SPC L_NUM SPACE`, pos 30), or `to L_NUM` from Navigate |
 | 4 | Mouse | `HML_LT L_MOUSE N` hold (pos 10) |
 | 5 | Alpha+ | right thumb hold (`LT_TH L_ALPHAP TAB`, pos 33), or `lt L_ALPHAP N0` on Numpad (pos 33) |
 | 6 | Navigate | right thumb hold (`LT_TH L_NAV RET`, pos 32) |
-| 7 | Vim | `lt L_VIM B` (pos 14) |
+| 7 | Vim | `lt L_VIM B` / `lt L_VIM V` (pos 14, 15), or `AS_P` / `AS_K` hold on Graphmod (`lt L_VIM`, pos 21, 28) |
 | 8 | Functions | `to L_FUNC` from Navigate (pos 2) |
 | 9 | BT (Bluetooth/system) | `AS_W` (`lt L_BT W`) / `lt L_BT U` hold on Graphmod (pos 1, 8) |
 | 10 | Hex | `LT_TH L_HEX SE_PLUS` on Numpad (pos 19) |
@@ -107,7 +107,7 @@ opt in with a `locking;` property; `&mo` deliberately does not lock.
 - `LT_SPC` (Space/Numpad, pos 30) is `balanced` with `require-prior-idle-ms = 150`.
   Space is pressed mid-typing constantly, so within 150 ms of another key it
   taps instantly, and a roll where Space is released last stays a space.
-- `LT_TH` (every other layer-tap: Esc/Symbols, Return/Navigate, Tab/Alpha+, plus
+- `LT_TH` (every other layer-tap: Return/Navigate, Tab/Alpha+, plus
   `+`/Hex) is `hold-preferred` with no `require-prior-idle-ms`.
   Alpha+ and Navigate are held mid-word, so an idle guard would turn a fast
   hold into Tab or Return.
@@ -122,7 +122,7 @@ overrides near the top of `kibard.keymap`; the two numbers are
 
 ### Home row mods
 
-`HML` (left hand) and `HMR` (right hand) are `zmk,behavior-hold-tap` with `flavor = "balanced"`, `tapping-term-ms = 250`, `quick-tap-ms = 175`, `require-prior-idle-ms = 150`, `hold-trigger-on-release`, and positional `hold-trigger-key-positions`: the opposite hand plus all four thumbs, so a mod held with Space, Esc, Return or Tab (or a thumb layer) fires without waiting out the tapping term. Rolling a home-row key into Space nested (Space released first) can therefore fire the mod; `require-prior-idle-ms` keeps that from happening mid-typing. Home row mod order, index→pinky (inner to outer): Alt / Ctrl / Shift.
+`HML` (left hand) and `HMR` (right hand) are `zmk,behavior-hold-tap` with `flavor = "balanced"`, `tapping-term-ms = 250`, `quick-tap-ms = 175`, `require-prior-idle-ms = 150`, `hold-trigger-on-release`, and positional `hold-trigger-key-positions`: the opposite hand plus all four thumbs, so a mod held with a thumb key (Space, Shift, Return, Tab or a thumb layer) fires without waiting out the tapping term. Rolling a home-row key into Space nested (Space released first) can therefore fire the mod; `require-prior-idle-ms` keeps that from happening mid-typing. Home row mod order, index→pinky (inner to outer): Alt / Ctrl / Shift.
 
 `HML_SFT` / `HMR_SFT` are the same but with `require-prior-idle-ms = 100`, and every Shift home-row mod uses them. `require-prior-idle-ms` is a per-behavior property, so a separate behavior is the only way to give Shift a different value than Ctrl/Alt.
 
@@ -142,7 +142,7 @@ expands one-argument `#define`s like this before reading bindings.
 different letter. Two are swaps `[X, Y, Z]`, where right after X keys Y and Z
 trade places (a pair of adaptive keys pointing at each other): `[U, E, O]`
 and `[S, D, C]`. The rest are one-way: `HD → HÅ`, `HK → HJ`, `GK → GY`, `KC → KE`, `KP → KO`, `PK → PO`, `PC → PR`, `FC → FL`, `FQ → FJ`, `OQ → OA`, `GW → GS`, `KW → KU`, `NR → NN`, `Esc K → Esc .`, and C repeats L or M (`LC → LL`, `MC → MM`).
-They live on `AS_E`, `AS_R`, `AS_O`, `AS_D`, `AS_C`, `AS_Q`, `AS_P`, `AS_K` and `AS_W` (`AS_W` keeps its BT layer hold). A rule fires only while typing: the
+They live on `AS_E`, `AS_R`, `AS_O`, `AS_D`, `AS_C`, `AS_Q`, `AS_P`, `AS_K` and `AS_W` (which keep their layer holds: Vim on P and K, BT on W). A rule fires only while typing: the
 trigger must be pressed less than `AS_IDLE_MS` (400 ms) earlier, with no modifier
 other than Shift (`strict-modifiers` plus `LS`/`RS` triggers via `AS_TRIGGER`),
 so shortcuts like Ctrl+F don't trigger it. Adapted output is a plain `&kp` with
@@ -193,7 +193,8 @@ from Oryx's public GraphQL API, folds the Voyager's 52 keys onto the Kibård's
 and belongs in the commit that ports the change.
 
 The Kibård holds Symbols on the middle fingers, M and Ä (pos 22, 27), instead
-of the Voyager's P and K (pos 21, 28), and M has no Ctrl+Alt hold. Until Oryx
+of the Voyager's P and K (pos 21, 28), which hold Vim instead, and M has no
+Ctrl+Alt hold. Until Oryx
 is changed to match, `compare` lists these keys, and a sync should leave them
 alone. The Kibård also keeps `<` and `_` on Symbols at pos 21 and 28, where
 Oryx has `&trans`, because Oryx can't bind a key on the layer that its own hold

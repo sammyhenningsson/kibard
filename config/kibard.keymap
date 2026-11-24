@@ -285,7 +285,7 @@
         AS_P: AS_P {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp P>;
+            bindings = <&lt L_VIM P>;
 
             as_kp { trigger-keys = <AS_TRIGGER(K)>; bindings = <&kp O>; AS_GUARD };
         };
@@ -293,7 +293,7 @@
         AS_K: AS_K {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp K>;
+            bindings = <&lt L_VIM K>;
 
             as_hk { trigger-keys = <AS_TRIGGER(H)>; bindings = <&kp J>; AS_GUARD };
             as_pk { trigger-keys = <AS_TRIGGER(P)>; bindings = <&kp O>; AS_GUARD };
@@ -687,7 +687,7 @@
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &kp Y             &AS_P             &lt L_SYM M       &AS_C             &kp COMMA                                &kp DOT           &kp L             &lt L_SYM SE_ADIA &AS_K             &kp SE_OO
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
-                                                                          &LT_SPC L_NUM SPACE  &LT_TH L_SYM ESC                      &LT_TH L_NAV RET  &LT_TH L_ALPHAP TAB
+                                                                          &LT_SPC L_NUM SPACE  &kp LSHIFT                            &LT_TH L_NAV RET  &LT_TH L_ALPHAP TAB
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
             >;
         };
@@ -792,7 +792,7 @@
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &to L_MAIN        &trans            &trans            &trans            &trans                                   &vim_win_left     &vim_win_down     &vim_win_up       &vim_win_right    &trans
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
-                                                                          &kp SE_SEMI       &trans                                   &kp N             &kp SE_COLON
+                                                                          &kp ESC           &kp SE_SEMI                              &kp LS(N)         &kp N
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
             >;
         };
