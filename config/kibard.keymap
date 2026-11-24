@@ -657,7 +657,7 @@
                 ;
         };
 
-        // ≤ and ≥ are not on the Swedish layout, so these type them with
+        // ≤, ≥ and ≈ are not on the Swedish layout, so these type them with
         // Linux Unicode entry (IBus/GTK): Ctrl+Shift+U, the hex code point,
         // then Space. Apps without that input method get the raw keys.
         lte: lte {
@@ -675,6 +675,15 @@
             bindings
                 = <&macro_tap &kp LC(LS(U))>
                 , <&macro_tap &kp N2 &kp N2 &kp N6 &kp N5 &kp SPACE>
+                ;
+        };
+
+        approx: approx {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(LS(U))>
+                , <&macro_tap &kp N2 &kp N2 &kp N4 &kp N8 &kp SPACE>
                 ;
         };
     };
@@ -734,7 +743,7 @@
                 //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮                      ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                     &none             &grav             &acut             &trans            &circ                                    &trans            &trans            &ocirc            &kp SE_MICRO      &trans
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &trans            &kp SE_GRAV       &kp SE_ACUT       &trans            &trans                                   &trans            &kp SE_SLASH      &kp N             &eacut            &tilde
+                    &trans            &kp SE_GRAV       &kp SE_ACUT       &trans            &trans                                   &approx           &kp SE_SLASH      &kp N             &eacut            &tilde
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &trans            &lte              &gte              &trans            &trans                                   &trans            &kp SE_STERLING   &kp SE_EURO       &trans            &trans
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯

@@ -66,6 +66,7 @@ parse_config:
     # Linux Unicode-entry macros.
     "&lte": "≤"
     "&gte": "≥"
+    "&approx": "≈"
     # Adaptive keys: the shifted legend reads "after X, this key types Y".
     "&AS_E": {t: "E", h: "RSHIFT", s: "U→O"}
     "&AS_O": {t: "O", s: "U→E"}
