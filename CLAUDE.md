@@ -122,14 +122,14 @@ overrides near the top of `kibard.keymap`; the two numbers are
 
 ### Home row mods
 
-`HML` (left hand) and `HMR` (right hand) are `zmk,behavior-hold-tap` with `flavor = "balanced"`, `tapping-term-ms = 250`, `quick-tap-ms = 175`, `require-prior-idle-ms = 150`, `hold-trigger-on-release`, and positional `hold-trigger-key-positions` restricting each to the opposite hand. Home row mod order, index→pinky (inner to outer): Alt / Ctrl / Shift.
+`HML` (left hand) and `HMR` (right hand) are `zmk,behavior-hold-tap` with `flavor = "balanced"`, `tapping-term-ms = 250`, `quick-tap-ms = 175`, `require-prior-idle-ms = 150`, `hold-trigger-on-release`, and positional `hold-trigger-key-positions`: the opposite hand plus all four thumbs, so a mod held with Space, Esc, Return or Tab (or a thumb layer) fires without waiting out the tapping term. Rolling a home-row key into Space nested (Space released first) can therefore fire the mod; `require-prior-idle-ms` keeps that from happening mid-typing. Home row mod order, index→pinky (inner to outer): Alt / Ctrl / Shift.
 
 `HML_SFT` / `HMR_SFT` are the same but with `require-prior-idle-ms = 100`, and every Shift home-row mod uses them. `require-prior-idle-ms` is a per-behavior property, so a separate behavior is the only way to give Shift a different value than Ctrl/Alt.
 
 `HML_LT` is `HML` with `&mo` as the hold, used for N (pos 10) → Mouse and for
-`|` (pos 20) → Symbols+; the thumbs count as hold triggers too, so the mouse speed
-layers work right after it. `HMR_LT` is its right-hand mirror (left hand plus
-thumbs as hold triggers), used for `-` (pos 29) → Symbols+.
+`|` (pos 20) → Symbols+; since the thumbs are hold triggers, the mouse speed
+layers work right after it. `HMR_LT` is its right-hand mirror, used for `-`
+(pos 29) → Symbols+.
 
 `CAP(k)` (tap `k`, hold for `Shift+k`) is a plain time-based hold-tap on the
 `NUM` behavior, not a home-row mod: Alpha+ uses it for J, and for P inside `AK_P`. `tools/sync-oryx.py`
