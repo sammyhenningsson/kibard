@@ -693,7 +693,7 @@
 
 / {
     combos {
-        kompatible = "zmk,combos";
+        compatible = "zmk,combos";
 
         combo_esc {
             timeout-ms = <40>;
