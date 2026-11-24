@@ -70,7 +70,7 @@ Defined in `config/kibard.keymap`. Layer indices:
 |---|------|-----------|
 | 0 | Graphmod (default) | base layer |
 | 1 | Symbols | left thumb hold (`LT_TH L_SYM ESC`, pos 31), or `AS_P` / `AS_K` hold on Graphmod (`lt L_SYM`, pos 21, 28) |
-| 2 | Symbols+ | `LT_TH L_SYMP SE_AT` hold on Symbols (pos 10) |
+| 2 | Symbols+ | `HML_LT L_SYMP SE_PIPE` / `HMR_LT L_SYMP SE_MINUS` hold on Symbols (pos 20, 29) |
 | 3 | Numpad | left thumb hold (`LT_SPC L_NUM SPACE`, pos 30), or `to L_NUM` from Navigate |
 | 4 | Mouse | `HML_LT L_MOUSE N` hold (pos 10) |
 | 5 | Alpha+ | right thumb hold (`LT_TH L_ALPHAP TAB`, pos 33), or `lt L_ALPHAP N0` on Numpad (pos 33) |
@@ -108,7 +108,7 @@ opt in with a `locking;` property; `&mo` deliberately does not lock.
   Space is pressed mid-typing constantly, so within 150 ms of another key it
   taps instantly, and a roll where Space is released last stays a space.
 - `LT_TH` (every other layer-tap: Esc/Symbols, Return/Navigate, Tab/Alpha+, plus
-  `@`/Symbols+ and `+`/Hex) is `hold-preferred` with no `require-prior-idle-ms`.
+  `+`/Hex) is `hold-preferred` with no `require-prior-idle-ms`.
   Alpha+ and Navigate are held mid-word, so an idle guard would turn a fast
   hold into Tab or Return.
 
@@ -126,8 +126,10 @@ overrides near the top of `kibard.keymap`; the two numbers are
 
 `HML_SFT` / `HMR_SFT` are the same but with `require-prior-idle-ms = 100`, and every Shift home-row mod uses them. `require-prior-idle-ms` is a per-behavior property, so a separate behavior is the only way to give Shift a different value than Ctrl/Alt.
 
-`HML_LT` is `HML` with `&mo` as the hold, used for N (pos 10) → Mouse; the
-thumbs count as hold triggers too, so the mouse speed layers work right after it.
+`HML_LT` is `HML` with `&mo` as the hold, used for N (pos 10) → Mouse and for
+`|` (pos 20) → Symbols+; the thumbs count as hold triggers too, so the mouse speed
+layers work right after it. `HMR_LT` is its right-hand mirror (left hand plus
+thumbs as hold triggers), used for `-` (pos 29) → Symbols+.
 
 `CAP(k)` (tap `k`, hold for `Shift+k`) is a plain time-based hold-tap on the
 `NUM` behavior, not a home-row mod: Alpha+ uses it for J, and for P inside `AK_P`. `tools/sync-oryx.py`
