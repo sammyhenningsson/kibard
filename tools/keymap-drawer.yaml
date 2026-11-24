@@ -68,7 +68,7 @@ parse_config:
     "&gte": "≥"
     "&approx": "≈"
     # Adaptive keys: the shifted legend reads "after X, this key types Y".
-    "&AS_E": {t: "E", h: "RSHIFT", s: "U→O"}
+    "&AS_E": {t: "E", h: "RSHIFT", s: "U→O ⇧I→␣"}
     "&AS_O": {t: "O", s: "U→E"}
     "&AS_R": {t: "R", h: "LSHIFT", s: "N→N"}
     "&AS_D": {t: "D", s: "S→C H→Å"}

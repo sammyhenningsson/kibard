@@ -216,6 +216,7 @@
         // each other: [U, E, O] and [S, D, C]. The rest are one-way: HD -> HÅ,
         // HK -> HJ, GK -> GY, KC -> KE, KP -> KO, PK -> PO, PC -> PR, FC -> FL, FQ -> FJ,
         // OQ -> OA, GW -> GS, KW -> KU, NR -> NN, and C repeats L or M: LC -> LL, MC -> MM.
+        // After a capital I only, E types Space (`I am`); a lowercase i leaves E alone.
         // Esc K -> Esc . is the one rule with a non-letter trigger.
         // Output is a plain &kp: a rule only fires mid-word, where a hold is
         // unwanted.
@@ -233,6 +234,7 @@
             bindings = <&HMR_SFT RSHIFT E>;
 
             as_ue { trigger-keys = <AS_TRIGGER(U)>; bindings = <&kp O>; AS_GUARD };
+            as_ie { trigger-keys = <LS(I) RS(I)>; bindings = <&kp SPACE>; AS_GUARD };
         };
 
         AS_R: AS_R {
