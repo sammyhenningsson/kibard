@@ -656,6 +656,27 @@
                 , <&macro_tap &kp O>
                 ;
         };
+
+        // ≤ and ≥ are not on the Swedish layout, so these type them with
+        // Linux Unicode entry (IBus/GTK): Ctrl+Shift+U, the hex code point,
+        // then Space. Apps without that input method get the raw keys.
+        lte: lte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(LS(U))>
+                , <&macro_tap &kp N2 &kp N2 &kp N6 &kp N4 &kp SPACE>
+                ;
+        };
+
+        gte: gte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(LS(U))>
+                , <&macro_tap &kp N2 &kp N2 &kp N6 &kp N5 &kp SPACE>
+                ;
+        };
     };
 };
 
@@ -715,7 +736,7 @@
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
                     &trans            &kp SE_GRAV       &kp SE_ACUT       &trans            &trans                                   &trans            &kp SE_SLASH      &kp N             &eacut            &tilde
                 //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                    &trans            &trans            &trans            &trans            &trans                                   &trans            &kp SE_STERLING   &kp SE_EURO       &trans            &trans
+                    &trans            &lte              &gte              &trans            &trans                                   &trans            &kp SE_STERLING   &kp SE_EURO       &trans            &trans
                 //╰─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤                      ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────╯
                                                                           &trans            &trans                                   &kp SPACE         &lt L_ALPHAP N0
                 //                                                      ╰─────────────────┴─────────────────╯                      ╰─────────────────┴─────────────────╯
