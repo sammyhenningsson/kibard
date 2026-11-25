@@ -458,6 +458,12 @@
     slow { layers = <L_MSLOW>; input-processors = <&zip_scroll_scaler 1 3>; };
 };
 
+// Caps word's default continue-list is US keycodes: UNDERSCORE is LS(MINUS),
+// which on the Swedish layout is `?`, so `_` (LS(FSLH)) ended caps word.
+&caps_word {
+    continue-list = <SE_UNDER SE_MINUS BSPC DEL>;
+};
+
 / {
     macros {
         vim_write: vim_write {

@@ -171,6 +171,10 @@ and a label in `tools/keymap-drawer.yaml`.
 
 All `SE_*` macros at the top of `kibard.keymap` map Swedish characters and symbols to their positions on a Swedish keyboard layout (e.g. `SE_AA`, `SE_ADIA`, `SE_OO` for å, ä, ö). On the base layer ä and ö sit directly on keys (`SE_ADIA` at pos 27, `SE_OO` at pos 29); pos 9 is `&none`. Å lives on Alpha+ (`SE_AA` at pos 18, with Shift on hold), and on the base layer D types it right after H (`HD → HÅ`).
 
+`&caps_word` has its `continue-list` overridden with `SE_UNDER`/`SE_MINUS`, since
+the default `UNDERSCORE` is US `_` (Swedish `?`). Caps word shifts only A–Z
+keycodes, so å, ä and ö (`LEFT_BRACKET`, `APOS`, `SEMI`) end it and stay lowercase.
+
 Symbols+ has ≤ and ≥ at pos 21 and 22 (`&lte`, `&gte`), and ≈ at pos 15 under
 Symbols' `=` (`&approx`). The Swedish layout has no key for them, so the macros use Linux Unicode entry (Ctrl+Shift+U, code point,
 Space), which works only in apps with IBus/GTK input.
